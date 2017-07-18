@@ -6,7 +6,7 @@ module.exports = function collectSameElements(collectionA, objectB) {
    for(var i = 0;i < collectionA.length; i++){
       collectionA_value.push(collectionA[i].key);
    }
-   
+
 
     var collectionB_array = objectB.value;
     var result =[];
