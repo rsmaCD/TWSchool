@@ -1,45 +1,34 @@
 'use strict';
 
-function HashMap(){
-
-    var length = 0;
-
-    var obj = new Object();
-
-    this.isEmpty = function(){
-        return length == 0;
-    };
-
-    this.containsKey = function(key){
-        return (key in obj);
-    };
-
-    this.put = function(key,value){
-        if(!this.containsKey(key)){
-            length ++;
-        }
-        obj[key] += value;
-    };
-
-    this.toArray = function(){
-      var array = [];
-      if(this.isEmpty()){
-        return array;
-      }
-
-      for(var i = 0;i < this.length;i++){
-        array.push(this[i]);
-      }
-      return array;
-    }
-}
-
 module.exports = function countSameElements(collection) {
 
-  var hashMap = HashMap();
+  var key = [];
+  var value = [];
   for(var i = 0;i < collection.length;i++){
-    hashMap.put(collection[i],1);
+    var flag = -1;
+    for(var j = 0; j < key.length; j++){
+
+      if(collection[i] == key[j]) {
+          flag = j;
+          break;
+
+      }
+    }
+    if(flag != -1){
+          value[flag] += 1;
+
+    }else{
+          key[key.length] = collection[i];
+          value[key.length-1] = 1;
+    }
+
+
   }
 
-   return hashMap.toArray();
+  var result = [];
+  for(var i = 0;i < key.length; i++){
+    result.push({"key":key[i],"count":value[i]});
+  }
+
+   return result;
 }
