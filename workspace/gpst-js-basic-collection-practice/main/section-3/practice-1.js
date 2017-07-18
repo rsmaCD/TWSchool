@@ -2,7 +2,7 @@
 
 module.exports = function createUpdatedCollection(collectionA, objectB) {
 
-  for(let i = 1; i < collectionA.length; i++){
+  for(var i = 1; i < collectionA.length; i++){
     for(var j = i; j < objectB.value.length;j++){
       console.log("1.-----------------");
       console.log(collectionA[i].key);
@@ -10,7 +10,7 @@ module.exports = function createUpdatedCollection(collectionA, objectB) {
 
       if(collectionA[i].key == objectB.value[j]){
         console.log("!!!!!!!");
-        collectionA[i].count -= collectionA[i].count;
+        collectionA[i].count --;
       }
     }
   }
