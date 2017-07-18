@@ -21,10 +21,6 @@ function HashMap(){
         obj[key] += value;
     };
 
-    this.get = function(key){
-        return this.containsKey(key)?obj[key]:null;
-    };
-
     this.toArray = function(){
       var array = [];
       if(this.isEmpty()){
