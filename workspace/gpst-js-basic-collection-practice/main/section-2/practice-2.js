@@ -27,7 +27,7 @@ module.exports = function countSameElements(collection) {
             }
         }
         if(flag != -1){
-            value[flag] += temp_value;
+            value[flag] += parseInt(temp_value);
 
         }else{
             key[key.length] = temp_key;
