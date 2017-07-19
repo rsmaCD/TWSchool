@@ -8,7 +8,9 @@ const allItems = loadAllItems();
 
 function printReceipt(tags) {
 
-    posV1(tags);
+    let info = countPosV1Info(tags);
+
+    printResult(info.itemsAndCountList,info.totalPriceAndSavePrice);
 
 //     console.log(`***<没钱赚商店>收据***
 // 名称：雪碧，数量：5瓶，单价：3.00(元)，小计：12.00(元)
@@ -21,16 +23,20 @@ function printReceipt(tags) {
 
 }
 
-function posV1(tags){
-    let itemsIdAndCountList = countItemsAndCount(tags);
-
-    let itemsAndCountList = addItemsProperty(itemsIdAndCountList);
-
-    itemsAndCountList = countItemsTotalPrice(itemsAndCountList);
+function countPosV1Info(tags){
+    let itemsAndCountList = getItemsAndCountList(tags);
 
     let totalPriceAndSavePrice = countTotalPriceAndSavePrice(itemsAndCountList);
 
-    printResult(itemsAndCountList,totalPriceAndSavePrice);
+    return {"itemsAndCountList":itemsAndCountList,"totalPriceAndSavePrice":totalPriceAndSavePrice};
+
+}
+
+function getItemsAndCountList(tags) {
+    let itemsIdAndCountList = countItemsAndCount(tags);
+
+    let itemsAndCountList = addItemsProperty(itemsIdAndCountList);
+    return countItemsTotalPrice(itemsAndCountList);
 
 }
 

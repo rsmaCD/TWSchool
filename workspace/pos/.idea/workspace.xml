@@ -15,10 +15,10 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/V1/main/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
               <folding>
-                <marker date="1500476094000" expanded="true" signature="205:408" ph="..." />
+                <marker date="1500477319000" expanded="true" signature="295:498" ph="..." />
               </folding>
             </state>
           </provider>
@@ -609,12 +609,12 @@
       <option name="presentableId" value="Default" />
       <updated>1500452499750</updated>
       <workItem from="1500452500968" duration="5038000" />
-      <workItem from="1500467135086" duration="8297000" />
+      <workItem from="1500467135086" duration="9338000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13335000" />
+    <option name="totallyTimeSpent" value="14376000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,7 +677,7 @@
         <state relative-caret-position="1185">
           <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
-            <marker date="1500476094000" expanded="true" signature="205:408" ph="..." />
+            <marker date="1500477319000" expanded="true" signature="295:498" ph="..." />
           </folding>
         </state>
       </provider>
@@ -705,6 +705,15 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1487693750000" expanded="true" signature="345:493" ph="[...]" />
+              <marker date="1487693750000" expanded="true" signature="1142:1232" ph="{...}" />
+              <marker date="1487693750000" expanded="true" signature="1326:1590" ph="[...]" />
+              <marker date="1487693750000" expanded="true" signature="1334:1458" ph="{&quot;type&quot;: 'BUY_TWO_GET_ONE_FREE'...}" />
+              <marker date="1487693750000" expanded="true" signature="1392:1450" ph="[...]" />
+              <marker date="1487693750000" expanded="true" signature="1466:1585" ph="{&quot;type&quot;: 'OTHER_PROMOTION'...}" />
+              <marker date="1487693750000" expanded="true" signature="1519:1577" ph="[...]" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -754,10 +763,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
           <folding>
-            <marker date="1500476094000" expanded="true" signature="205:408" ph="..." />
+            <marker date="1500477319000" expanded="true" signature="295:498" ph="..." />
           </folding>
         </state>
       </provider>
