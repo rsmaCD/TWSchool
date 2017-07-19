@@ -22,7 +22,7 @@ function printReceipt(tags) {
 }
 
 function posV1(tags){
-    let itemsIdAndCountList = getItemsAndCount(tags);
+    let itemsIdAndCountList = countItemsAndCount(tags);
 
     let itemsAndCountList = addItemsProperty(itemsIdAndCountList);
 
@@ -87,7 +87,7 @@ function isDiscountById(Id){
     return false;
 }
 
-function getItemsAndCount(tags) {
+function countItemsAndCount(tags) {
 
     let itemsAndCountList = [];
     for(let i = 0; i < tags.length; i++){
