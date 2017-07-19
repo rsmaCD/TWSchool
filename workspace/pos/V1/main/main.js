@@ -28,7 +28,7 @@ function posV1(tags){
 
     itemsAndCountList = countItemsTotalPrice(itemsAndCountList);
 
-    let totalPriceAndSavePrice = getTotalPriceAndSavePrice(itemsAndCountList);
+    let totalPriceAndSavePrice = countTotalPriceAndSavePrice(itemsAndCountList);
 
     printResult(itemsAndCountList,totalPriceAndSavePrice);
 
@@ -52,7 +52,7 @@ function printResult(itemsAndCountList,totalPriceAndSavePriace) {
     console.log(result);
 }
 
-function getTotalPriceAndSavePrice(itemsAndCountList) {
+function countTotalPriceAndSavePrice(itemsAndCountList) {
     let totalPrice = 0;
     let savePrice = 0;
     for(let i = 0;i < itemsAndCountList.length;i++){
