@@ -1,46 +1,58 @@
 'use strict';
 
-
-
 module.exports = function countSameElements(collection) {
-    var key = [];
-    var value = [];
-    for(var i = 0;i < collection.length;i++){
-        var reg = '[A-Za-z]-[0-9]+';
-        var temp_key ;
-        var temp_value;
-        if(collection[i].match(reg)){
-            temp_key = collection[i].split("-")[0];
-            temp_value = collection[i].split("-")[1];
-        }else{
-            temp_key = collection[i];
-            temp_value = 1;
-        }
-
-      var flag = -1;
-        for(var j = 0; j < key.length; j++){
-
-            if(temp_key == key[j]) {
-                flag = j;
-                break;
-
-            }
-        }
-        if(flag != -1){
-            value[flag] += parseInt(temp_value);
-
-        }else{
-            key[key.length] = temp_key;
-            value[key.length-1] = parseInt(temp_value);
-        }
-
-
-    }
 
     var result = [];
-    for(var i = 0;i < key.length; i++){
-        result.push({"key":key[i],"count":value[i]});
+    for(var i = 0;i < collection.length; i++){
+        var keyAndNum = getkeyAndNum(collection[i]);
+        if(!isExist(keyAndNum.key,result)){
+            result.push({"key":keyAndNum.key,"count":0});
+        }
+    }
+
+
+    for(var i = 0;i < collection.length; i++){
+        var keyAndNum = getkeyAndNum(collection[i]);
+        result = countAdd(result,keyAndNum.key,keyAndNum.Num);
     }
 
     return result;
 }
+
+function getkeyAndNum(element){
+
+    if(element.indexOf('-') != -1){
+        return {key:element.substring(0,element.indexOf('-')),Num:parseInt(element.substring(element.indexOf('-')+1,element.length))};
+    }
+
+    return {key:element,Num:1};
+}
+
+
+function isExist(element,collection){
+
+    for(var i = 0; i < collection.length; i++){
+        if(collection[i].key == element){
+            return true;
+        }
+    }
+    return false;
+    // console.log("-----------collection");
+    // console.log(collection);
+    // console.log(element);
+    // if(typeof collection[element] == "undefined"){
+    //     return false;
+    // }
+    // return true;
+}
+
+function countAdd(collection,key,num) {
+
+    for(var i = 0; i < collection.length; i++){
+        if(collection[i].key == key){
+            collection[i].count += num;
+        }
+    }
+    return collection;
+}
+
