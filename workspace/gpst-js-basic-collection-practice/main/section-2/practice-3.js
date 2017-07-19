@@ -6,7 +6,7 @@ module.exports = function countSameElements(collection) {
     for(var i = 0;i < collection.length; i++){
         var keyAndNum = getkeyAndNum(collection[i]);
         if(!isExist(keyAndNum.key,result)){
-            result.push({"key":keyAndNum.key,"count":0});
+            result.push({"name":keyAndNum.key,"summary":0});
         }
     }
 
@@ -23,8 +23,10 @@ function getkeyAndNum(element){
 
     if(element.indexOf('-') != -1){
         return {key:element.substring(0,element.indexOf('-')),Num:parseInt(element.substring(element.indexOf('-')+1,element.length))};
-    }else if(){
-
+    }else if(element.indexOf(":") != -1){
+        return {key:element.substring(0,element.indexOf(':')),Num:parseInt(element.substring(element.indexOf(':')+1,element.length))};
+    }else if(element.indexOf("[") != -1){
+        return {key:element.substring(0,element.indexOf('[')),Num:parseInt(element.substring(element.indexOf('[')+1,element.length-1))}
     }
 
     return {key:element,Num:1};
@@ -34,7 +36,7 @@ function getkeyAndNum(element){
 function isExist(element,collection){
 
     for(var i = 0; i < collection.length; i++){
-        if(collection[i].key == element){
+        if(collection[i].name == element){
             return true;
         }
     }
@@ -51,8 +53,8 @@ function isExist(element,collection){
 function countAdd(collection,key,num) {
 
     for(var i = 0; i < collection.length; i++){
-        if(collection[i].key == key){
-            collection[i].count += num;
+        if(collection[i].name == key){
+            collection[i].summary += num;
         }
     }
     return collection;
