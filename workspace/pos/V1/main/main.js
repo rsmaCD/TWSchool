@@ -17,28 +17,47 @@ function printReceipt(tags) {
 ----------------------
 总计：58.50(元)
 节省：7.50(元)
-**********************`)
+**********************`);
+
 }
 
 function posV1(tags){
-    let itemsAndCountList = getItemsAndCount(tags);
+    let itemsIdAndCountList = getItemsAndCount(tags);
 
-    //itemsAndCountList = disCount(itemsAndCountList);
+    let itemsAndCountList = addItemProperty(itemsIdAndCountList);
 
-};
+    itemsAndCountList = disCount(itemsAndCountList);
+    
+    print(itemsAndCountList);
+
+}
+
+function print(itemsAndCountList) {
 
 
-function getOneItemsById(ID) {
+}
+
+function addItemProperty(itemsIdAndCountList){
+    for(let i = 0; i < itemsIdAndCountList.length; i++){
+        itemsIdAndCountList[i].itemProperty = getOneItemsById(itemsIdAndCountList[i].itemId);
+        itemsIdAndCountList[i].isDiscount = isDiscountById(itemsIdAndCountList[i].itemId);
+    }
+    return itemsIdAndCountList;
+}
+
+function getOneItemsById(Id) {
     for(let i = 0; i < allItems.length; i++){
-        if(allItems[i].barcode === ID){
+        if(allItems[i].barcode === Id){
             return allItems[i];
         }
     }
 }
 
-function isDiscountById(ID){
-    if(typeof promotions[ID]){
-        return true;
+function isDiscountById(Id){
+    for(let i = 0 ;i < promotions[0].barcodes.length;i++){
+        if(promotions[0].barcodes[i] === Id){
+            return true;
+        }
     }
     return false;
 }
@@ -56,21 +75,23 @@ function getItemsAndCount(tags) {
 
 function disCount(itemsAndCountList) {
     for(let i = 0; i < itemsAndCountList.length; i++){
-        itemsAndCountList[i].itemPriace = getItemTotalPrice(itemsAndCountList[i].item,itemsAndCountList[i].count);
+        itemsAndCountList[i].itemPriace = getItemTotalPrice(itemsAndCountList[i]);
     }
     return itemsAndCountList;
 }
 //商品小计
-function getItemTotalPrice(itemId,itemCount){
-    if(!isDiscountById(itemId)){
-        return (getOneItemsById(itemId).price)*itemCount;
+function getItemTotalPrice(item){
+    if(!item.isDiscount){
+        return item.itemProperty.price*item.count;
     }
-    return getDiscountItemTotalPrice(itemId,itemCount);
+    return getDiscountItemTotalPrice(item);
 }
 
-function getDiscountItemTotalPrice(itemId,itemCount){
-    let disCountNum = itemCount/3;
-    return (getOneItemsById(itemId).price)*(itemCount-disCountNum);
+function getDiscountItemTotalPrice(item){
+    if(item.count >= 2){
+        return item.itemProperty.price*(item.count-1);
+    }
+    return item.itemProperty.price*item.count;
 }
 
 
