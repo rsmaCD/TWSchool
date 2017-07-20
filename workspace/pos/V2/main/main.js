@@ -14,6 +14,20 @@ function printReceipt(tags) {
 
 }
 
+
+
+function calcTotalPriceAndTotalSaving(cartItemsInfo) {
+    let totalPrice = 0;
+    let totalSaving = 0;
+    for(let i = 0; i < cartItemsInfo.length;i++){
+        totalPrice += cartItemsInfo[i].itemPrice;
+        totalSaving += (cartItemsInfo[i].itemProperty.price)*cartItemsInfo[i].count - cartItemsInfo[i].itemPrice;
+    }
+    return {"totalPrice":totalPrice,"totalSaving":totalSaving};
+}
+
+
+
 function calcCartItemsInfo(itemsAndCount) {
     let cartItemsInfo = [];
     let itemsProperty = buildItemsProperty(itemsAndCount);

@@ -118,3 +118,14 @@ describe('calcCartItemsInfo', () => {
         expect(cartItemsInfo).toEqual(calcCartItemsInfoExpectText);
     });
 });
+
+describe('calcTotalPriceAndTotalSaving', () => {
+
+    it('should print text', () => {
+
+        const cartItemsInfo = [{"itemProperty":{ "barcode": 'ITEM000000', "name": '可口可乐', "unit": '瓶', "price": 3, "isDiscount": true }, "count": 5, "itemPrice": 12}];
+        const calcTotalPriceAndTotalSavingExpectText = {"totalPrice":12,"totalSaving":3}
+        const totalPriceAndTotalSaving = calcTotalPriceAndTotalSaving(cartItemsInfo);
+        expect(totalPriceAndTotalSaving).toEqual(calcTotalPriceAndTotalSavingExpectText);
+    });
+});
