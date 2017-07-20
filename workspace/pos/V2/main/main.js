@@ -14,10 +14,26 @@ function printReceipt(tags) {
 
 }
 
+function printReceipt(tags) {
+    let receiptInfo = countReceiptInfo(tags);
+    console.log(print(receiptInfo));
+}
 
 function print(receiptInfo) {
     let result = "";
-    result += "***<没钱赚商店>收据***\n";
+    const dateDigitToString = num => (num < 10 ? `0${num}` : num);
+    const currentDate = new Date(),
+        year = dateDigitToString(currentDate.getFullYear()),
+        month = dateDigitToString(currentDate.getMonth() + 1),
+        date = dateDigitToString(currentDate.getDate()),
+        hour = dateDigitToString(currentDate.getHours()),
+        minute = dateDigitToString(currentDate.getMinutes()),
+        second = dateDigitToString(currentDate.getSeconds()),
+        formattedDateString = `${year}年${month}月${date}日 ${hour}:${minute}:${second}`;
+    result += `***<没钱赚商店>收据***
+打印时间：${formattedDateString}
+----------------------
+`;
     for(let i = 0;i < receiptInfo.cartItemsInfo.length;i++){
         result += "名称：" + receiptInfo.cartItemsInfo[i].itemProperty.name
             + "，数量：" + receiptInfo.cartItemsInfo[i].count + receiptInfo.cartItemsInfo[i].itemProperty.unit
@@ -36,7 +52,7 @@ function print(receiptInfo) {
 
 
 function countReceiptInfo(tags) {
-    let itemsAndCount = countItemsCount();
+    let itemsAndCount = countItemsCount(tags);
     let cartItemsInfo = calcCartItemsInfo(itemsAndCount);
     let totalPriceAndTotalSaving = calcTotalPriceAndTotalSaving(cartItemsInfo);
     let receiptInfo = {"cartItemsInfo":cartItemsInfo,"totalPrice":totalPriceAndTotalSaving.totalPrice
@@ -88,7 +104,6 @@ function buildItemsProperty(itemsAndCount) {
     let itemsProperty = [];
     for(let i = 0;i < itemsAndCount.length;i++){
         let item = getItemById(itemsAndCount[i].itemId);
-        console.log("itemsAndCount[i].itemId"+itemsAndCount[i].itemId);
         let discount = isDiscount(itemsAndCount[i].itemId);
         itemsProperty[itemsProperty.length] = {"barcode":item.barcode,"name":item.name,
                 "unit":item.unit,"price":item.price,"isDiscount":discount};
@@ -97,7 +112,6 @@ function buildItemsProperty(itemsAndCount) {
 }
 
 function isDiscount(itemId){
-    console.log("sadadwes");
     const promotions = Promotion.all();
     for(let i = 0 ;i < promotions[0].barcodes.length;i++){
         if(promotions[0].barcodes[i] === itemId){
