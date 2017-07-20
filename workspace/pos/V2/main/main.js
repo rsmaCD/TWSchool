@@ -14,18 +14,47 @@ function printReceipt(tags) {
 
 }
 
+function calcCartItemsInfo(itemsAndCount) {
+    let cartItemsInfo = [];
+    let itemsProperty = buildItemsProperty(itemsAndCount);
+    for(let i = 0;i < itemsProperty.length;i++){
+        let count = getItemCountById(itemsProperty[i].barcode,itemsAndCount);
+        cartItemsInfo[cartItemsInfo.length] = {"itemProperty":itemsProperty[i],"count":count
+            ,"itemPrice":calcCartItemPrice(itemsProperty[i].price,count,itemsProperty[i].isDiscount)};
+    }
+    return cartItemsInfo;
+}
+
+function getItemCountById(itemId,itemsAndCount) {
+    for(let i = 0; i < itemsAndCount.length;i++){
+        if(itemsAndCount[i].itemId === itemId){
+            return itemsAndCount[i].count;
+        }
+    }
+}
+
+function calcCartItemPrice(price,count,isDiscount) {
+    if(isDiscount && count >= 3){
+        return price*(count-1);
+    }
+    return price*count;
+}
+
+
 function buildItemsProperty(itemsAndCount) {
     let itemsProperty = [];
-    for(let i = 0;i < itemsProperty.length;i++){
-        let item = getItemById(itemsAndCount.itemId);
-        let isDiscount = isDiscount(itemsAndCount.itemId);
+    for(let i = 0;i < itemsAndCount.length;i++){
+        let item = getItemById(itemsAndCount[i].itemId);
+        console.log("itemsAndCount[i].itemId"+itemsAndCount[i].itemId);
+        let discount = isDiscount(itemsAndCount[i].itemId);
         itemsProperty[itemsProperty.length] = {"barcode":item.barcode,"name":item.name,
-                "unit":item.unit,"price":item.price,"isDiscount":isDiscount};
+                "unit":item.unit,"price":item.price,"isDiscount":discount};
     }
     return itemsProperty;
 }
 
 function isDiscount(itemId){
+    console.log("sadadwes");
     const promotions = Promotion.all();
     for(let i = 0 ;i < promotions[0].barcodes.length;i++){
         if(promotions[0].barcodes[i] === itemId){
@@ -38,7 +67,7 @@ function isDiscount(itemId){
 function getItemById(itemId) {
     const items = Item.all();
     for(let i = 0;i < items.length;i++){
-        if(items[i].barcodes === itemId){
+        if(items[i].barcode === itemId){
             return items[i];
         }
     }

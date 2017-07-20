@@ -101,11 +101,20 @@ describe('buildItemsProperty', () => {
 
     it('should print text', () => {
 
-        const itemsAndCount = [{"itemId":'ITEM000000',"count":5},
-            {"itemId":'ITEM000003',"count":2.5}];
-        const buildItemsPropertyExpectText = [{"barcode":'ITEM000000',"name":'可口可乐',"unit":'瓶',"price":3.00},
-            {"barcode":'ITEM000000',"name":'荔枝',"unit":'斤',"price":15.00}];
+        const itemsAndCount = [{"itemId":'ITEM000000',"count":5}];
+        const buildItemsPropertyExpectText = [{"barcode":'ITEM000000',"name":'可口可乐',"unit":'瓶',"price":3.00,"isDiscount":true}];
         const itemsProperty = buildItemsProperty(itemsAndCount);
         expect(itemsProperty).toEqual(buildItemsPropertyExpectText);
+    });
+});
+
+describe('calcCartItemsInfo', () => {
+
+    it('should print text', () => {
+
+        const itemsAndCount = [{"itemId":'ITEM000000',"count":5}];
+        const calcCartItemsInfoExpectText = [{"itemProperty":{ "barcode": 'ITEM000000', "name": '可口可乐', "unit": '瓶', "price": 3, "isDiscount": true }, "count": 5, "itemPrice": 12}];
+        const cartItemsInfo = calcCartItemsInfo(itemsAndCount);
+        expect(cartItemsInfo).toEqual(calcCartItemsInfoExpectText);
     });
 });
