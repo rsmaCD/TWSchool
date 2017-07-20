@@ -14,6 +14,15 @@ function printReceipt(tags) {
 
 }
 
+function countItemsCount(tags) {
+    let itemsAndCount = [];
+    for(let i = 0; i < tags.length; i++){
+        let itemAndCount = getOneTagItemAndCount(tags[i]);
+        itemsAndCount = buildItemsAndCount(itemAndCount,itemsAndCount);
+    }
+    return itemsAndCount;
+}
+
 
 function getOneTagItemAndCount(tag) {
     let itemId = tag.split("-")[0];
@@ -28,6 +37,6 @@ function buildItemsAndCount(itemAndCount,itemsAndCount){
             return itemsAndCount;
         }
     }
-    itemsAndCount[length] = itemAndCount;
-    return itemAndCount;
+    itemsAndCount[itemsAndCount.length] = itemAndCount;
+    return itemsAndCount;
 }

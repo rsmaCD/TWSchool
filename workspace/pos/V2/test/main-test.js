@@ -69,17 +69,30 @@ describe('buildItemsAndCount', () => {
 
     it('should print text', () => {
 
-        const itemAndCount = {"itemId":'ITEM000003',"count":2.5};
-        const buildItemsAndCountExpectText = [{"itemId":'ITEM000003',"count":5},{"itemId":'ITEM000001',"count":1}];
+        const itemAndCount = {"itemId":'ITEM000005',"count":3};
+        const buildItemsAndCountExpectText = [{"itemId":'ITEM000003',"count":2.5},{"itemId":'ITEM000001',"count":1},{"itemId":'ITEM000005',"count":3}];
         const itemsAndCount = buildItemsAndCount(itemAndCount,[{"itemId":'ITEM000003',"count":2.5},{"itemId":'ITEM000001',"count":1}]);
         expect(itemsAndCount).toEqual(buildItemsAndCountExpectText);
     });
+});
 
-    // it('should print text', () => {
-    //
-    //     const tag = 'ITEM000003';
-    //     const getOneItemAndCountExpectText = {"itemId":'ITEM000003',"count":1};
-    //     const oneItemAndCount = getOneTagItemAndCount(tag);
-    //     expect(oneItemAndCount).toEqual(getOneItemAndCountExpectText);
-    // });
+describe('countItemsCount', () => {
+
+    it('should print text', () => {
+
+        const tags = [
+            'ITEM000001',
+            'ITEM000001',
+            'ITEM000001',
+            'ITEM000001',
+            'ITEM000001',
+            'ITEM000003-2.5',
+            'ITEM000005',
+            'ITEM000005-2',
+        ];
+        const countItemsCountExpectText = [{"itemId":'ITEM000001',"count":5},
+            {"itemId":'ITEM000003',"count":2.5},{"itemId":'ITEM000005',"count":3}];
+        const itemsAndCount = countItemsCount(tags);
+        expect(itemsAndCount).toEqual(countItemsCountExpectText);
+    });
 });
