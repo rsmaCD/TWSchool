@@ -14,6 +14,14 @@ function printReceipt(tags) {
 
 }
 
+function countReceiptInfo(tags) {
+    let itemsAndCount = countItemsCount();
+    let cartItemsInfo = calcCartItemsInfo(itemsAndCount);
+    let totalPriceAndTotalSaving = calcTotalPriceAndTotalSaving(cartItemsInfo);
+    let receiptInfo = {"cartItemsInfo":cartItemsInfo,"totalPrice":totalPriceAndTotalSaving.totalPrice
+        ,"totalSaving":totalPriceAndTotalSaving.totalSaving};
+    return receiptInfo;
+}
 
 
 function calcTotalPriceAndTotalSaving(cartItemsInfo) {
