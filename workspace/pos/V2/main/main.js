@@ -14,6 +14,38 @@ function printReceipt(tags) {
 
 }
 
+function buildItemsProperty(itemsAndCount) {
+    let itemsProperty = [];
+    for(let i = 0;i < itemsProperty.length;i++){
+        let item = getItemById(itemsAndCount.itemId);
+        let isDiscount = isDiscount(itemsAndCount.itemId);
+        itemsProperty[itemsProperty.length] = {"barcode":item.barcode,"name":item.name,
+                "unit":item.unit,"price":item.price,"isDiscount":isDiscount};
+    }
+    return itemsProperty;
+}
+
+function isDiscount(itemId){
+    const promotions = Promotion.all();
+    for(let i = 0 ;i < promotions[0].barcodes.length;i++){
+        if(promotions[0].barcodes[i] === itemId){
+            return true;
+        }
+    }
+    return false;
+}
+
+function getItemById(itemId) {
+    const items = Item.all();
+    for(let i = 0;i < items.length;i++){
+        if(items[i].barcodes === itemId){
+            return items[i];
+        }
+    }
+}
+
+
+
 function countItemsCount(tags) {
     let itemsAndCount = [];
     for(let i = 0; i < tags.length; i++){
