@@ -14,6 +14,27 @@ function printReceipt(tags) {
 
 }
 
+
+function print(receiptInfo) {
+    let result = "";
+    result += "***<没钱赚商店>收据***\n";
+    for(let i = 0;i < receiptInfo.cartItemsInfo.length;i++){
+        result += "名称：" + receiptInfo.cartItemsInfo[i].itemProperty.name
+            + "，数量：" + receiptInfo.cartItemsInfo[i].count + receiptInfo.cartItemsInfo[i].itemProperty.unit
+            +"，单价：" + receiptInfo.cartItemsInfo[i].itemProperty.price.toFixed(2) + "(元)"
+            +"，小计：" + receiptInfo.cartItemsInfo[i].itemPrice.toFixed(2) + "(元)\n";
+    }
+    result += "----------------------\n";
+
+    result += "总计：" + receiptInfo.totalPrice.toFixed(2) + "(元)\n";
+    result += "节省：" + receiptInfo.totalSaving.toFixed(2) + "(元)\n";
+
+    result += "**********************";
+
+    return result;
+}
+
+
 function countReceiptInfo(tags) {
     let itemsAndCount = countItemsCount();
     let cartItemsInfo = calcCartItemsInfo(itemsAndCount);
