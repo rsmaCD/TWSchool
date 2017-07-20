@@ -44,3 +44,23 @@ describe('pos', () => {
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
 });
+
+
+describe('getOneTagItemAndCount', () => {
+
+    it('should print text', () => {
+
+        const tag = 'ITEM000003-2.5';
+        const getOneItemAndCountExpectText = {"itemId":'ITEM000003',"count":2.5};
+        const oneItemAndCount = getOneTagItemAndCount(tag);
+        expect(oneItemAndCount).toEqual(getOneItemAndCountExpectText);
+    });
+
+    it('should print text', () => {
+
+        const tag = 'ITEM000003';
+        const getOneItemAndCountExpectText = {"itemId":'ITEM000003',"count":1};
+        const oneItemAndCount = getOneTagItemAndCount(tag);
+        expect(oneItemAndCount).toEqual(getOneItemAndCountExpectText);
+    });
+});
