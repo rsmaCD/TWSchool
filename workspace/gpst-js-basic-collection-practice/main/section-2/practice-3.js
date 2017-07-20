@@ -21,15 +21,20 @@ module.exports = function countSameElements(collection) {
 
 function getkeyAndNum(element){
 
-    if(element.indexOf('-') != -1){
-        return {key:element.substring(0,element.indexOf('-')),Num:parseInt(element.substring(element.indexOf('-')+1,element.length))};
-    }else if(element.indexOf(":") != -1){
-        return {key:element.substring(0,element.indexOf(':')),Num:parseInt(element.substring(element.indexOf(':')+1,element.length))};
-    }else if(element.indexOf("[") != -1){
-        return {key:element.substring(0,element.indexOf('[')),Num:parseInt(element.substring(element.indexOf('[')+1,element.length-1))}
-    }
+    // if(element.indexOf('-') != -1){
+    //     return {key:element.substring(0,element.indexOf('-')),Num:parseInt(element.substring(element.indexOf('-')+1,element.length))};
+    // }else if(element.indexOf(":") != -1){
+    //     return {key:element.substring(0,element.indexOf(':')),Num:parseInt(element.substring(element.indexOf(':')+1,element.length))};
+    // }else if(element.indexOf("[") != -1){
+    //     return {key:element.substring(0,element.indexOf('[')),Num:parseInt(element.substring(element.indexOf('[')+1,element.length-1))}
+    // }
+    //
+    // return {key:element,Num:1};
+    var reg_key = '[A-Za-z]';
+    var reg_num = '[0-9]+';
+    
 
-    return {key:element,Num:1};
+
 }
 
 

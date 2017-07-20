@@ -15,8 +15,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/V1/main/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="54" column="74" lean-forward="false" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+            <state relative-caret-position="114">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <marker date="1500515114000" expanded="true" signature="295:498" ph="..." />
               </folding>
@@ -609,12 +609,12 @@
       <updated>1500452499750</updated>
       <workItem from="1500452500968" duration="5038000" />
       <workItem from="1500467135086" duration="9498000" />
-      <workItem from="1500515051036" duration="113000" />
+      <workItem from="1500515051036" duration="632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14649000" />
+    <option name="totallyTimeSpent" value="15168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/V1/main/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="54" column="74" lean-forward="false" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+        <state relative-caret-position="114">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <marker date="1500515114000" expanded="true" signature="295:498" ph="..." />
           </folding>
