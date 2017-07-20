@@ -42,17 +42,17 @@ function getItemsAndCountList(tags) {
 
 function printResult(itemsAndCountList,totalPriceAndSavePriace) {
     let result = "";
-    result += "***<没钱赚商店>收据***\r\n";
+    result += "***<没钱赚商店>收据***\n";
     for(let i = 0;i < itemsAndCountList.length;i++){
         result += "名称：" + itemsAndCountList[i].itemProperty.name
             + "，数量：" + itemsAndCountList[i].count + itemsAndCountList[i].itemProperty.unit
             +"，单价：" + itemsAndCountList[i].itemProperty.price.toFixed(2) + "(元)"
-            +"，小计：" + itemsAndCountList[i].itemPrice.toFixed(2) + "(元)\r\n";
+            +"，小计：" + itemsAndCountList[i].itemPrice.toFixed(2) + "(元)\n";
     }
-    result += "----------------------\r\n";
+    result += "----------------------\n";
 
-    result += "总计：" + totalPriceAndSavePriace.totalPrice.toFixed(2) + "(元)\r\n";
-    result += "节省：" + totalPriceAndSavePriace.savePrice.toFixed(2) + "(元)\r\n";
+    result += "总计：" + totalPriceAndSavePriace.totalPrice.toFixed(2) + "(元)\n";
+    result += "节省：" + totalPriceAndSavePriace.savePrice.toFixed(2) + "(元)\n";
 
     result += "**********************";
     console.log(result);
