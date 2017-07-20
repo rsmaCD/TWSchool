@@ -20,3 +20,14 @@ function getOneTagItemAndCount(tag) {
     let count = parseFloat(tag.split("-")[1] || 1);
     return {"itemId":itemId,"count":count};
 }
+
+function buildItemsAndCount(itemAndCount,itemsAndCount){
+    for(let i = 0; i < itemsAndCount.length;i++){
+        if(itemsAndCount[i].itemId === itemAndCount.itemId){
+            itemsAndCount[i].count += itemAndCount.count;
+            return itemsAndCount;
+        }
+    }
+    itemsAndCount[length] = itemAndCount;
+    return itemAndCount;
+}
