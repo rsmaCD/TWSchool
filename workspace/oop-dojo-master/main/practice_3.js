@@ -12,7 +12,7 @@ class Person {
 export default class Student extends Person{
 
     constructor(name,age,classNum){
-        super(age, name);
+        super(name, age);
         this.classNum = classNum;
     }
 
