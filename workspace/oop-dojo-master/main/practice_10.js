@@ -55,8 +55,22 @@ class Student extends Person{
     }
 }
 
+class Teacher extends Person{
+    constructor(id,name,age,classObj){
+        super(id,name,age);
+        this.class = classObj;
+    }
+    introduce(){
+        if(this.class === undefined){
+            return super.introduce() + ` I am a Teacher. I teach No Class.`;
+        }
+        return super.introduce() + ` I am a Teacher. I teach Class ${this.class.getClassNum()}.`;
+    }
+}
+
 module.exports = {
     Person,
     Class,
-    Student
+    Student,
+    Teacher
 }

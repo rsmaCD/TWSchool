@@ -1,5 +1,5 @@
 "use strict";
-import {Person,Class,Student} from '../../main/practice_10';
+import {Person,Class,Student,Teacher} from '../../main/practice_10';
 describe("OO入门", function(){
     it("对象之间的交互-4", function(){
         const person = new Person(110,'Tom',21);
@@ -14,6 +14,16 @@ describe("OO入门", function(){
 
         const student2 = new Student(111,'Anna',22);
         expect(classObj.assignLeader(student2)).toEqual('It is not one of us.');
+
+    });
+
+    it("对象之间的交互-3", function(){
+        const classObj = new Class(2);
+        const teacher1 = new Teacher(111,'Tom',21);
+        const teacher2 = new Teacher(112,'Tom',21,classObj);
+        expect(teacher1.introduce()).toEqual("My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.");
+        expect(teacher2.introduce()).toEqual("My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.");
+
 
     });
 });
