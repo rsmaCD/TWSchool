@@ -55,8 +55,27 @@ class Student extends Person{
     }
 }
 
+class Teacher extends Person{
+    constructor(id,name,age,classes){
+        super(id,name,age);
+        this.classes = classes;
+    }
+    introduce(){
+        if(this.classes === undefined || this.classes.length === 0){
+            return super.introduce() + ` I am a Teacher. I teach No Class.`;
+        }
+        let classesNum = '';
+        for(let i = 0;i < this.classes.length;i++){
+            classesNum += this.classes[i].getClassNum() + ', ';
+        }
+        classesNum = classesNum.substring(0,classesNum.length-2);
+        return super.introduce() + ` I am a Teacher. I teach Class ${classesNum}.`;
+    }
+}
+
 module.exports = {
     Person,
     Class,
-    Student
+    Student,
+    Teacher
 }
