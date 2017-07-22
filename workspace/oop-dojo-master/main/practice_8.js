@@ -21,11 +21,19 @@ class Student extends Person{
 
     constructor(name,age,classNum){
         super(name, age);
-        this.class = classNum;
+        this.classobj = classNum;
     }
 
     introduce(){
-        return super.introduce() + " " + `I am a Student. I am at Class ${this.class.getClassNum()}.`;
+        return super.introduce() + " " + `I am a Student. I am at Class ${this.getClassNum()}.`;
+    }
+
+    getClassNum(){
+        return this.classobj.getClassNum();
+    }
+
+    getName(){
+        return this.name;
     }
 }
 
@@ -33,20 +41,30 @@ class Teacher extends Person{
 
     constructor(name,age,classNum){
         super(name,age);
-        this.class = classNum;
+        this.classobj = classNum;
 
+    }
+    getClassNum(){
+        return this.classobj.getClassNum();
     }
 
     introduce(){
-        if(this.class != undefined){
-            return super.introduce() + " " + `I am a Teacher. I teach Class ${this.class.getClassNum()}.`;
+        if(this.classobj !== undefined){
+            return super.introduce() + " " + `I am a Teacher. I teach Class ${this.getClassNum()}.`;
         }else{
             return super.introduce() + " " + `I am a Teacher. I teach No Class.`;
         }
 
     }
 
-    introduceWith(){}
+    introduceWith(student){
+        if(this.classobj !== undefined && this.getClassNum() === student.getClassNum()){
+            return super.introduce() + ` I am a Teacher. I teach ${student.getName()}.`;
+        }else{
+            return super.introduce() + ` I am a Teacher. I don't teach ${student.getName()}.`;
+        }
+
+    }
 }
 
 module.exports =  {

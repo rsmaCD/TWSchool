@@ -12,4 +12,14 @@ describe("OO入门", function(){
         expect(teacher1.introduce()).toEqual('My name is Tom. I am 21 years old. I am a Teacher. I teach Class 2.');
         expect(teacher2.introduce()).toEqual('My name is Tom. I am 21 years old. I am a Teacher. I teach No Class.');
     });
+
+
+    it("对象之间的交互-3", function(){
+        const classObj = new ClassObj(2);
+        const student = new Student('Jerry',21,classObj);
+        const teacher1 = new Teacher('Tom',21,classObj);
+        const teacher2 = new Teacher('Tom',21);
+        expect(teacher1.introduceWith(student)).toEqual('My name is Tom. I am 21 years old. I am a Teacher. I teach Jerry.');
+        expect(teacher2.introduceWith(student)).toEqual('My name is Tom. I am 21 years old. I am a Teacher. I don\'t teach Jerry.');
+    });
 });
