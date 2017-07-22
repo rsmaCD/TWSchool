@@ -2,7 +2,6 @@
 import {Person,Class,Student,Teacher} from '../../main/practice_11';
 describe("OO入门", function(){
     it("对象之间的交互-5", function(){
-        it("对象之间的交互-4", function(){
             const person = new Person(110,'Tom',21);
             expect(person.introduce()).toEqual('My name is Tom. I am 21 years old.');
 
@@ -16,10 +15,9 @@ describe("OO入门", function(){
             const student2 = new Student(111,'Anna',22);
             expect(classObj.assignLeader(student2)).toEqual('It is not one of us.');
 
-        });
     });
 
-    it("对象之间的交互-3", function(){
+    it("对象之间的交互-5", function(){
         const classObj1 = new Class(2);
         const classObj2 = new Class(3);
         const teacher1 = new Teacher(111,'Tom',21);
