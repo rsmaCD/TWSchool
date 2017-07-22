@@ -32,6 +32,13 @@ class Class{
     appendMember(student){
         student.setClass(this);
     }
+
+    isIn(student){
+        if(student.getClass() === this){
+            return true;
+        }
+        return false;
+    }
 }
 
 class Student extends Person{
@@ -70,6 +77,15 @@ class Teacher extends Person{
         }
         classesNum = classesNum.substring(0,classesNum.length-2);
         return super.introduce() + ` I am a Teacher. I teach Class ${classesNum}.`;
+    }
+
+    isTeaching(student){
+        for(let i = 0;i < this.classes.length;i++){
+            if(this.classes[i].isIn(student)){
+                return true;
+            }
+        }
+        return false;
     }
 }
 
