@@ -89,7 +89,7 @@ class Teacher extends Person{
 
     appendClasses(classes){
         this.classes = classes;
-        for(let i = 1; i < classes.length;i++){
+        for(let i = 0; i < classes.length;i++){
             classes[i].appendTeacher(this);
         }
     }
