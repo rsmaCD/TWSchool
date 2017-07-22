@@ -9,12 +9,12 @@ class Person{
     }
 }
 
-class ClassObj{
+class Class{
     constructor(classNum){
-        this.classNum = classNum;
+        this.number = classNum;
     }
     getClassNum(){
-        return this.classNum;
+        return this.number;
     }
 
     assignLeader(student){
@@ -29,36 +29,36 @@ class ClassObj{
 class Student extends Person{
     constructor(id,name,age,classObj){
         super(id,name,age);
-        this.classObj = classObj;
+        this.class = classObj;
     }
 
     getClassObj(){
-        return this.classObj;
+        return this.class;
     }
     introduce(){
-        if(this.classObj.getClassLeader() === this){
-            return super.introduce() + ` I am a Student. I am Leader of Class ${this.classObj.getClassNum()}.`;
+        if(this.class.getClassLeader() === this){
+            return super.introduce() + ` I am a Student. I am Leader of Class ${this.class.getClassNum()}.`;
         }
-        return super.introduce() + ` I am a Student. I am at Class ${this.classObj.getClassNum()}.`;
+        return super.introduce() + ` I am a Student. I am at Class ${this.class.getClassNum()}.`;
     }
 }
 
 class Teacher extends Person{
     constructor(id,name,age,classObj){
         super(id,name,age);
-        this.classObj = classObj;
+        this.class = classObj;
     }
     introduce(){
-        if(this.classObj === undefined){
+        if(this.class === undefined){
             return super.introduce() + ` I am a Teacher. I teach No Class.`;
         }
-        return super.introduce() + ` I am a Teacher. I teach Class ${this.classObj.getClassNum()}.`;
+        return super.introduce() + ` I am a Teacher. I teach Class ${this.class.getClassNum()}.`;
     }
 }
 
 module.exports = {
     Person,
     Student,
-    ClassObj,
+    Class,
     Teacher
 }
