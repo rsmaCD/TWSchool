@@ -45,6 +45,8 @@ class Teacher extends Person{
         }
 
     }
+
+    introduceWith(){}
 }
 
 module.exports =  {
