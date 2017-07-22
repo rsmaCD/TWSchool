@@ -12,6 +12,7 @@ class Person{
 class Class{
     constructor(classNum){
         this.number = classNum;
+        this.teacherList = [];
     }
     getClassNum(){
         return this.number;
@@ -22,6 +23,8 @@ class Class{
             return `It is not one of us.`;
         }else{
             this.leader = student;
+            const event = ` become Leader of Class ${this.number}.`;
+            this.informTeachers(student,event);
         }
     }
 
@@ -31,6 +34,14 @@ class Class{
 
     appendMember(student){
         student.setClass(this);
+        const event = ` has joined Class ${this.number}.`;
+        this.informTeachers(student,event);
+    }
+
+    informTeachers(student,event){
+        for(let i = 0; i < this.teacherList.length;i++) {
+            this.teacherList[i].say(student,event);
+        }
     }
 
     isIn(student){
@@ -39,6 +50,11 @@ class Class{
         }
         return false;
     }
+
+    appendTeacher(teacher){
+        this.teacherList[this.teacherList.length] = teacher;
+    }
+
 }
 
 class Student extends Person{
@@ -60,13 +76,28 @@ class Student extends Person{
         }
         return super.introduce() + ` I am a Student. I am at Class ${this.class.getClassNum()}.`;
     }
+    getName(){
+        return this.name;
+    }
 }
 
 class Teacher extends Person{
     constructor(id,name,age,classes){
         super(id,name,age);
-        this.classes = classes;
+        this.appendClasses(classes);
     }
+
+    appendClasses(classes){
+        this.classes = classes;
+        for(let i = 1; i < classes.length;i++){
+            classes[i].appendTeacher(this);
+        }
+    }
+
+    say(student,event){
+        console.log(`I am ${this.name}. I know ${student.getName()}${event}`);
+    }
+
     introduce(){
         if(this.classes === undefined || this.classes.length === 0){
             return super.introduce() + ` I am a Teacher. I teach No Class.`;
