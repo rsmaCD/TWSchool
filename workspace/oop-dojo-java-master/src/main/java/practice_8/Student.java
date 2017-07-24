@@ -15,4 +15,12 @@ public class Student extends Person {
     public String introduce() {
         return super.introduce() + " I am a Student. I am at Class " + this.kclass.getClassNum() + ".";
     }
+
+    public KClass getKClass() {
+        return this.kclass;
+    }
+
+    public String getName() {
+        return this.name;
+    }
 }
