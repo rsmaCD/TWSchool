@@ -5,6 +5,8 @@ package practice_2;
  */
 public class Student extends Person{
     private int kclass;
+    private String name;
+    private int age;
 
     public Student(String name, int age, int kclass) {
         super(name,age);
