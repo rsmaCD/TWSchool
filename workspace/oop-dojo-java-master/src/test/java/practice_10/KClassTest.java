@@ -26,7 +26,7 @@ public class KClassTest {
     @Test
     public void testAssignLeaderSuccess() throws Exception {
         kClass = new KClass(2);
-        student = new Student("Tom", 21,kClass);
+        student = new Student("111","Tom", 21,kClass);
         kClass.assignLeader(student);
 
         assertEquals(kClass.getLeader(), student);
@@ -35,7 +35,7 @@ public class KClassTest {
     @Test
     public void testAppendMerber() throws Exception {
         kClass = new KClass(2);
-        student = new Student("Tom",21);
+        student = new Student("111","Tom",21);
         kClass.appendMember(student);
 
         assertEquals(student.getKClass(), kClass);
@@ -44,7 +44,7 @@ public class KClassTest {
     @Test
     public void testAssignLeaderFail() throws Exception {
         kClass = new KClass(2);
-        student = new Student("Tom",21);
+        student = new Student("111","Tom",21);
         kClass.assignLeader(student);
 
         assertEquals(outContent.toString(),"It is not one of us.");

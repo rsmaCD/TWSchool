@@ -20,7 +20,7 @@ public class KClassTest {
     @Test
     public void testAssignLeader() throws Exception {
         kClass = new KClass(2);
-        Student student = new Student("Tom", 21,kClass);
+        Student student = new Student("111","Tom", 21,kClass);
         kClass.assignLeader(student);
 
         assertEquals(kClass.getLeader(),student);
