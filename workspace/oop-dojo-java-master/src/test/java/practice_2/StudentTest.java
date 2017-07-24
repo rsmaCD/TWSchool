@@ -7,12 +7,11 @@ import static junit.framework.TestCase.assertEquals;
 /**
  * Created by rsma on 24/07/2017.
  */
-public class PersonTest {
+public class StudentTest {
+
     @Test
     public void testIntroduce() throws Exception {
-        Person person = new Person("Tom", 21);
-        assertEquals(person.introduce(),"My name is Tom. I am 21 years old.");
+        Student student = new Student("Tom", 21, 2);
+        assertEquals(student.introduce(),"My name is Tom. I am 21 years old. I am a Student. I am at Class 2.");
     }
-
-
 }
