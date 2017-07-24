@@ -9,9 +9,17 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class PersonTest {
 
+    private Person person;
+
     @Test
     public void testIntroduce() throws Exception {
-        Person person = new Person("Tom",21);
+        person = new Person("Tom", 21);
         assertEquals(person.introduce(),"My name is Tom. I am 21 years old.");
+    }
+
+    @Test
+    public void testModifyName() throws Exception {
+        person = new Person("Tom",21);
+        person.setName("Tom Wu");
     }
 }
