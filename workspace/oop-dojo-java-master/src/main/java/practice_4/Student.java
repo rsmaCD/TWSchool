@@ -3,14 +3,13 @@ package practice_4;
 /**
  * Created by rsma on 24/07/2017.
  */
-public class Student {
+public class Student extends Person{
     private int kclass;
     private String name;
     private int age;
 
     public Student(String name, int age, int kclass) {
-        this.name = name;
-        this.age = age;
+        super(name,age);
         this.kclass = kclass;
     }
 

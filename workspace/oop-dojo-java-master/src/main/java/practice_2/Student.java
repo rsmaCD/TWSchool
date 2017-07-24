@@ -3,18 +3,18 @@ package practice_2;
 /**
  * Created by rsma on 24/07/2017.
  */
-public class Student extends Person{
+public class Student{
     private int kclass;
     private String name;
     private int age;
 
     public Student(String name, int age, int kclass) {
-        super(name,age);
+        this.name = name;
+        this.age = age;
         this.kclass = kclass;
     }
 
-    @Override
     public String introduce() {
-        return super.introduce() + " I am a Student. I am at Class " + this.kclass + ".";
+        return "My name is " + this.name + ". I am " + this.age +" years old. I am a Student. I am at Class " + this.kclass + ".";
     }
 }
