@@ -7,13 +7,13 @@ public class Teacher extends Person {
 
     private KClass kclass = null;
 
-    public Teacher(String name, int age, KClass kclass) {
-        super(name, age);
+    public Teacher(String id,String name, int age, KClass kclass) {
+        super(id,name, age);
         this.kclass = kclass;
     }
 
-    public Teacher(String name, int age) {
-        super(name,age);
+    public Teacher(String id,String name, int age) {
+        super(id,name,age);
     }
 
     @Override

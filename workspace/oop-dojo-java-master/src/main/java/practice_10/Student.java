@@ -6,13 +6,13 @@ package practice_10;
 public class Student extends Person {
     private KClass kclass;
 
-    public Student(String name, int age, KClass kclass) {
-        super(name,age);
+    public Student(String id,String name, int age, KClass kclass) {
+        super(id,name,age);
         this.kclass = kclass;
     }
 
-    public Student(String name, int age) {
-        super(name,age);
+    public Student(String id,String name, int age) {
+        super(id,name,age);
     }
 
     @Override
