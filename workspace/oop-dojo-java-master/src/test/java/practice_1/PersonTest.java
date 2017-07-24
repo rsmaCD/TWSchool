@@ -21,5 +21,7 @@ public class PersonTest {
     public void testModifyName() throws Exception {
         person = new Person("Tom",21);
         person.setName("Tom Wu");
+        assertEquals(person.introduce(),"My name is Tom Wu. I am 21 years old.");
     }
+
 }
