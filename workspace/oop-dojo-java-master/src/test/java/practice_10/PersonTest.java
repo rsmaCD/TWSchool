@@ -1,4 +1,4 @@
-package practice_9;
+package practice_10;
 
 import org.junit.Test;
 

@@ -1,7 +1,6 @@
 package practice_3;
 
 import org.junit.Test;
-import practice_2.Person;
 
 import static junit.framework.TestCase.assertEquals;
 
