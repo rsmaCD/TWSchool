@@ -5,8 +5,8 @@ package practice_4;
  */
 public class Person {
 
-    private int age;
-    private String name;
+    protected int age;
+    protected String name;
 
     public Person(String name, int age) {
         this.name = name;
