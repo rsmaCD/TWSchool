@@ -24,4 +24,9 @@ public class PersonTest {
         assertEquals(person.introduce(),"My name is Tom Wu. I am 21 years old.");
     }
 
+    @Test
+    public void testToString() throws Exception {
+        person = new Person("Tom",21);
+        assertEquals(person.toString(),"My name is Tom. I am 21 years old.");
+    }
 }
