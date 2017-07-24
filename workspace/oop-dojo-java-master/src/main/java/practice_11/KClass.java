@@ -33,4 +33,11 @@ public class KClass {
     public void appendMember(Student student){
         student.setKClass(this);
     }
+
+    public boolean isIn(Student student){
+        if(student.getKClass() == this){
+            return true;
+        }
+        return false;
+    }
 }
