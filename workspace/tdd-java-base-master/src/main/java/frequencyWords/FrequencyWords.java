@@ -88,4 +88,22 @@ public class FrequencyWords {
 
         return readResult;
     }
+
+
+    public void printSortedWordsAndFrequencyInFile(String filePath) {
+
+        List<String> fileContent = readFileTxt(filePath);
+        LinkedHashMap<String, Integer> sortedWordsAndFrequency = getSortedWordsAndFrequency(fileContent);
+        printResult(sortedWordsAndFrequency);
+    }
+
+    private LinkedHashMap<String,Integer> getSortedWordsAndFrequency(List<String> fileContent) {
+        List<String> wordsList = new ArrayList<>();
+        for (String fileLine : fileContent) {
+            wordsList.addAll(splitStr(fileLine));
+        }
+
+        LinkedHashMap<String,Integer> sortedWords = sortWords(countWords(wordsList));
+        return sortedWords;
+    }
 }

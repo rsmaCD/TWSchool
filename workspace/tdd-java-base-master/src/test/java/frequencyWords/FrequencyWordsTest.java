@@ -106,8 +106,23 @@ public class FrequencyWordsTest {
         String filePath = "words.txt";
         //When
         List<String> strList = frequencyWords.readFileTxt(filePath);
-        List<String> exceptList = Arrays.asList("a b ss","q t   q","qqq r fvf");
         //Then
+        List<String> exceptList = Arrays.asList("the day is sunny the the", "the sunny is is");
         assertEquals(strList,exceptList);
+    }
+
+    @Test
+    public void should_print_sorted_words_and_frequency_by_file_path() throws Exception {
+        //Given
+        frequencyWords = new FrequencyWords();
+        String filePath = "words.txt";
+        //When
+        frequencyWords.printSortedWordsAndFrequencyInFile(filePath);
+        //Then
+        String exceptResult = "the 4\n"
+                + "is 3\n"
+                +"sunny 2\n"
+                +"day 1\n";
+        assertEquals(outContent.toString(),exceptResult);
     }
 }
