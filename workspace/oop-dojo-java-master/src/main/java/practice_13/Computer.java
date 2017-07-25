@@ -6,16 +6,15 @@ import java.util.Observer;
 /**
  * Created by rsma on 24/07/2017.
  */
-public class Computer implements X,Observer{
+public class Computer implements X{
 
-    private String name = "Machine";
+    private String name = "the Machine";
 
     @Override
     public void inform(String str) {
-        System.out.print("I am the " + this.name + ". I know " + str);
+        System.out.print(String.format(notifyInformationTemplate,this.name,str));
     }
 
-    @Override
     public void myAddObserver(KClass kclass) {
         kclass.addObserver(this);
     }

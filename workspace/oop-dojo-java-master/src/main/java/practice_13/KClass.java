@@ -9,6 +9,9 @@ public class KClass extends Observable {
 
     private int number;
     private Student leader;
+    private final String assignLeaderFailTemplate = "It is not one of us.";
+    private final String notifyAssignLeaderSuccessTemplate = " become Leader of Class %d.";
+    private final String notifyAppendMemberSuccessTemplate = " has joined Class %d.";
 
 
     public KClass(int num) {
@@ -22,12 +25,11 @@ public class KClass extends Observable {
 
     public void assignLeader(Student student) {
         if(student.getKClass() != this){
-            System.out.print("It is not one of us.");
+            System.out.print(assignLeaderFailTemplate);
         }else{
             this.leader = student;
-            String str = student.getName() + " become Leader of Class " + this.getClassNum() + ".";
-            this.setChanged();
-            this.notifyObservers(str);
+            String event = student.getName() + String.format(notifyAssignLeaderSuccessTemplate,this.number);
+            myNotifyObservers(event);
         }
     }
 
@@ -37,9 +39,13 @@ public class KClass extends Observable {
 
     public void appendMember(Student student){
         student.setKClass(this);
-        String str = student.getName() + " has joined Class " + this.getClassNum() + ".";
+        String event = student.getName() + String.format(notifyAppendMemberSuccessTemplate,this.number);
+        myNotifyObservers(event);
+    }
+
+    public void myNotifyObservers(String event) {
         this.setChanged();
-        this.notifyObservers(str);
+        this.notifyObservers(event);
     }
 
     public boolean isIn(Student student){

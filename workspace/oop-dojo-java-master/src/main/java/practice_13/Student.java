@@ -4,6 +4,9 @@ package practice_13;
  * Created by rsma on 24/07/2017.
  */
 public class Student extends Person {
+
+    private final String notLeaderStudentIntroduceTemplate = " I am a Student. I am at Class %d.";
+    private final String leaderStudentIntroduceTemplate = " I am a Student. I am Leader of Class %d.";
     private KClass kclass;
 
     public Student(String id, String name, int age, KClass kclass) {
@@ -18,10 +21,9 @@ public class Student extends Person {
     @Override
     public String introduce() {
         if(this.kclass.getLeader() == this){
-
-            return super.introduce() + " I am a Student. I am Leader of Class " + this.kclass.getClassNum() + ".";
+            return super.introduce() + String.format(leaderStudentIntroduceTemplate,this.kclass.getClassNum());
         }
-        return super.introduce() + " I am a Student. I am at Class " + this.kclass.getClassNum() + ".";
+        return super.introduce() + String.format(notLeaderStudentIntroduceTemplate,this.kclass.getClassNum());
     }
 
     public KClass getKClass() {
