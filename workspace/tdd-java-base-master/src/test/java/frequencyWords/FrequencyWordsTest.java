@@ -79,5 +79,23 @@ public class FrequencyWordsTest {
         assertEquals(actualHashMap,exceptHashMap);
     }
 
-
+    @Test
+    public void should_print_sorted_words_by_frequency_when_call_printresult() throws Exception {
+        //Given
+        frequencyWords = new FrequencyWords();
+        HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
+        stringIntegerHashMap.put("day",1);
+        stringIntegerHashMap.put("sunny",2);
+        stringIntegerHashMap.put("is",3);
+        stringIntegerHashMap.put("the",4);
+        //When
+        LinkedHashMap<String,Integer> actualMap = frequencyWords.sortWords(stringIntegerHashMap);
+        frequencyWords.printResult(actualMap);
+        //Then
+        String exceptResult = "the 4\n"
+                + "is 3\n"
+                +"sunny 2\n"
+                +"day 1\n";
+        assertEquals(outContent.toString(),exceptResult);
+    }
 }

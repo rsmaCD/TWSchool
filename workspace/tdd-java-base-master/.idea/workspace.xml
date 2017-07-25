@@ -29,8 +29,8 @@
       <file leaf-file-name="FrequencyWordsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/frequencyWords/FrequencyWordsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="94" column="38" lean-forward="false" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#664#665#0" expanded="true" />
@@ -43,8 +43,8 @@
       <file leaf-file-name="FrequencyWords.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/frequencyWords/FrequencyWords.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="62" column="70" lean-forward="false" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -501,7 +501,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FrequencyWordsTest.should_get_sorted_words_and_frequency_when_call_sortwords">
+  <component name="RunManager" selected="JUnit.FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult">
     <configuration default="false" name="FrequencyWordsTest.should_get_string_list_when_call_splitstring" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -994,8 +994,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_get_sorted_words_and_frequency_when_call_sortwords" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_get_sorted_words_and_frequency_when_call_sortwords" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_get_words_and_frequency_when_call_countwords" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FrequencyWordsTest.should_get_string_list_when_call_splitstring" />
       </list>
@@ -1011,7 +1011,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1500968303030</updated>
-      <workItem from="1500968304346" duration="7672000" />
+      <workItem from="1500968304346" duration="7936000" />
     </task>
     <servers />
   </component>
@@ -1037,18 +1037,18 @@
     <history-entry file="FrequencyWordsTest_should_get_sorted_words_and_frequency_when_call_sortwords - 2017.07.25 at 18h 04m 12s.xml">
       <configuration name="FrequencyWordsTest.should_get_sorted_words_and_frequency_when_call_sortwords" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrequencyWordsTest_should_print_sorted_words_by_frequency_when_call_printresult - 2017.07.25 at 17h 49m 34s.xml">
+    <history-entry file="FrequencyWordsTest_should_get_sorted_words_and_frequency_when_call_sortwords - 2017.07.25 at 18h 04m 46s.xml">
+      <configuration name="FrequencyWordsTest.should_get_sorted_words_and_frequency_when_call_sortwords" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FrequencyWordsTest_should_print_sorted_words_by_frequency_when_call_printresult - 2017.07.25 at 18h 08m 13s.xml">
       <configuration name="FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FrequencyWordsTest_should_print_sorted_words_by_frequency_when_call_printresult - 2017.07.25 at 17h 55m 36s.xml">
-      <configuration name="FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FrequencyWordsTest_should_print_sorted_words_by_frequency_when_call_printresult - 2017.07.25 at 18h 00m 13s.xml">
+    <history-entry file="FrequencyWordsTest_should_print_sorted_words_by_frequency_when_call_printresult - 2017.07.25 at 18h 08m 49s.xml">
       <configuration name="FrequencyWordsTest.should_print_sorted_words_by_frequency_when_call_printresult" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7672000" />
+    <option name="totallyTimeSpent" value="7936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1063,7 +1063,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28313252" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1139,8 +1139,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/frequencyWords/FrequencyWordsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="403">
+          <caret line="94" column="38" lean-forward="false" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#664#665#0" expanded="true" />
@@ -1151,8 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/frequencyWords/FrequencyWords.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="62" column="70" lean-forward="false" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="70" />
           <folding />
         </state>
       </provider>

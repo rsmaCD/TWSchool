@@ -42,13 +42,9 @@ public class FrequencyWords {
         Collections.sort(infos, new Comparator<Map.Entry<String, Integer>>(){
 
             @Override
-
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-
                 return o2.getValue() - o1.getValue();
-
             }
-
         });
 
         for(Map.Entry<String, Integer> entry:infos){
@@ -60,4 +56,12 @@ public class FrequencyWords {
 
     }
 
+    public void printResult(LinkedHashMap<String, Integer> map) {
+
+        for(Map.Entry<String, Integer> entry:map.entrySet()){
+
+            System.out.println(entry.getKey() + " " + entry.getValue());
+
+        }
+    }
 }
