@@ -1,8 +1,6 @@
 package frequencyWords;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by rsma on 25/07/2017.
@@ -35,4 +33,31 @@ public class FrequencyWords {
 
         return wordsAndFrequency;
     }
+
+    public LinkedHashMap<String,Integer> sortWords(HashMap<String, Integer> map) {
+        LinkedHashMap<String,Integer> sortedWordsAndFrequency = new LinkedHashMap<>();
+
+        List<Map.Entry<String, Integer>> infos = new ArrayList<>(map.entrySet());
+
+        Collections.sort(infos, new Comparator<Map.Entry<String, Integer>>(){
+
+            @Override
+
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+
+                return o2.getValue() - o1.getValue();
+
+            }
+
+        });
+
+        for(Map.Entry<String, Integer> entry:infos){
+
+            sortedWordsAndFrequency.put(entry.getKey(), entry.getValue());
+
+        }
+        return sortedWordsAndFrequency;
+
+    }
+
 }
