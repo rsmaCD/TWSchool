@@ -9,7 +9,7 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class PersonTest {
     @Test
-    public void testIntroduce() throws Exception {
+    public void should_get_person_introduce() throws Exception {
         Person person = new Person("111","Tom", 21);
         assertEquals(person.introduce(),"My name is Tom. I am 21 years old.");
     }

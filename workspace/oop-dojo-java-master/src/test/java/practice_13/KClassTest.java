@@ -19,13 +19,13 @@ public class KClassTest{
     private Student student;
 
     @Test
-    public void testGetNum() throws Exception {
+    public void should_get_class_number_when_call_getclassnum() throws Exception {
         kClass = new KClass(2);
         assertEquals(kClass.getClassNum(),2);
     }
 
     @Test
-    public void testAssignLeaderSuccess() throws Exception {
+    public void should_get_leader_when_call_getleader() throws Exception {
         kClass = new KClass(2);
         student = new Student("111","Tom", 21,kClass);
         kClass.assignLeader(student);
@@ -34,7 +34,7 @@ public class KClassTest{
     }
 
     @Test
-    public void testAppendMerber() throws Exception {
+    public void student_class_should_be_assign_this_class() throws Exception {
         kClass = new KClass(2);
         student = new Student("111","Tom",21);
         kClass.appendMember(student);
@@ -43,7 +43,7 @@ public class KClassTest{
     }
 
     @Test
-    public void testAssignLeaderFail() throws Exception {
+    public void should_fail_when_assign_leader_when_student_not_in_this_class() throws Exception {
         kClass = new KClass(2);
         student = new Student("111","Tom",21);
         kClass.assignLeader(student);
@@ -52,7 +52,7 @@ public class KClassTest{
     }
 
     @Test
-    public void testInformTeacher1() throws Exception {
+    public void infrom_teacher_when_class_append_member() throws Exception {
         kClass = new KClass(2);
         student = new Student("111","Jerry",21);
         Teacher teacher = new Teacher("110","Tom",21, Arrays.asList(new KClass[]{kClass}));
@@ -62,14 +62,14 @@ public class KClassTest{
     }
 
     @Test
-    public void testInformTeacher2() throws Exception {
+    public void infrom_teacher_when_class_assign_leader() throws Exception {
         kClass = new KClass(2);
         KClass kClass2 = new KClass(3);
         student = new Student("111","Jerry",21,kClass);
-        Teacher teacher = new Teacher("110","Tom",21, Arrays.asList(new KClass[]{kClass2}));
+        Teacher teacher = new Teacher("110","Tom",21, Arrays.asList(new KClass[]{kClass2,kClass}));
         kClass.assignLeader(student);
 
-        assertEquals(outContent.toString(),"");
+        assertEquals(outContent.toString(),"I am Tom. I know Jerry become Leader of Class 2.");
     }
 
     @Test
