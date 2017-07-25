@@ -1,17 +1,22 @@
 package practice_13;
 
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by rsma on 24/07/2017.
  */
-public class Teacher extends Person implements X{
+public class Teacher extends Person implements X,Observer {
 
     private List<KClass> kClassList = null;
 
     public Teacher(String id, String name, int age, List<KClass> kclass) {
         super(id,name, age);
         this.kClassList = kclass;
+        for (int i = 0; i < kClassList.size();i++) {
+            kClassList.get(i).addObserver(this);
+        }
     }
 
     public Teacher(String id, String name, int age) {
@@ -41,13 +46,14 @@ public class Teacher extends Person implements X{
         return false;
     }
 
+
     @Override
-    public void informAssignLeader(Student student, KClass kClass) {
-        System.out.println("I am "+ this.name + ". I know "+ student.getName() +" has joined Class "+ kClass.getClassNum() +".");
+    public void informTeacher(String str) {
+        System.out.print("I am " + this.name + ". I know " + str);
     }
 
     @Override
-    public void informAppendMember(Student student, KClass kClass) {
-        System.out.println("I am "+ this.name + ". I know "+ student.getName() +" has become Leader of  Class "+ kClass.getClassNum() +".");
+    public void update(Observable o, Object arg) {
+        informTeacher((String)arg);
     }
 }

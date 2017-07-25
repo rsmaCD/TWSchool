@@ -64,11 +64,12 @@ public class KClassTest{
     @Test
     public void testInformTeacher2() throws Exception {
         kClass = new KClass(2);
+        KClass kClass2 = new KClass(3);
         student = new Student("111","Jerry",21,kClass);
-        Teacher teacher = new Teacher("110","Tom",21, Arrays.asList(new KClass[]{kClass}));
+        Teacher teacher = new Teacher("110","Tom",21, Arrays.asList(new KClass[]{kClass2}));
         kClass.assignLeader(student);
 
-        assertEquals(outContent.toString(),"I am Tom. I know Jerry become Leader of Class 2.");
+        assertEquals(outContent.toString(),"");
     }
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();

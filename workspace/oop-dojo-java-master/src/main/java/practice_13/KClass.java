@@ -1,12 +1,15 @@
 package practice_13;
 
+import java.util.Observable;
+
 /**
  * Created by rsma on 24/07/2017.
  */
-public class KClass{
+public class KClass extends Observable {
 
     private int number;
     private Student leader;
+
 
     public KClass(int num) {
         this.number = num;
@@ -22,8 +25,9 @@ public class KClass{
             System.out.print("It is not one of us.");
         }else{
             this.leader = student;
-            new Teacher().informAppendMember(student,this);
-            new Computer().informAppendMember(student,this);
+            String str = student.getName() + " become Leader of Class " + this.getClassNum() + ".";
+            this.setChanged();
+            this.notifyObservers(str);
         }
     }
 
@@ -33,7 +37,9 @@ public class KClass{
 
     public void appendMember(Student student){
         student.setKClass(this);
-        new Teacher().informAssignLeader(student,this);
+        String str = student.getName() + " has joined Class " + this.getClassNum() + ".";
+        this.setChanged();
+        this.notifyObservers(str);
     }
 
     public boolean isIn(Student student){
