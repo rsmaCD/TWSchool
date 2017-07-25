@@ -72,6 +72,28 @@ public class KClassTest{
         assertEquals(outContent.toString(),"");
     }
 
+    @Test
+    public void infrom_machine_when_class_append_member() throws Exception {
+        kClass = new KClass(2);
+        student = new Student("111","Jerry",21);
+        Computer computer = new Computer();
+        computer.myAddObserver(kClass);
+        kClass.appendMember(student);
+
+        assertEquals(outContent.toString(),"I am the Machine. I know Jerry has joined Class 2.");
+    }
+
+    @Test
+    public void infrom_machine_when_class_assign_leader() throws Exception {
+        kClass = new KClass(2);
+        student = new Student("111","Jerry",21,kClass);
+        Computer computer = new Computer();
+        computer.myAddObserver(kClass);
+        kClass.assignLeader(student);
+
+        assertEquals(outContent.toString(),"I am the Machine. I know Jerry become Leader of Class 2.");
+    }
+
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before

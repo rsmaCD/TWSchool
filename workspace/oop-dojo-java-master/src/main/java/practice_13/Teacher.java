@@ -7,7 +7,7 @@ import java.util.Observer;
 /**
  * Created by rsma on 24/07/2017.
  */
-public class Teacher extends Person implements X,Observer {
+public class Teacher extends Person implements X{
 
     private List<KClass> kClassList = null;
 
@@ -15,7 +15,7 @@ public class Teacher extends Person implements X,Observer {
         super(id,name, age);
         this.kClassList = kclass;
         for (int i = 0; i < kClassList.size();i++) {
-            kClassList.get(i).addObserver(this);
+            myAddObserver(kClassList.get(i));
         }
     }
 
@@ -48,12 +48,17 @@ public class Teacher extends Person implements X,Observer {
 
 
     @Override
-    public void informTeacher(String str) {
+    public void inform(String str) {
         System.out.print("I am " + this.name + ". I know " + str);
     }
 
     @Override
+    public void myAddObserver(KClass kclass) {
+        kclass.addObserver(this);
+    }
+
+    @Override
     public void update(Observable o, Object arg) {
-        informTeacher((String)arg);
+        inform((String)arg);
     }
 }
