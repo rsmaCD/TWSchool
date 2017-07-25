@@ -98,4 +98,16 @@ public class FrequencyWordsTest {
                 +"day 1\n";
         assertEquals(outContent.toString(),exceptResult);
     }
+
+    @Test
+    public void should_get_string_list_by_file_path() throws Exception {
+        //Given
+        frequencyWords = new FrequencyWords();
+        String filePath = "words.txt";
+        //When
+        List<String> strList = frequencyWords.readFileTxt(filePath);
+        List<String> exceptList = Arrays.asList("a b ss","q t   q","qqq r fvf");
+        //Then
+        assertEquals(strList,exceptList);
+    }
 }

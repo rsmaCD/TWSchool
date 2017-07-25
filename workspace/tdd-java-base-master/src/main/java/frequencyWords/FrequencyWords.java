@@ -1,5 +1,6 @@
 package frequencyWords;
 
+import java.io.*;
 import java.util.*;
 
 /**
@@ -63,5 +64,28 @@ public class FrequencyWords {
             System.out.println(entry.getKey() + " " + entry.getValue());
 
         }
+    }
+
+    public List<String> readFileTxt(String filePath) {
+        List<String> readResult = new ArrayList<>();
+        String encoding="GBK";
+        try {
+            InputStreamReader read = new InputStreamReader(
+                    new FileInputStream(filePath),encoding);//考虑到编码格式
+            BufferedReader bufferedReader = new BufferedReader(read);
+            String lineTxt = null;
+            while((lineTxt = bufferedReader.readLine()) != null){
+                readResult.add(lineTxt);
+            }
+            read.close();
+        }
+        catch(FileNotFoundException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return readResult;
     }
 }
