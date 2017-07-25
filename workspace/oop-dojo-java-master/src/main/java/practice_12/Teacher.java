@@ -44,6 +44,6 @@ public class Teacher extends Person implements Observer{
 
     @Override
     public void update(Observable o, Object obj) {
-        System.out.print("I am Tom. I know " + (String)obj);
+        System.out.print("I am " + this.name + ". I know " + (String)obj);
     }
 }
