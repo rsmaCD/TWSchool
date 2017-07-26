@@ -9,17 +9,16 @@ public class Reports {
 
 
     private List<Student> studentList;
+    private final static String reportsHeadTemplate = "成绩单\n姓名|数学|语文|英语|编程|平均分|总分 \n========================\n";
+    private final static String reportsTailTemplate = "========================\n全班总平均分：0\n全班总分中位数：0";
 
     public Reports(List<Student> students) {
         this.studentList = students;
     }
 
-    public String creatReports() {
-        return "成绩单\n" +
-                "姓名|数学|语文|英语|编程|平均分|总分 \n" +
-                "========================\n" +
-                "========================\n" +
-                "全班总平均分：0\n" +
-                "全班总分中位数：0";
+    public String createReports() {
+
+        return reportsHeadTemplate +
+                reportsTailTemplate;
     }
 }

@@ -3,7 +3,6 @@ package studentScore;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import static junit.framework.TestCase.assertEquals;
@@ -25,7 +24,7 @@ public class ReportsTest {
                 "全班总平均分：0\n" +
                 "全班总分中位数：0";
         //When
-        String  actual = reports.creatReports();
+        String  actual = reports.createReports();
         //Then
         assertEquals(emptyReports,actual);
 
