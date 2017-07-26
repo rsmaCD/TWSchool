@@ -62,10 +62,10 @@ public class Reports {
         totalScoreList.sort(Comparator.naturalOrder());
 
         if(totalScoreList.size()%2 == 0){
-            return ((double) (totalScoreList.get(totalScoreList.size()/2 - 1) + totalScoreList.get(totalScoreList.size()/2)))/totalScoreList.size();
+            return ((double) (totalScoreList.get(totalScoreList.size()/2 - 1) + totalScoreList.get(totalScoreList.size()/2)))/2;
 
         }
-        return ((double)totalScoreList.get(totalScoreList.size()/2))/totalScoreList.size();
+        return ((double)totalScoreList.get(totalScoreList.size()/2));
     }
 
     private double calcAverageScore(){

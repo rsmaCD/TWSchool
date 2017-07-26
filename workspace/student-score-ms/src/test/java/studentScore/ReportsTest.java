@@ -30,6 +30,10 @@ public class ReportsTest {
         Score score2 = new Score(2, 2, 2, 2);
         Student lili = new Student("110","Lili",score2);
         when(mockStudentManager.getStudentById("110")).thenReturn(lili);
+
+        Score score23 = new Score(2, 2, 2, 2);
+        Student www = new Student("112","WWW",score2);
+        when(mockStudentManager.getStudentById("112")).thenReturn(www);
     }
 
     @Test
@@ -60,7 +64,7 @@ public class ReportsTest {
     }
 
     @Test
-    public void get_students_and_score_reports_when_input_multi_students_id() throws Exception {
+    public void get_students_and_score_reports_when_input_two_students_id() throws Exception {
         //Given
         Reports.manager = mockStudentManager;
         reports = new Reports(Arrays.asList("111","110"));
@@ -69,6 +73,23 @@ public class ReportsTest {
                 .append("Tom|2|1|1|1|1.25|5\n")
                 .append("Lili|2|2|2|2|2.00|8\n")
                 .append(String.format(reportsTailTemplate,1.625,6.5)).toString();
+        //When
+        String actual = reports.createReports();
+        //Then
+        assertEquals(expectReports,actual);
+    }
+
+    @Test
+    public void get_students_and_score_reports_when_input_Three_students_id() throws Exception {
+        //Given
+        Reports.manager = mockStudentManager;
+        reports = new Reports(Arrays.asList("111","110","112"));
+        String expectReports = new StringBuilder()
+                .append(reportsHeadTemplate)
+                .append("Tom|2|1|1|1|1.25|5\n")
+                .append("Lili|2|2|2|2|2.00|8\n")
+                .append("WWW|2|2|2|2|2.00|8\n")
+                .append(String.format(reportsTailTemplate,1.75,8.0)).toString();
         //When
         String actual = reports.createReports();
         //Then

@@ -70,8 +70,8 @@
       <file leaf-file-name="ReportsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/ReportsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="70" column="67" lean-forward="false" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
+            <state relative-caret-position="411">
+              <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,8 +98,8 @@
       <file leaf-file-name="Reports.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Reports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="64" column="122" lean-forward="false" selection-start-line="64" selection-start-column="122" selection-end-line="64" selection-end-column="122" />
+            <state relative-caret-position="248">
+              <caret line="64" column="127" lean-forward="false" selection-start-line="64" selection-start-column="127" selection-end-line="64" selection-end-column="127" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -876,23 +876,11 @@
       <option name="presentableId" value="Default" />
       <updated>1501061927796</updated>
       <workItem from="1501061928897" duration="2959000" />
-      <workItem from="1501067973109" duration="7964000" />
+      <workItem from="1501067973109" duration="8353000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 09m 37s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 11m 00s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 14m 25s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 14m 48s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ReportsTest - 2017.07.26 at 22h 15m 33s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
@@ -911,9 +899,21 @@
     <history-entry file="ReportsTest - 2017.07.26 at 22h 25m 41s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 30m 41s.xml">
+      <configuration name="ReportsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 30m 53s.xml">
+      <configuration name="ReportsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 31m 35s.xml">
+      <configuration name="ReportsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 32m 00s.xml">
+      <configuration name="ReportsTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10923000" />
+    <option name="totallyTimeSpent" value="11312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -928,7 +928,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28433734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28433734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1147,8 +1147,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Reports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="64" column="122" lean-forward="false" selection-start-line="64" selection-start-column="122" selection-end-line="64" selection-end-column="122" />
+        <state relative-caret-position="248">
+          <caret line="64" column="127" lean-forward="false" selection-start-line="64" selection-start-column="127" selection-end-line="64" selection-end-column="127" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1157,8 +1157,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/ReportsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="70" column="67" lean-forward="false" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
+        <state relative-caret-position="411">
+          <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
