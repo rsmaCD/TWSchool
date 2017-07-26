@@ -1,0 +1,55 @@
+package studentScore;
+
+/**
+ * Created by rsma on 26/07/2017.
+ */
+public class Score {
+
+    private int programmingScore;
+    private int englishScore;
+    private int languageScore;
+    private int mathScore;
+    private int totalScore;
+    private double averageScore;
+
+    public Score(int mathScore, int languageScore, int englishScore, int programmingScore) {
+        this.mathScore = mathScore;
+        this.languageScore = languageScore;
+        this.englishScore = englishScore;
+        this.programmingScore = programmingScore;
+        calcTotalScore(mathScore,languageScore,englishScore,programmingScore);
+        calcAverageScore();
+    }
+
+    private void calcTotalScore(int mathScore, int languageScore, int englishScore, int programmingScore) {
+        this.totalScore = mathScore + languageScore + englishScore + programmingScore;
+    }
+
+    private void calcAverageScore() {
+        this.averageScore = (double) this.totalScore/4;
+    }
+
+    public double getAverageScore() {
+        return averageScore;
+    }
+
+    public int getTotalScore() {
+        return totalScore;
+    }
+
+    public int getEnglishScore() {
+        return englishScore;
+    }
+
+    public int getLanguageScore() {
+        return languageScore;
+    }
+
+    public int getMathScore() {
+        return mathScore;
+    }
+
+    public int getProgrammingScore() {
+        return programmingScore;
+    }
+}
