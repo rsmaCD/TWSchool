@@ -54,42 +54,55 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="StudentScoreSystemTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/StudentScoreSystemTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding>
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="446">
+              <caret line="39" column="5" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportsTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentScoreSystem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/StudentScoreSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Score.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="56" column="25" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/ReportsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+            <state relative-caret-position="30">
+              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/StudentManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#870#871#0" expanded="true" />
-                <element signature="e#917#918#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +111,8 @@
       <file leaf-file-name="Reports.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Reports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="64" column="127" lean-forward="false" selection-start-line="64" selection-start-column="127" selection-end-line="64" selection-end-column="127" />
+            <state relative-caret-position="251">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,7 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/studentScore/Score.java" />
         <option value="$PROJECT_DIR$/src/test/java/studentScore/ScoreTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/studentScore/StudentTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/studentScore/StudentManager.java" />
@@ -133,8 +145,12 @@
         <option value="$PROJECT_DIR$/src/main/java/studentScore/StudentManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/studentScore/StudentManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/studentScore/Tools.java" />
-        <option value="$PROJECT_DIR$/src/main/java/studentScore/Reports.java" />
+        <option value="$PROJECT_DIR$/src/test/java/studentScore/StudentScoreSystem.java" />
         <option value="$PROJECT_DIR$/src/test/java/studentScore/ReportsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/studentScore/Reports.java" />
+        <option value="$PROJECT_DIR$/src/test/java/studentScore/StudentScoreSystemTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/studentScore/Score.java" />
+        <option value="$PROJECT_DIR$/src/main/java/studentScore/StudentScoreSystem.java" />
       </list>
     </option>
   </component>
@@ -318,33 +334,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReportsTest">
-    <configuration default="false" name="StudentManagerTest.should_get_null_when_find_not_exist_student" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="studentScore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="student-score-ms" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="studentScore" />
-      <option name="MAIN_CLASS_NAME" value="studentScore.StudentManagerTest" />
-      <option name="METHOD_NAME" value="should_get_null_when_find_not_exist_student" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.StudentScoreSystemTest.should_call_creatstudent_when_input_legal">
     <configuration default="false" name="ReportsTest.get_student_and_score_reports_when_input_one_student_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
@@ -436,6 +426,32 @@
       <option name="PACKAGE_NAME" value="studentScore" />
       <option name="MAIN_CLASS_NAME" value="studentScore.ReportsTest" />
       <option name="METHOD_NAME" value="get_empty_reports_when_input_no_student_id" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="studentScore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="student-score-ms" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="studentScore" />
+      <option name="MAIN_CLASS_NAME" value="studentScore.StudentScoreSystemTest" />
+      <option name="METHOD_NAME" value="should_call_creatstudent_when_input_legal" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
@@ -831,19 +847,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StudentManagerTest.should_get_null_when_find_not_exist_student" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_student_and_score_reports_when_input_one_student_id" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StudentManagerTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ReportsTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_empty_reports_when_input_no_student_id" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_student_and_score_reports_when_input_one_student_id" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StudentManagerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ReportsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_empty_reports_when_input_no_student_id" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StudentScoreSystemTest.should_call_creatstudent_when_input_legal" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ReportsTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_student_and_score_reports_when_input_one_student_id" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_empty_reports_when_input_no_student_id" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StudentManagerTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentManagerTest.should_get_null_when_find_not_exist_student" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StudentScoreSystemTest.should_call_creatstudent_when_input_legal" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ReportsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_student_and_score_reports_when_input_one_student_id" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ReportsTest.get_empty_reports_when_input_no_student_id" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentManagerTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -876,44 +892,44 @@
       <option name="presentableId" value="Default" />
       <updated>1501061927796</updated>
       <workItem from="1501061928897" duration="2959000" />
-      <workItem from="1501067973109" duration="8353000" />
+      <workItem from="1501067973109" duration="11102000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 15m 33s.xml">
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 38m 33s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 16m 02s.xml">
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 38m 49s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 24m 05s.xml">
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 51m 15s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 24m 34s.xml">
+    <history-entry file="ReportsTest - 2017.07.26 at 22h 52m 13s.xml">
       <configuration name="ReportsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 25m 24s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 12m 27s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 25m 41s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 15m 36s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 30m 41s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 16m 21s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 30m 53s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 16m 40s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 31m 35s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 17m 25s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ReportsTest - 2017.07.26 at 22h 32m 00s.xml">
-      <configuration name="ReportsTest" configurationId="JUnit" />
+    <history-entry file="StudentScoreSystemTest_should_call_creatstudent_when_input_legal - 2017.07.26 at 23h 17m 37s.xml">
+      <configuration name="StudentScoreSystemTest.should_call_creatstudent_when_input_legal" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11312000" />
+    <option name="totallyTimeSpent" value="14061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -928,7 +944,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28433734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28433734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -940,7 +956,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -962,7 +978,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/studentScore/StudentScoreSystem.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1109,36 +1133,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#888#889#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/StudentManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
+        <state relative-caret-position="536">
           <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
             <element signature="e#870#871#0" expanded="true" />
             <element signature="e#917#918#0" expanded="true" />
           </folding>
@@ -1147,8 +1147,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Reports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="64" column="127" lean-forward="false" selection-start-line="64" selection-start-column="127" selection-end-line="64" selection-end-column="127" />
+        <state relative-caret-position="251">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1157,11 +1157,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/ReportsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="35" column="69" lean-forward="false" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        <state relative-caret-position="30">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="39" column="5" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="56" column="25" lean-forward="false" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/studentScore/StudentScoreSystemTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="30" column="75" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/studentScore/StudentScoreSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="76" lean-forward="false" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>

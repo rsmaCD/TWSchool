@@ -39,6 +39,7 @@ public class ReportsTest {
     @Test
     public void get_empty_reports_when_input_no_student_id() throws Exception {
         //Given
+        Reports.manager = mockStudentManager;
         reports = new Reports(Arrays.asList());
         String emptyReports = new StringBuilder().append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
         //When

@@ -52,4 +52,22 @@ public class Score {
     public int getProgrammingScore() {
         return programmingScore;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj.getClass() != this.getClass()){
+            return false;
+        }
+        if(this.programmingScore == ((Score)obj).getProgrammingScore()){
+            if(this.mathScore == ((Score)obj).getMathScore()){
+                if(this.languageScore == ((Score)obj).getLanguageScore()){
+                    if(this.englishScore == ((Score)obj).getEnglishScore()){
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
 }

@@ -27,13 +27,14 @@ public class Reports {
 
     public String createReports() {
 
+        StringBuilder sb = new StringBuilder();
         if(studentList.size() == 0){
-            return new StringBuilder().append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
+            return sb.append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
         }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(reportsHeadTemplate).append(formatStudentsScore()).append(String.format(reportsTailTemplate,calcAverageScore(),calcMedanScore()));
-
+        sb.append(reportsHeadTemplate)
+                .append(formatStudentsScore())
+                .append(String.format(reportsTailTemplate,calcAverageScore(), calcMedianScore()));
 
         return sb.toString();
     }
@@ -53,7 +54,7 @@ public class Reports {
         return sb.toString();
     }
 
-    private double calcMedanScore(){
+    private double calcMedianScore(){
 
         List<Integer> totalScoreList = new ArrayList<>();
         for (Student student:studentList) {
