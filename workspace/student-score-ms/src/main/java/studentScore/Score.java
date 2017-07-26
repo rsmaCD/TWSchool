@@ -26,7 +26,7 @@ public class Score {
     }
 
     private void calcAverageScore() {
-        this.averageScore = (double) this.totalScore/4;
+        this.averageScore = (double)this.totalScore/4;
     }
 
     public double getAverageScore() {
