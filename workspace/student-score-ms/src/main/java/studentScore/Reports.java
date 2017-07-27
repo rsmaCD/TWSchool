@@ -20,17 +20,18 @@ public class Reports {
 
     }
 
-    public String createReports(List<String> studentsId) {
-
-
+    public void setStudentList(List<String> studentsId) {
         for (String id:studentsId) {
             Student student = manager.getStudentById(id);
             if(student != null){
                 studentList.add(student);
             }
         }
+    }
 
+    public String createReports(List<String> studentsId) {
 
+        setStudentList(studentsId);
         StringBuilder sb = new StringBuilder();
         if(studentList.size() == 0){
             return sb.append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
