@@ -25,6 +25,7 @@ public class Reports {
     }
 
     public void setStudentList(List<String> studentsId) {
+        studentList = new ArrayList<>();
         for (String id:studentsId) {
             Student student = manager.getStudentById(id);
             if(student != null){

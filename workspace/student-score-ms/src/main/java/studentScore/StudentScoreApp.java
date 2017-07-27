@@ -29,12 +29,7 @@ public class StudentScoreApp {
 
     private StudentScoreService studentScoreService = new StudentScoreService();
 
-    public StudentScoreApp() {
-    }
-
-    public StudentScoreApp(String status) {
-        this.status = status;
-    }
+    public StudentScoreApp() {}
 
     public StudentScoreApp(StudentScoreService studentScoreService) {
         this.studentScoreService = studentScoreService;
