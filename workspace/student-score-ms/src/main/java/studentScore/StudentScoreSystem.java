@@ -1,22 +1,44 @@
 package studentScore;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * Created by rsma on 26/07/2017.
  */
 public class StudentScoreSystem {
 
-    public static StudentManager manager = StudentManager.getInstance();
+    private static StudentManager manager;
     private final static String createStudentInputTemplate = "[0-9]+,[a-zA-Z]+,[0-9]+,[0-9]+,[0-9]+,[0-9]+";
+    private final static String createReportsInputTemplate = "([0-9]+(,)?)*[0-9]+$";
+    private Reports reports;
 
-    public boolean CreateStudent(String createStudentInput) {
+    public StudentScoreSystem(StudentManager manager,Reports reports){
+        this.manager = manager;
+        this.reports = reports;
+    }
+
+    public boolean createStudent(String createStudentInput) {
         if(createStudentInput.matches(createStudentInputTemplate)){
-            String input[] = createStudentInput.split(",");
-            boolean createStudentFlag = manager.createStudent(input[0],input[1],new Score(Integer.valueOf(input[2])
-                    ,Integer.valueOf(input[3])
-                    ,Integer.valueOf(input[4])
-                    ,Integer.valueOf(input[5])));
+            String[] split = createStudentInput.split(",");
+            boolean createStudentFlag = manager.createStudent(split[0],split[1]
+                    ,new Score(Integer.valueOf(split[2])
+                    ,Integer.valueOf(split[3])
+                    ,Integer.valueOf(split[4])
+                    ,Integer.valueOf(split[5])));
             return createStudentFlag;
         }
         return false;
+    }
+
+    public String createReports(String createReportsInput) {
+        if(createReportsInput.matches(createReportsInputTemplate)){
+            reports = new Reports(Arrays.asList(createReportsInput
+                    .split(","))
+                    .stream()
+                    .collect(Collectors.toList()));
+            return reports.createReports();
+        }
+        return null;
     }
 }

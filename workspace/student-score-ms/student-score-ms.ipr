@@ -171,7 +171,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module filepath="$PROJECT_DIR$/student-score-ms.iml" fileurl="file://$PROJECT_DIR$/student-score-ms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-score-ms.iml" filepath="$PROJECT_DIR$/student-score-ms.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
