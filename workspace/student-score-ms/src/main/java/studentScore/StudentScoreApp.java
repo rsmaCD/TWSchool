@@ -40,6 +40,10 @@ public class StudentScoreApp {
         this.studentScoreService = studentScoreService;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
     public void appInterface() {
         while (this.status != exitAppStatus){
             if(this.status.equals(mainInterfaceStatus)){

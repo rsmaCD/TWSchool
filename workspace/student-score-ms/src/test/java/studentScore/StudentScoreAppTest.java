@@ -15,6 +15,9 @@ public class StudentScoreAppTest {
 
     StudentScoreService studentScoreService;
     private StudentScoreApp studentScoreApp;
+    private final static String jumpToCreateStudentInterfaceCommand = "1";
+    private final static String createStudentInterfaceStatus = "CREATE_STUDENT_INTERFACE_STATUS";
+    private final static String mainInterfaceStatus = "MAIN_INTERFACE_STATUS";
 
     @Before
     public void setUp() throws Exception {
@@ -35,6 +38,13 @@ public class StudentScoreAppTest {
     }
 
     @Test
-    public void should_print_() throws Exception {
+    public void should_change_status_to_create_student() throws Exception {
+        studentScoreApp.changeStatus(jumpToCreateStudentInterfaceCommand);
+        assertEquals(createStudentInterfaceStatus,studentScoreApp.getStatus());
+    }
+
+    public void should_not_change_status() throws Exception {
+        studentScoreApp.changeStatus("12");
+        assertEquals(mainInterfaceStatus,studentScoreApp.getStatus());
     }
 }
