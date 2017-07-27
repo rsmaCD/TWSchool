@@ -24,8 +24,8 @@ public class StudentScoreAppTest {
 
     @Test
     public void should_call_creatstudent_when_input_legal() throws Exception {
-        studentScoreApp.createStudentInterface("111,Tom,2,2,2,2");
-        verify(studentScoreService,times(1)).createStudent("111,Tom,2,2,2,2");
+        studentScoreApp.createStudentInterface("Tom,111,2,2,2,2");
+        verify(studentScoreService,times(1)).createStudent("Tom,111,2,2,2,2");
     }
 
     @Test

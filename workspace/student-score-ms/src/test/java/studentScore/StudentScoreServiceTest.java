@@ -31,13 +31,13 @@ public class StudentScoreServiceTest {
 
     @Test
     public void should_call_creatstudent_onece_when_input_legal() throws Exception {
-        studentScoreSystem.createStudent("112,Tom,2,2,2,2");
+        studentScoreSystem.createStudent("Tom,112,2,2,2,2");
         verify(mockStudentManager, times(1)).createStudent("112","Tom",score);
     }
 
     @Test
     public void should_return_false_when_input_illegal() throws Exception {
-        studentScoreSystem.createStudent("112,Tom,a,2,2,2");
+        studentScoreSystem.createStudent("Tom,112,a,2,2,2");
         verify(mockStudentManager, times(0)).createStudent("112","Tom",score);
     }
 

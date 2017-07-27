@@ -22,6 +22,7 @@ public class ReportsTest {
     @Before
     public void setUp() throws Exception {
         mockStudentManager = mock(StudentManager.class);
+        reports = new Reports(mockStudentManager);
 
         Score score1 = new Score(2, 1, 1, 1);
         Student tom = new Student("111","Tom",score1);
@@ -39,7 +40,6 @@ public class ReportsTest {
     @Test
     public void get_empty_reports_when_input_no_student_id() throws Exception {
         //Given
-        Reports.manager = mockStudentManager;
         reports = new Reports();
         String emptyReports = new StringBuilder().append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
         //When
@@ -52,7 +52,6 @@ public class ReportsTest {
     @Test
     public void get_student_and_score_reports_when_input_one_student_id() throws Exception {
         //Given
-        Reports.manager = mockStudentManager;
         reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)
@@ -67,7 +66,6 @@ public class ReportsTest {
     @Test
     public void get_students_and_score_reports_when_input_two_students_id() throws Exception {
         //Given
-        Reports.manager = mockStudentManager;
         reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)
@@ -83,7 +81,6 @@ public class ReportsTest {
     @Test
     public void get_students_and_score_reports_when_input_Three_students_id() throws Exception {
         //Given
-        Reports.manager = mockStudentManager;
         reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)

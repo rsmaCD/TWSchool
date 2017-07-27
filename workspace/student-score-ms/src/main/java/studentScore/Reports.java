@@ -13,11 +13,15 @@ public class Reports {
     private List<Student> studentList = new ArrayList<>();
     private final static String reportsHeadTemplate = "成绩单\n姓名|数学|语文|英语|编程|平均分|总分 \n========================\n";
     private final static String reportsTailTemplate = "========================\n全班总平均分：%.2f\n全班总分中位数：%.2f";
-    public static StudentManager manager = StudentManager.getInstance();
+    private static StudentManager manager = StudentManager.getInstance();
     private final static String reportsStudentAndScoreTemplate = "%s|%d|%d|%d|%d|%.2f|%d\n";
 
     public Reports() {
 
+    }
+
+    public Reports(StudentManager manager) {
+        this.manager = manager;
     }
 
     public void setStudentList(List<String> studentsId) {
