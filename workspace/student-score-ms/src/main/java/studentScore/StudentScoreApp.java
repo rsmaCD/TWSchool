@@ -15,9 +15,16 @@ public class StudentScoreApp {
         this.studentScoreService = studentScoreService;
     }
 
-    public String creatStudent(String createStudentInput) {
+    public boolean creatStudent(String createStudentInput) {
         if(createStudentInput.matches(createStudentInputTemplate)){
-            studentScoreService.createStudent(createStudentInput);
+            return studentScoreService.createStudent(createStudentInput);
+        }
+        return false;
+    }
+
+    public String createReports(String createReportsInput) {
+        if(createReportsInput.matches(createReportsInputTemplate)){
+            return studentScoreService.createReports(createReportsInput);
         }
         return null;
     }
