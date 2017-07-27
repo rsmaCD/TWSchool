@@ -37,7 +37,8 @@ public class StudentScoreServiceTest {
 
     @Test
     public void should_return_false_when_input_illegal() throws Exception {
-        assertEquals(false, studentScoreSystem.createStudent("112,Tom,a,2,2,2"));
+        studentScoreSystem.createStudent("112,Tom,a,2,2,2");
+        verify(mockStudentManager, times(0)).createStudent("112","Tom",score);
     }
 
     @Test

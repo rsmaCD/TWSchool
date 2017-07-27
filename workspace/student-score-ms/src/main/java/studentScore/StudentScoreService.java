@@ -18,14 +18,18 @@ public class StudentScoreService {
         this.reports = reports;
     }
 
-    public boolean createStudent(String createStudentInput) {
-        String[] split = createStudentInput.split(",");
-        boolean createStudentFlag = manager.createStudent(split[0], split[1]
-                , new Score(Integer.valueOf(split[2])
-                        , Integer.valueOf(split[3])
-                        , Integer.valueOf(split[4])
-                        , Integer.valueOf(split[5])));
-        return createStudentFlag;
+    public Student createStudent(String createStudentInput) {
+        try{
+            String[] split = createStudentInput.split(",");
+            Student student = manager.createStudent(split[1], split[0]
+                    , new Score(Integer.valueOf(split[2])
+                            , Integer.valueOf(split[3])
+                            , Integer.valueOf(split[4])
+                            , Integer.valueOf(split[5])));
+            return student;
+        }catch (Exception e){
+            return null;
+        }
     }
 
     public String createReports(String createReportsInput) {

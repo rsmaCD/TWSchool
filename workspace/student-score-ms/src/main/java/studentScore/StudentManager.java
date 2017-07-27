@@ -17,13 +17,14 @@ public class StudentManager {
     }
 
 
-    public boolean createStudent(String id, String name, Score score) {
+    public Student createStudent(String id, String name, Score score) {
 
         if(getStudentById(id) == null) {
-            studentList.add(new Student(id, name, score));
-            return true;
+            Student student = new Student(id, name, score);
+            studentList.add(student);
+            return student;
         }
-        return false;
+        return null;
     }
 
     public Student getStudentById(String id){

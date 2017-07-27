@@ -3,6 +3,7 @@ package studentScore;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -23,13 +24,17 @@ public class StudentScoreAppTest {
 
     @Test
     public void should_call_creatstudent_when_input_legal() throws Exception {
-        studentScoreApp.creatStudent("111,Tom,2,2,2,2");
+        studentScoreApp.createStudentInterface("111,Tom,2,2,2,2");
         verify(studentScoreService,times(1)).createStudent("111,Tom,2,2,2,2");
     }
 
     @Test
     public void should_call_creatreport_when_input_legal() throws Exception {
-        studentScoreApp.createReports("111,111,110");
+        studentScoreApp.createReportsInterface("111,111,110");
         verify(studentScoreService,times(1)).createReports("111,111,110");
+    }
+
+    @Test
+    public void should_print_() throws Exception {
     }
 }

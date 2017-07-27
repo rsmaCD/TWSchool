@@ -24,9 +24,9 @@ public class StudentManagerTest {
         manager = StudentManager.getInstance();
         Score score = new Score(2, 1, 1, 1);
         //When
-        boolean actual = manager.createStudent("111","Tom",score);
+        Student student = manager.createStudent("111","Tom",score);
         //Then
-        assertEquals(true,actual);
+        assertEquals(true,student != null);
     }
 
     @Test
@@ -36,9 +36,9 @@ public class StudentManagerTest {
         Score score = new Score(2, 1, 1, 1);
         //When
         manager.createStudent("111","Tom",score);
-        boolean actual = manager.createStudent("111","Lili",score);
+        Student student = manager.createStudent("111","Lili",score);
         //Then
-        assertEquals(false,actual);
+        assertEquals(false,student != null);
     }
 
     @Test
