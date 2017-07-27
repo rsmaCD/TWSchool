@@ -16,16 +16,20 @@ public class Reports {
     public static StudentManager manager = StudentManager.getInstance();
     private final static String reportsStudentAndScoreTemplate = "%s|%d|%d|%d|%d|%.2f|%d\n";
 
-    public Reports(List<String> studentsId) {
+    public Reports() {
+
+    }
+
+    public String createReports(List<String> studentsId) {
+
+
         for (String id:studentsId) {
             Student student = manager.getStudentById(id);
             if(student != null){
                 studentList.add(student);
             }
         }
-    }
 
-    public String createReports() {
 
         StringBuilder sb = new StringBuilder();
         if(studentList.size() == 0){

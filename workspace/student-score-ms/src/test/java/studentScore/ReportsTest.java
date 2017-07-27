@@ -40,10 +40,10 @@ public class ReportsTest {
     public void get_empty_reports_when_input_no_student_id() throws Exception {
         //Given
         Reports.manager = mockStudentManager;
-        reports = new Reports(Arrays.asList());
+        reports = new Reports();
         String emptyReports = new StringBuilder().append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
         //When
-        String  actual = reports.createReports();
+        String  actual = reports.createReports(Arrays.asList());
         //Then
         assertEquals(emptyReports,actual);
 
@@ -53,13 +53,13 @@ public class ReportsTest {
     public void get_student_and_score_reports_when_input_one_student_id() throws Exception {
         //Given
         Reports.manager = mockStudentManager;
-        reports = new Reports(Arrays.asList("111"));
+        reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
                 .append(String.format(reportsTailTemplate,1.25,5.0)).toString();
         //When
-        String actual = reports.createReports();
+        String actual = reports.createReports(Arrays.asList("111"));
         //Then
         assertEquals(expectReports,actual);
     }
@@ -68,14 +68,14 @@ public class ReportsTest {
     public void get_students_and_score_reports_when_input_two_students_id() throws Exception {
         //Given
         Reports.manager = mockStudentManager;
-        reports = new Reports(Arrays.asList("111","110"));
+        reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
                 .append("Lili|2|2|2|2|2.00|8\n")
                 .append(String.format(reportsTailTemplate,1.625,6.5)).toString();
         //When
-        String actual = reports.createReports();
+        String actual = reports.createReports(Arrays.asList("111","110"));
         //Then
         assertEquals(expectReports,actual);
     }
@@ -84,7 +84,7 @@ public class ReportsTest {
     public void get_students_and_score_reports_when_input_Three_students_id() throws Exception {
         //Given
         Reports.manager = mockStudentManager;
-        reports = new Reports(Arrays.asList("111","110","112"));
+        reports = new Reports();
         String expectReports = new StringBuilder()
                 .append(reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
@@ -92,7 +92,7 @@ public class ReportsTest {
                 .append("WWW|2|2|2|2|2.00|8\n")
                 .append(String.format(reportsTailTemplate,1.75,8.0)).toString();
         //When
-        String actual = reports.createReports();
+        String actual = reports.createReports(Arrays.asList("111","110","112"));
         //Then
         assertEquals(expectReports,actual);
     }

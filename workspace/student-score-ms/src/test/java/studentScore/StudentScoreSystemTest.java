@@ -6,6 +6,7 @@ import org.mockito.Mock;
 
 import java.util.Arrays;
 
+import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -26,6 +27,7 @@ public class StudentScoreSystemTest {
     public void setUp() throws Exception {
 
         mockStudentManager = mock(StudentManager.class);
+        mockReports = mock(Reports.class);
         studentScoreSystem = new StudentScoreSystem(mockStudentManager,mockReports);
 
         score = new Score(2, 2, 2, 2);
@@ -59,10 +61,10 @@ public class StudentScoreSystemTest {
     }
 
     @Test
-    public void should_return_reports_When_input_legal() throws Exception {
+    public void should_call_creatreports_once__When_input_legal() throws Exception {
 
         studentScoreSystem.createReports("110,111");
-        verify(mockReports, times(1)).createReports();
+        verify(mockReports, times(1)).createReports(asList("110","111"));
 
     }
 }

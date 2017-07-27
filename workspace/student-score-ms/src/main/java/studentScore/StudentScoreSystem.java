@@ -33,11 +33,10 @@ public class StudentScoreSystem {
 
     public String createReports(String createReportsInput) {
         if(createReportsInput.matches(createReportsInputTemplate)){
-            reports = new Reports(Arrays.asList(createReportsInput
+            return reports.createReports(Arrays.asList(createReportsInput
                     .split(","))
                     .stream()
                     .collect(Collectors.toList()));
-            return reports.createReports();
         }
         return null;
     }
