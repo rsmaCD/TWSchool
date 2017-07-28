@@ -11,10 +11,7 @@ public class Reports {
 
 
     private List<Student> studentList = new ArrayList<>();
-    private final static String reportsHeadTemplate = "成绩单\n姓名|数学|语文|英语|编程|平均分|总分 \n========================\n";
-    private final static String reportsTailTemplate = "========================\n全班总平均分：%.2f\n全班总分中位数：%.2f";
     private static StudentManager manager = StudentManager.getInstance();
-    private final static String reportsStudentAndScoreTemplate = "%s|%d|%d|%d|%d|%.2f|%d\n";
 
     public Reports() {
 
@@ -24,7 +21,7 @@ public class Reports {
         this.manager = manager;
     }
 
-    public void setStudentList(List<String> studentsId) {
+    private void setStudentList(List<String> studentsId) {
         studentList = new ArrayList<>();
         for (String id:studentsId) {
             Student student = manager.getStudentById(id);
@@ -39,12 +36,12 @@ public class Reports {
         setStudentList(studentsId);
         StringBuilder sb = new StringBuilder();
         if(studentList.size() == 0){
-            return sb.append(reportsHeadTemplate).append(String.format(reportsTailTemplate,0.0,0.0)).toString();
+            return sb.append(Global.reportsHeadTemplate).append(String.format(Global.reportsTailTemplate,0.0,0.0)).toString();
         }
 
-        sb.append(reportsHeadTemplate)
+        sb.append(Global.reportsHeadTemplate)
                 .append(formatStudentsScore())
-                .append(String.format(reportsTailTemplate,calcAverageScore(), calcMedianScore()));
+                .append(String.format(Global.reportsTailTemplate,calcAverageScore(), calcMedianScore()));
 
         return sb.toString();
     }
@@ -52,7 +49,7 @@ public class Reports {
     private String formatStudentsScore(){
         StringBuilder sb = new StringBuilder();
         for (Student student:studentList) {
-            sb.append(String.format(reportsStudentAndScoreTemplate
+            sb.append(String.format(Global.reportsStudentAndScoreTemplate
                     ,student.getName()
                     ,student.getScore().getMathScore()
                     ,student.getScore().getLanguageScore()
