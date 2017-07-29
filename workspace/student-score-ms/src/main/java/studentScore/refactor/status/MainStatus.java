@@ -2,6 +2,7 @@ package studentScore.refactor.status;
 
 import studentScore.Global;
 import studentScore.refactor.App;
+import studentScore.refactor.Validate;
 import studentScore.refactor.io.IOInterface;
 
 /**
@@ -21,7 +22,7 @@ public class MainStatus implements Status{
     public void input() {
         ioInterface.output(Global.mainInterfaceTemplate);
         String command = ioInterface.getInput();
-        if(!command.matches(Global.mainInterfaceInputTemplate)){
+        if(!Validate.validateMainInterfaceInput(command)){
             input();
         }
         ChangeStatus.changeStatus(app,command);

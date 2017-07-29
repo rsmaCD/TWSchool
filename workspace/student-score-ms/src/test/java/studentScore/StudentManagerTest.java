@@ -75,7 +75,6 @@ public class StudentManagerTest {
     public void should_get_null_when_find_not_exist_student() throws Exception {
         //Given
         manager = StudentManager.getInstance();
-        Score score = new Score(2, 1, 1, 1);
         //When
         Student actualStudent = manager.getStudentById("111");
         //Then

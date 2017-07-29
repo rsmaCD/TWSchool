@@ -6,17 +6,13 @@ import studentScore.Global;
  * Created by rsma on 28/07/2017.
  */
 public class Validate {
-
-    public boolean validateCreateStudentInput(String createStudentInput){
+    public static boolean validateCreateStudentInput(String createStudentInput){
         return createStudentInput.matches(Global.createStudentInputTemplate);
     }
-
-    public boolean validateCreateReportsInput(String createReportsInput){
+    public static boolean validateCreateReportsInput(String createReportsInput){
         return createReportsInput.matches(Global.createReportsInputTemplate);
     }
-
-    public boolean validateMainInterfaceInput(String mainInterfaceInput){
+    public static boolean validateMainInterfaceInput(String mainInterfaceInput){
         return mainInterfaceInput.matches(Global.mainInterfaceInputTemplate);
     }
-
 }

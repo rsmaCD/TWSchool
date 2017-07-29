@@ -16,14 +16,6 @@ public class Course {
         return courseScore;
     }
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
-    }
-
-    public void setCourseScore(int courseScore) {
-        this.courseScore = courseScore;
-    }
-
     public Course(String courseName, int courseScore){
         this.courseName = courseName;
         this.courseScore = courseScore;

@@ -4,6 +4,7 @@ import studentScore.Global;
 import studentScore.Student;
 import studentScore.StudentScoreService;
 import studentScore.refactor.App;
+import studentScore.refactor.Validate;
 import studentScore.refactor.io.IOInterface;
 
 /**
@@ -24,7 +25,7 @@ public class CreateStudentAfterErrStatus implements Status {
     public void input() {
         ioInterface.output(Global.createStudentWarning);
         String input = ioInterface.getInput();
-        if(!input.matches(Global.createStudentInputTemplate)){
+        if(!Validate.validateCreateStudentInput(input)){
             input();
         }else {
             Student student = studentScoreService.createStudent(input);

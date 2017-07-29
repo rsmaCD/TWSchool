@@ -3,6 +3,7 @@ package studentScore.refactor.status;
 import studentScore.Global;
 import studentScore.StudentScoreService;
 import studentScore.refactor.App;
+import studentScore.refactor.Validate;
 import studentScore.refactor.io.IOInterface;
 
 /**
@@ -23,7 +24,7 @@ public class CreateReportsStatus implements Status {
     public void input() {
         ioInterface.output(Global.createReportsNotice);
         String input = ioInterface.getInput();
-        if (!input.matches(Global.createReportsInputTemplate)) {
+        if (!Validate.validateCreateReportsInput(input)) {
             ChangeStatus.changeStatus(app, Global.jumpToCreateReportsAfterErrInterfaceCommand);
             app.Run();
         } else {
