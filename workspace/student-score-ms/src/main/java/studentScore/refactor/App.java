@@ -1,6 +1,6 @@
 package studentScore.refactor;
 
-import studentScore.refactor.io.FileIO;
+import studentScore.refactor.io.ConsoleIO;
 import studentScore.refactor.io.IOInterface;
 import studentScore.refactor.status.*;
 
@@ -67,7 +67,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        App app = new App(new FileIO());
+        App app = new App(new ConsoleIO());
         app.Start();
         app.Run();
     }
