@@ -25,6 +25,6 @@ public class MainStatus implements Status{
             input();
         }
         ChangeStatus.changeStatus(app,command);
-        app.run();
+        app.Run();
     }
 }

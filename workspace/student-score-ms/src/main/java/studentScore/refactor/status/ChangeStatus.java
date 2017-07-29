@@ -17,6 +17,10 @@ public class ChangeStatus {
             app.setStatus(app.getCreateReportsStatus());
         } else if (command.equals(Global.exitAppCommand)) {
             app.setStatus(app.getExitStatus());
+        }else if(command.equals(Global.jumpToCreateReportsAfterErrInterfaceCommand)){
+            app.setStatus(app.getCreateReportsAfterErrStatus());
+        }else if(command.equals(Global.jumpToCreateStudentAfterErrInterfaceCommand)){
+            app.setStatus(app.getCreateStudentAfterErrStatus());
         }
     }
 }

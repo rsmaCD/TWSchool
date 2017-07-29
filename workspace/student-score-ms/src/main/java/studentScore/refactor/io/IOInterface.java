@@ -5,6 +5,8 @@ package studentScore.refactor.io;
  */
 public interface IOInterface {
 
+    public void Start();
+
     public String getInput();
 
     public void output(String output);

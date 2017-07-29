@@ -1,6 +1,6 @@
 package studentScore.refactor;
 
-import studentScore.refactor.io.ConsoleIO;
+import studentScore.refactor.io.FileIO;
 import studentScore.refactor.io.IOInterface;
 import studentScore.refactor.status.*;
 
@@ -14,6 +14,8 @@ public class App {
     private CreateStudentStatus createStudentStatus;
     private CreateReportsStatus createReportsStatus;
     private ExitStatus exitStatus;
+    private CreateReportsAfterErrStatus createReportsAfterErrStatus;
+    private CreateStudentAfterErrStatus createStudentAfterErrStatus;
 
     private Status status;
 
@@ -23,6 +25,8 @@ public class App {
         this.createReportsStatus = new CreateReportsStatus(this,this.ioInterface);
         this.createStudentStatus = new CreateStudentStatus(this,this.ioInterface);
         this.exitStatus = new ExitStatus(this,this.ioInterface);
+        this.createReportsAfterErrStatus = new CreateReportsAfterErrStatus(this,this.ioInterface);
+        this.createStudentAfterErrStatus = new CreateStudentAfterErrStatus(this,this.ioInterface);
         this.status = this.mainStatus;
     }
 
@@ -46,12 +50,25 @@ public class App {
         return createStudentStatus;
     }
 
-    public void run() {
+    public CreateReportsAfterErrStatus getCreateReportsAfterErrStatus() {
+        return createReportsAfterErrStatus;
+    }
+
+    public CreateStudentAfterErrStatus getCreateStudentAfterErrStatus() {
+        return createStudentAfterErrStatus;
+    }
+
+    public void Run() {
         this.status.input();
     }
 
+    public void Start(){
+        this.ioInterface.Start();
+    }
+
     public static void main(String[] args) {
-        App app = new App(new ConsoleIO());
-        app.run();
+        App app = new App(new FileIO());
+        app.Start();
+        app.Run();
     }
 }

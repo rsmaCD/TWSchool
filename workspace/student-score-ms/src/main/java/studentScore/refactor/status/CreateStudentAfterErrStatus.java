@@ -7,26 +7,25 @@ import studentScore.refactor.App;
 import studentScore.refactor.io.IOInterface;
 
 /**
- * Created by rsma on 28/07/2017.
+ * Created by rsma on 29/07/2017.
  */
-public class CreateStudentStatus implements Status{
+public class CreateStudentAfterErrStatus implements Status {
 
     IOInterface ioInterface;
     App app;
     private StudentScoreService studentScoreService = new StudentScoreService();
 
-    public CreateStudentStatus(App app,IOInterface ioInterface){
+    public CreateStudentAfterErrStatus(App app,IOInterface ioInterface){
         this.app = app;
         this.ioInterface = ioInterface;
     }
 
     @Override
     public void input() {
-        ioInterface.output(Global.createStudentNotice);
+        ioInterface.output(Global.createStudentWarning);
         String input = ioInterface.getInput();
         if(!input.matches(Global.createStudentInputTemplate)){
-            ChangeStatus.changeStatus(app,Global.jumpToCreateStudentAfterErrInterfaceCommand);
-            app.Run();
+            input();
         }else {
             Student student = studentScoreService.createStudent(input);
             if (student != null) {
@@ -34,8 +33,7 @@ public class CreateStudentStatus implements Status{
                 ioInterface.output(String.format(Global.createStudentSuccessNoticeTemplate, student.getName()));
                 app.Run();
             } else {
-                ChangeStatus.changeStatus(app, Global.jumpToCreateStudentAfterErrInterfaceCommand);
-                app.Run();
+                input();
             }
         }
     }
