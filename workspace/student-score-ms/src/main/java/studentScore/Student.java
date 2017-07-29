@@ -1,30 +1,44 @@
 package studentScore;
 
+import java.util.List;
+
 /**
  * Created by rsma on 26/07/2017.
  */
 public class Student {
 
     private String id;
-    private Score score;
+    private List<Course> courseList;
     private String name;
 
-    public Student(String id,String name,Score score) {
+    public Student(String id,String name,List<Course> courseList) {
         this.id = id;
         this.name = name;
-        this.score = score;
+        this.courseList = courseList;
     }
 
     public String getId() {
         return id;
     }
 
-    public Score getScore() {
-        return score;
+    public List<Course> getCourseList() {
+        return courseList;
     }
 
     public String getName() {
         return name;
+    }
+
+    public double getAverageScore(){
+        return ((double)getTotalScore())/courseList.size();
+    }
+
+    public int getTotalScore(){
+        int totalScore = 0;
+        for (Course course:courseList) {
+            totalScore += course.getCourseScore();
+        }
+        return totalScore;
     }
 
     @Override

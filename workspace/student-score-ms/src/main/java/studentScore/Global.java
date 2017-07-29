@@ -33,4 +33,11 @@ public class Global {
     public final static String jumpToMainInterfaceCommand = "JUMP_TO_MAIN_STATUS";
     public final static String jumpToCreateReportsAfterErrInterfaceCommand = "JUMP_TO_CREATE_REPORTS_AFTER_ERR_STATUS";
     public final static String jumpToCreateStudentAfterErrInterfaceCommand = "JUMP_TO_CREATE_STUDENT_AFTER_ERR_STATUS";
+
+
+    public final static String mathCourseName = "math";
+    public final static String englishCourseName = "english";
+    public final static String languageCourseName = "language";
+    public final static String programCourseName = "program";
+
 }

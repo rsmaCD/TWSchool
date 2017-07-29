@@ -17,10 +17,10 @@ public class StudentManager {
     }
 
 
-    public Student createStudent(String id, String name, Score score) {
+    public Student createStudent(String id, String name, List<Course> courseList) {
 
         if(getStudentById(id) == null) {
-            Student student = new Student(id, name, score);
+            Student student = new Student(id, name, courseList);
             studentList.add(student);
             return student;
         }
@@ -35,6 +35,19 @@ public class StudentManager {
         }
         return null;
     }
+
+    public List<Student> getStudentsByIdList(List<String> idList){
+
+        List<Student> studentList = new ArrayList<>();
+        for (String id:idList) {
+            Student student = this.management.getStudentById(id);
+            if(student != null){
+                studentList.add(new Student(student.getId(),student.getName(),student.getCourseList()));
+            }
+        }
+        return studentList;
+    }
+
 
     public void cleanList(){
         studentList = new ArrayList<>();
