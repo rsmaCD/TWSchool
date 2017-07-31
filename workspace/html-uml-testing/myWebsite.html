@@ -4,12 +4,84 @@
     <title>MyWebsite</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style type="text/css">
+
+        .navbar.navbar-default{
+            background: black;
+            margin: 0;
+            border: 0;
+        }
+
+        .nav.navbar-nav.navbar-right li a {
+            color: white;
+        }
+
+        .nav.navbar-nav a {
+            color: white;
+        }
+
+        .left_div {
+            display: inline-block;
+            float: left;
+            width: 10%;
+            background: gray;
+        }
+
+        .left_div a {
+            color: black;
+        }
+
+        .right_div {
+            display: inline-block;
+            float: left;
+            width: 90%;
+            padding: 20px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        .footer_class{
+            width:100%;
+            height:50px;
+            background-color: black;
+            font-size: 15px;
+            display: table;
+        }
+        .footer_content{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            color:white;
+        }
+
+        .text_div{
+            display: inline-block;
+            float: left;
+            width: 50%;
+        }
+
+        .picture_div{
+            display: inline-block;
+            float: left;
+            width: 50%;
+            text-align: center;
+        }
+
+        img{
+            vertical-align: middle;
+        }
+
+    </style>
+
 </head>
 <body>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="nav navbar-nav">
             <img src="my_website_headshot.png" width="40" height="40" style="float: left;margin: 5px"/>
             <a class="navbar-brand" href="#">My Website</a>
         </div>
@@ -21,6 +93,57 @@
         </ul>
     </div>
 </nav>
+
+<div id="main" class="main_div">
+
+    <aside class="left_div">
+        <div>
+            <ul>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+
+        </div>
+    </aside>
+
+    <div id="content" class="right_div">
+
+        <div id="text_div" class="text_div">
+
+            <p>wdekfnewkfnrjkgnrgkjnkrgnknrgkengk wdekfnewkfnrjkgnrgkjnkrgnknrgkengk wdekfnewkfnrjkgnrgkjnkrgnknrgkengk wdekfnewkfnrjkgnrgkjnkrgnknrgkengk</p>
+
+        </div>
+
+        <div id="picture_div" class="picture_div">
+            
+            <img src="man_picture.png" style="width: inherit;height: inherit">
+
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer_class">
+    <div class="footer_content" >
+
+            Copyright?W3CSchool.com
+
+    </div>
+</footer>
 
 
 </body>
