@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>统一建模语言理论测试</title>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+
+        .label_exam_title {
+            display: inline-block;
+            margin: 10px 0 20px 0;
+        }
+
+        .input_text_readonly {
+            border: none;
+            font-size: 15px;
+            width: 100px;
+            margin: 2px;
+        }
+
+        .input_text {
+            font-size: 13px;
+            width: 100px;
+        }
+
+        .textarea_short_answer {
+            width: 500px;
+            height: 200px;
+            font-size: 13px;
+        }
+
+        ul li{
+            list-style-type:none;
+        }
+    </style>
+
+</head>
+
+<body style="margin: 20px 0 20px 20px">
+
+
+<div id="exam_info">
+    <h1>统一建模语言理论测试</h1>
+
+    <table>
+        <tr>
+            <td>考试科目：</td>
+            <td><input class="input_text_readonly" type="text" name="exam_name"
+                       readonly="readonly" value="统一建模语言"></td>
+            <td>时间：</td>
+            <td><input class="input_text_readonly" type="text" name="exam_time"
+                               readonly="readonly" value="100分钟"></td>
+            <td>得分：</td>
+            <td><input class="input_text_readonly" type="text" name="exam_score"
+                       readonly="readonly" value="100"></td>
+        </tr>
+        <tr>
+            <td>班级：</td>
+            <td><input class="input_text" type="text" name="stu_class" value="1班"></td>
+            <td>学号：</td>
+            <td><input class="input_text" type="text" name="stu_num" value="001"></td>
+            <td>姓名：</td>
+            <td><input class="input_text" type="text" name="stu_name" value="王小闹" style="margin: 0 0 0 30px"></td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+<div id="exam_question">
+
+    <h2>一、填空题（每空5分，共20分）</h2>
+    <div id="gap_filling">
+
+        <label>1、UML的中文全称是：<input class="input_text" type="text" value="统一建模语言"></label><br>
+        <label>2、对象最突出的特征是：<input class="input_text" type="text" value="封装性">
+            <input class="input_text" type="text" value="继承性">
+            <input class="input_text" type="text" value="多态性"></label>
+    </div>
+
+    <h2>二、选择题（每题10分，共20分）</h2>
+    <div id="single_choice">
+
+        <ul class="single_choice_single">
+            <label class="label_exam_title">1、UML与软件工程的关系是：</label><br>
+            <li><input name="2.1" type="radio"/>(A)UML就是软件工程 </li><br>
+            <li><input name="2.1" type="radio" checked="checked"/>(B)UML参与到软件工程中软件开发过程的几个阶段 </li><br>
+            <li><input name="2.1" type="radio"/>(C)UML与软件工程无关 </li><br>
+            <li><input name="2.1" type="radio"/>(D)UML是软件工程的一部分 </li><br>
+        </ul>
+        <ul class="single_choice_single">
+            <label class="label_exam_title">2、Java语言支持</label><br>
+            <li><input name="2.2" type="radio" checked="checked"/>(A)单继承 </li><br>
+            <li><input name="2.2" type="radio"/>(B)多继承 </li><br>
+            <li><input name="2.2" type="radio"/>(C)单继承和多继承都支持 </li><br>
+            <li><input name="2.2" type="radio"/>(D)单继承和多继承都不支持 </li><br>
+        </ul>
+    </div>
+
+    <h2>三、多选题（每题10分，共20分）</h2>
+    <div id="multiple_choice">
+        <ul class="multiple_choice_single">
+            <label class="label_exam_title">1、用例的粒度分为以下哪三种：</label><br>
+            <li><input name="3.1" type="checkbox" checked="checked"/>(A)概述级 </li><br>
+            <li><input name="3.1" type="checkbox" checked="checked"/>(B)需求级 </li><br>
+            <li><input name="3.1" type="checkbox"/>(C)用户目标级 </li><br>
+            <li><input name="3.1" type="checkbox" checked="checked"/>(D)子功能级 </li><br>
+        </ul>
+
+        <ul class="multiple_choice_single">
+            <label class="label_exam_title">2、类图由以下哪三部分组成：</label><br>
+            <li><input name="3.2" type="checkbox" checked="checked"/>(A)名称(Name) </li><br>
+            <li><input name="3.2" type="checkbox" checked="checked"/>(B)属性(Attribute) </li><br>
+            <li><input name="3.2" type="checkbox"/>(C)操作(Operation) </li><br>
+            <li><input name="3.2" type="checkbox" checked="checked"/>(D)方法(Function) </li><br>
+        </ul>
+
+    </div>
+
+    <h2>四、判断题（每题10分，共20分）</h2>
+    <div id="true_or_false_questions">
+        <ul>
+            <label>1、用例图只是用于与客户交流和沟通的，用于确定需求。
+
+            <input name="4.1" type="radio"/>√
+            <input name="4.1" type="radio" checked="checked"/>X</label>
+
+        </ul>
+        <ul>
+            <label>2、在状态途中，终止状态在一个状态图中允许有人一多个。
+            <input name="4.2" type="radio" checked="checked"/>√
+            <input name="4.2" type="radio"/>X</label>
+        </ul>
+    </div>
+
+    <h2>五、简答题（每题20分，共20分）</h2>
+    <div id="short_answer_question">
+
+        <ul><label>1、简述什么是模型以及模型的表现形式？<br>
+            <textarea class="textarea_short_answer" style="margin: 0 0 0 10px">
+模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。
+            </textarea></label>
+        </ul>
+    </div>
+
+
+</div>
+
+<div id="submit" style="margin: 20px 0 0 0">
+    <input name="submit" type="button" value="计算分数"/>
+</div>
+
+
+</body>
+
+</html>
