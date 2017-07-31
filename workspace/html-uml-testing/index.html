@@ -10,6 +10,11 @@
             width: 100px;
         }
 
+        .label_exam_title {
+            display: inline-block;
+            margin: 20px 0px 20px 0px;
+        }
+
         .input_text_readonly {
             border: none;
             font-size: 15px;
@@ -54,14 +59,28 @@
 
     <div id="gap_filling">
         <h2>一、填空题（每空5分，共20分）</h2>
-        <p><label>1、UML的中文全称是：</label><input class="input_text" type="text" value="统一建模语言">
-        <p><label>2、对象最突出的特征是：</label><input class="input_text" type="text" value="封装性">
+        <ul><label>1、UML的中文全称是：<input class="input_text" type="text" value="统一建模语言"></label></ul>
+        <ul><label>2、对象最突出的特征是：<input class="input_text" type="text" value="封装性">
             <input class="input_text" type="text" value="继承性">
-            <input class="input_text" type="text" value="多态性">
+            <input class="input_text" type="text" value="多态性"></label></ul>
     </div>
 
     <div id="single_choice">
         <h2>二、选择题（每题10分，共20分）</h2>
+        <ul class="single_choice_single">
+            <label class="label_exam_title">1、UML与软件工程的关系是：</label><br>
+            <label><input name="2.1" type="radio"/>(A)UML就是软件工程 </label><br>
+            <label><input name="2.1" type="radio" checked="checked"/>(B)UML参与到软件工程中软件开发过程的几个阶段 </label><br>
+            <label><input name="2.1" type="radio"/>(C)UML与软件工程无关 </label><br>
+            <label><input name="2.1" type="radio"/>(D)UML是软件工程的一部分 </label><br>
+        </ul>
+        <ul class="single_choice_single">
+            <label class="label_exam_title">2、Java语言支持</label><br>
+            <label><input name="2.2" type="radio" checked="checked"/>(A)单继承 </label><br>
+            <label><input name="2.2" type="radio"/>(B)多继承 </label><br>
+            <label><input name="2.2" type="radio"/>(C)单继承和多继承都支持 </label><br>
+            <label><input name="2.2" type="radio"/>(D)单继承和多继承都不支持 </label><br>
+        </ul>
     </div>
 
     <div id="multiple_choice">
@@ -70,16 +89,31 @@
 
     <div id="true_or_false_questions">
         <h2>四、判断题（每题10分，共20分）</h2>
+
+        <ul>
+            <label>1、用例图只是用于与客户交流和沟通的，用于确定需求。</label>
+
+            <input name="4.1" type="radio"/>√
+            <input name="4.1" type="radio" checked="checked"/>X
+
+        </ul>
+
+        <ul>
+            <label>2、在状态途中，终止状态在一个状态图中允许有人一多个。</label>
+            <input name="4.2" type="radio" checked="checked"/>√
+            <input name="4.2" type="radio"/>X
+        </ul>
+
+
     </div>
 
     <div id="short_answer_question">
         <h2>五、简答题（每题20分，共20分）</h2>
-        <p><label>1、简述什么是模型以及模型的表现形式？</label>
-        <div>
-            <textarea class="textarea_short_answer" type="text" >
+        <ul><label>1、简述什么是模型以及模型的表现形式？</label><br>
+            <textarea class="textarea_short_answer" type="text">
 模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。
             </textarea>
-        </div>
+        </ul>
     </div>
 
 
