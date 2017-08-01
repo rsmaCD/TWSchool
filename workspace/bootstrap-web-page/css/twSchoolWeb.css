@@ -5,12 +5,18 @@
     width:50px;
     height:50px;
 }
-.navbar-fixed-top {
-    padding-bottom:0;
-}
+
 .navbar.isModified li a {
     padding:0 20px;
     line-height:96px;
+}
+
+.navbar-header{
+    padding-left: 20px;
+}
+
+.nav.navbar-nav.navbar-right{
+    padding-right: 40px;
 }
 
 .nav.navbar-nav.navbar-right li a {
@@ -28,7 +34,8 @@
     height: 894px;
     text-align: center;
     background-size: cover;
-    padding-top: 94px;
+    /*padding-top: 94px;*/
+    margin-top: -24px;
     color: white;
 }
 .title{
@@ -85,3 +92,52 @@
 .feature_box p{
     font-size: 16px;
 }
+
+.people_say{
+    background: #EFEFEF;
+    padding: 50px 144px;
+}
+
+.people_say h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+.people_say_text{
+    background: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 30px 0;
+}
+
+.people_intro img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.people_intro h5{
+    font-size: 20px;
+    margin: 0;
+    padding: 15px 0 10px 10px;
+}
+
+.people_intro span{
+    color: #999;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.people_img_modified{
+    max-width: 80px;
+    height:auto;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
