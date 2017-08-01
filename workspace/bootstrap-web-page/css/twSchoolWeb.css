@@ -5,9 +5,11 @@
     width:50px;
     height:50px;
 }
-
+.navbar-fixed-top {
+    padding-bottom:0;
+}
 .navbar.isModified li a {
-    padding:0 15px;
+    padding:0 20px;
     line-height:96px;
 }
 
@@ -19,4 +21,32 @@
 .nav.navbar-nav.navbar-left li a {
     color: white;
     font-size: 16px;
+}
+
+.main_content{
+    background-image: url("../img/mountain-star-min-mobile.png");
+    height: 894px;
+    text-align: center;
+    background-size: cover;
+    padding-top: 94px;
+    color: white;
+}
+.title{
+    font-size: 100px;
+    margin-top: 120px;
+}
+.main_content p{
+    font-size: 50px;
+    margin: 0 0 100px 0;
+}
+.main_content a{
+    font-size: 28px;
+    color: white;
+    padding: 15px 30px;
+    border-style:solid;
+    margin: 0 20px;
+}
+.main_content a:hover {
+    text-decoration: none;
+    color: white;
 }
