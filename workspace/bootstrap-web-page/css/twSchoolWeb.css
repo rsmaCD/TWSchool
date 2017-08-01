@@ -1,3 +1,22 @@
-.container-fluid{
-    padding: 0;
+*{
+    Border-sizing:border-box;
+}
+.avatar{
+    width:50px;
+    height:50px;
+}
+
+.navbar.isModified li a {
+    padding:0 15px;
+    line-height:96px;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-size: 16px;
+
+}
+.nav.navbar-nav.navbar-left li a {
+    color: white;
+    font-size: 16px;
 }
