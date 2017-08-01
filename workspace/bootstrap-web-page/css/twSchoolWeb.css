@@ -50,3 +50,38 @@
     text-decoration: none;
     color: white;
 }
+
+.key_feature{
+    padding: 50px 144px;
+}
+
+.key_feature h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+.feature_box{
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.feature_box img{
+    width: 80px;
+    height: 80px;
+}
+
+.feature_box h5{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #999;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.feature_box p{
+    font-size: 16px;
+}
