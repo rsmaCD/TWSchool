@@ -144,6 +144,7 @@
         </ul>
     </div>
 
+
 </form>
 </div>
 
@@ -158,8 +159,8 @@
 
 <script>
 
+
     $("#submit").click(function () {
-//        alert("wdewd");
         var stu_info = {};
         var stu_class = $(".input_text[name='stu_class']").val();
         stu_info["stu_class"] = stu_class;
@@ -182,13 +183,13 @@
         var stu_info = JSON.stringify(stu_info);
         var exam_result = JSON.stringify(values);
 
-        alert(stu_info);
-        alert(exam_result);
 
+        localStorage.setItem('stu_info', stu_info);
+        localStorage.setItem('exam_result', exam_result);
+//        alert(stu_info);
+//        alert(exam_result);
 
-
-
-//        location.href = "result.html"
+        location.href = "result.html"
     })
 
 </script>

@@ -6,5 +6,28 @@
 </head>
 <body>
 
+<div id="stu_info">
+
+</div>
+
+<div id="exam_result">
+
+</div>
+
+<script src="http://www.iclubz.com/js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+
+    if(localStorage.getItem('stu_info')) {
+        $('#stu_info').html(localStorage.getItem('stu_info'));
+    }
+
+    if(localStorage.getItem('exam_result')) {
+        $('#exam_result').html(localStorage.getItem('exam_result'));
+    }
+
+</script>
+
 </body>
 </html>
