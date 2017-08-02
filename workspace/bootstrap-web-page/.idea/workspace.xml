@@ -12,21 +12,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="twSchoolWeb.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="twSchoolWeb.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/twSchoolWeb.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="143" column="49" lean-forward="false" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+            <state relative-caret-position="91">
+              <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="twSchoolWeb.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="twSchoolWeb.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/twSchoolWeb.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="152" column="20" lean-forward="false" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+            <state relative-caret-position="250">
+              <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -42,8 +42,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/html/twSchoolWeb.html" />
         <option value="$PROJECT_DIR$/css/twSchoolWeb.css" />
+        <option value="$PROJECT_DIR$/html/twSchoolWeb.html" />
       </list>
     </option>
   </component>
@@ -258,12 +258,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501573460992</updated>
       <workItem from="1501573462312" duration="14456000" />
-      <workItem from="1501635186002" duration="575000" />
+      <workItem from="1501635186002" duration="2534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15031000" />
+    <option name="totallyTimeSpent" value="16990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -355,18 +355,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/twSchoolWeb.html">
+    <entry file="file://$PROJECT_DIR$/css/twSchoolWeb.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="143" column="49" lean-forward="false" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+        <state relative-caret-position="250">
+          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/twSchoolWeb.css">
+    <entry file="file://$PROJECT_DIR$/html/twSchoolWeb.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="152" column="20" lean-forward="false" selection-start-line="152" selection-start-column="20" selection-end-line="152" selection-end-column="20" />
+        <state relative-caret-position="91">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
