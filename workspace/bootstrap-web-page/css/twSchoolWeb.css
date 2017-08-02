@@ -141,3 +141,19 @@
     padding-right: 0;
 }
 
+.footer{
+    height: 218px;
+    padding: 40px;
+    background: black;
+    text-align: center;
+}
+.footer img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    /*text-align: center;*/
+}
+.footer span{
+    color: #777;
+    font-size: 16px;
+}
