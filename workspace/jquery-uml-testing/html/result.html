@@ -3,28 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
 
-<div id="stu_info">
+<div id="stu_info_table">
 
 </div>
 
-<div id="exam_result">
+<div id="exam_result_">
 
 </div>
 
 <script src="http://www.iclubz.com/js/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+<script id="stu_info_template" type="text/x-jquery-tmpl">
+    <table>
+        <tr>
+           <td>班级:</td>
+           <td>${stu_class}</td>
+           <td>学号:</td>
+           <td>${stu_num}</td>
+           <td>姓名:</td>
+           <td>${stu_name}</td>
+        </tr>
+        <tr>
+           <td>Email:</td>
+           <td>${stu_email}</td>
+           <td>身份证号:</td>
+           <td>${stu_id_card_num}</td>
+        </tr>
+    </table>
+</script>
+
+<script id="exam_result_template" type="text/x-jquery-tmpl">
+    <table>
+        <tr>
+           <td>题型:</td>
+           <td>第一题</td>
+           <td>第二题</td>
+        </tr>
+        <tr>
+           <td>填空题:</td>
+           <td>${gap_filling_1}</td>
+           <td>${gap_filling_2}</td>
+        </tr>
+         <tr>
+           <td>单选题:</td>
+           <td>${single_choice_1}</td>
+           <td>${single_choice_2}</td>
+        </tr>
+         <tr>
+           <td>多选题:</td>
+           <td>${multiple_choice_1}</td>
+           <td>${multiple_choice_2}</td>
+        </tr>
+         <tr>
+           <td>判断题:</td>
+           <td>${true_or_false_questions_1}</td>
+           <td>${true_or_false_questions_2}</td>
+        </tr>
+    </table>
+    <p>简答题:
+           ${short_answer_question_1}</p>
+</script>
 
 <script>
 
-    if(localStorage.getItem('stu_info')) {
-        $('#stu_info').html(localStorage.getItem('stu_info'));
+    if (localStorage.getItem('stu_info')) {
+        var stu_info = jQuery.parseJSON(localStorage.getItem('stu_info'));
+        $('#stu_info_template').tmpl(stu_info).appendTo('#stu_info_table');
     }
 
-    if(localStorage.getItem('exam_result')) {
-        $('#exam_result').html(localStorage.getItem('exam_result'));
+    if (localStorage.getItem('exam_result')) {
+        var exam_result = jQuery.parseJSON(localStorage.getItem('exam_result'));
+        $('#exam_result_template').tmpl(exam_result).appendTo('#exam_result_');
     }
 
 </script>
