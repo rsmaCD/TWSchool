@@ -29,8 +29,8 @@
             font-size: 13px;
         }
 
-        ul li{
-            list-style-type:none;
+        ul li {
+            list-style-type: none;
         }
     </style>
 
@@ -49,7 +49,7 @@
                        readonly="readonly" value="统一建模语言"></td>
             <td>时间：</td>
             <td><input class="input_text_readonly" type="text" name="exam_time"
-                               readonly="readonly" value="100分钟"></td>
+                       readonly="readonly" value="100分钟"></td>
             <td>得分：</td>
             <td><input class="input_text_readonly" type="text" name="exam_score"
                        readonly="readonly" value="100"></td>
@@ -61,94 +61,120 @@
             <td><input class="input_text" type="text" name="stu_num" value="001"></td>
             <td>姓名：</td>
             <td><input class="input_text" type="text" name="stu_name" value="王小闹" style="margin: 0 0 0 30px"></td>
-            <td><input class="input_text" type="text" name="stu_email" value="ijk_ma@163.com"></td>
-            <td><input class="input_text" type="text" name="stu_id_card_num" value="510421199309210036"></td>
+            <td><input id="stu_email" class="input_text" type="text" name="stu_email" value="ijk_ma@163.com"></td>
+            <td><input id="stu_id_card_num" class="input_text" type="text" name="stu_id_card_num"
+                       value="510421199309210036"></td>
         </tr>
 
     </table>
+
+    <div id="stu_email_err_notice" style="visibility: hidden">
+        <b style="color: red">请输入正确的邮箱！</b>
+    </div>
+
+    <div id="stu_id_card_err_notice" style="visibility: hidden">
+        <b style="color: red">请输入正确的身份证号！</b>
+    </div>
 
 </div>
 
 
 <div id="exam_question">
-<form id="exam_form">
-    <h2>一、填空题（每空5分，共20分）</h2>
-    <div id="gap_filling">
+    <form id="exam_form">
+        <h2>一、填空题（每空5分，共20分）</h2>
+        <div id="gap_filling">
 
-        <label>1、UML的中文全称是：<input name="gap_filling_1" class="input_text" type="text" value="统一建模语言"></label><br>
-        <label>2、对象最突出的特征是：<input name="gap_filling_2" class="input_text" type="text" value="封装性">
-            <input name="gap_filling_2" class="input_text" type="text" value="继承性">
-            <input name="gap_filling_2" class="input_text" type="text" value="多态性"></label>
-    </div>
+            <label>1、UML的中文全称是：<input name="gap_filling_1" class="input_text" type="text" value="统一建模语言"></label><br>
+            <label>2、对象最突出的特征是：<input name="gap_filling_2" class="input_text" type="text" value="封装性">
+                <input name="gap_filling_2" class="input_text" type="text" value="继承性">
+                <input name="gap_filling_2" class="input_text" type="text" value="多态性"></label>
+        </div>
 
-    <h2>二、选择题（每题10分，共20分）</h2>
-    <div id="single_choice">
+        <h2>二、选择题（每题10分，共20分）</h2>
+        <div id="single_choice">
 
-        <ul class="single_choice_single">
-            <label class="label_exam_title">1、UML与软件工程的关系是：</label><br>
-            <li><input name="single_choice_1" type="radio" value="A"/>(A)UML就是软件工程 </li><br>
-            <li><input name="single_choice_1" type="radio" checked="checked" value="B"/>(B)UML参与到软件工程中软件开发过程的几个阶段 </li><br>
-            <li><input name="single_choice_1" type="radio" value="C"/>(C)UML与软件工程无关 </li><br>
-            <li><input name="single_choice_1" type="radio" value="D"/>(D)UML是软件工程的一部分 </li><br>
-        </ul>
-        <ul class="single_choice_single">
-            <label class="label_exam_title">2、Java语言支持</label><br>
-            <li><input name="single_choice_2" type="radio" checked="checked" value="A"/>(A)单继承 </li><br>
-            <li><input name="single_choice_2" type="radio" value="B"/>(B)多继承 </li><br>
-            <li><input name="single_choice_2" type="radio" value="C"/>(C)单继承和多继承都支持 </li><br>
-            <li><input name="single_choice_2" type="radio" value="D"/>(D)单继承和多继承都不支持 </li><br>
-        </ul>
-    </div>
+            <ul class="single_choice_single">
+                <label class="label_exam_title">1、UML与软件工程的关系是：</label><br>
+                <li><input name="single_choice_1" type="radio" value="A"/>(A)UML就是软件工程</li>
+                <br>
+                <li><input name="single_choice_1" type="radio" checked="checked" value="B"/>(B)UML参与到软件工程中软件开发过程的几个阶段
+                </li>
+                <br>
+                <li><input name="single_choice_1" type="radio" value="C"/>(C)UML与软件工程无关</li>
+                <br>
+                <li><input name="single_choice_1" type="radio" value="D"/>(D)UML是软件工程的一部分</li>
+                <br>
+            </ul>
+            <ul class="single_choice_single">
+                <label class="label_exam_title">2、Java语言支持</label><br>
+                <li><input name="single_choice_2" type="radio" checked="checked" value="A"/>(A)单继承</li>
+                <br>
+                <li><input name="single_choice_2" type="radio" value="B"/>(B)多继承</li>
+                <br>
+                <li><input name="single_choice_2" type="radio" value="C"/>(C)单继承和多继承都支持</li>
+                <br>
+                <li><input name="single_choice_2" type="radio" value="D"/>(D)单继承和多继承都不支持</li>
+                <br>
+            </ul>
+        </div>
 
-    <h2>三、多选题（每题10分，共20分）</h2>
-    <div id="multiple_choice">
-        <ul class="multiple_choice_single">
-            <label class="label_exam_title">1、用例的粒度分为以下哪三种：</label><br>
-            <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="A"/>(A)概述级 </li><br>
-            <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="B"/>(B)需求级 </li><br>
-            <li><input name="multiple_choice_1" type="checkbox" value="C"/>(C)用户目标级 </li><br>
-            <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="D"/>(D)子功能级 </li><br>
-        </ul>
+        <h2>三、多选题（每题10分，共20分）</h2>
+        <div id="multiple_choice">
+            <ul class="multiple_choice_single">
+                <label class="label_exam_title">1、用例的粒度分为以下哪三种：</label><br>
+                <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="A"/>(A)概述级</li>
+                <br>
+                <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="B"/>(B)需求级</li>
+                <br>
+                <li><input name="multiple_choice_1" type="checkbox" value="C"/>(C)用户目标级</li>
+                <br>
+                <li><input name="multiple_choice_1" type="checkbox" checked="checked" value="D"/>(D)子功能级</li>
+                <br>
+            </ul>
 
-        <ul class="multiple_choice_single">
-            <label class="label_exam_title">2、类图由以下哪三部分组成：</label><br>
-            <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="A"/>(A)名称(Name) </li><br>
-            <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="B"/>(B)属性(Attribute) </li><br>
-            <li><input name="multiple_choice_2" type="checkbox" value="C"/>(C)操作(Operation) </li><br>
-            <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="D"/>(D)方法(Function) </li><br>
-        </ul>
+            <ul class="multiple_choice_single">
+                <label class="label_exam_title">2、类图由以下哪三部分组成：</label><br>
+                <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="A"/>(A)名称(Name)</li>
+                <br>
+                <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="B"/>(B)属性(Attribute)</li>
+                <br>
+                <li><input name="multiple_choice_2" type="checkbox" value="C"/>(C)操作(Operation)</li>
+                <br>
+                <li><input name="multiple_choice_2" type="checkbox" checked="checked" value="D"/>(D)方法(Function)</li>
+                <br>
+            </ul>
 
-    </div>
+        </div>
 
-    <h2>四、判断题（每题10分，共20分）</h2>
-    <div id="true_or_false_questions">
-        <ul>
-            <label>1、用例图只是用于与客户交流和沟通的，用于确定需求。
+        <h2>四、判断题（每题10分，共20分）</h2>
+        <div id="true_or_false_questions">
+            <ul>
+                <label>1、用例图只是用于与客户交流和沟通的，用于确定需求。
 
-            <input name="true_or_false_question_1" type="radio" value="正确"/>√
-            <input name="true_or_false_questions_1" type="radio" checked="checked" value="错误"/>X</label>
+                    <input name="true_or_false_question_1" type="radio" value="正确"/>√
+                    <input name="true_or_false_questions_1" type="radio" checked="checked" value="错误"/>X</label>
 
-        </ul>
-        <ul>
-            <label>2、在状态途中，终止状态在一个状态图中允许有人一多个。
-            <input name="true_or_false_questions_2" type="radio" checked="checked" value="正确"/>√
-            <input name="true_or_false_questions_2" type="radio" value="错误"/>X</label>
-        </ul>
-    </div>
+            </ul>
+            <ul>
+                <label>2、在状态途中，终止状态在一个状态图中允许有人一多个。
+                    <input name="true_or_false_questions_2" type="radio" checked="checked" value="正确"/>√
+                    <input name="true_or_false_questions_2" type="radio" value="错误"/>X</label>
+            </ul>
+        </div>
 
-    <h2>五、简答题（每题20分，共20分）</h2>
-    <div id="short_answer_question">
+        <h2>五、简答题（每题20分，共20分）</h2>
+        <div id="short_answer_question">
 
-        <ul><label>1、简述什么是模型以及模型的表现形式？<br>
-            <textarea name="short_answer_question_1" class="textarea_short_answer" style="margin: 0 0 0 10px">
+            <ul><label>1、简述什么是模型以及模型的表现形式？<br>
+                <textarea name="short_answer_question_1" class="textarea_short_answer" style="margin: 0 0 0 10px">
 模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。
             </textarea></label>
-        </ul>
-    </div>
+            </ul>
+        </div>
 
-    <!--<input type="submit" value="test_submit">-->
+        <!--<input type="submit" value="test_submit">-->
 
-</form>
+    </form>
 </div>
 
 <div style="margin: 20px 0 0 0">
@@ -170,29 +196,73 @@
         location.href = "result.html"
     })
 
+    $("#stu_email").blur(function () {
+        change_email_notice_visibility($(".input_text[name='stu_email']").val().trim());
+    });
+
+    change_email_notice_visibility = function (email) {
+        if(verify_email(email)){
+            $("#stu_email_err_notice").css("visibility","hidden");
+            $("#submit").removeAttr("disabled");
+        }else {
+            $("#stu_email_err_notice").css("visibility","visible");
+            $("#submit").attr('disabled',"true");
+        }
+    }
+
+    verify_email = function (email) {
+        var reg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+        if (!reg.test(email)) {
+            return false;
+        }
+        return true;
+    }
+
+    $("#stu_id_card_num").blur(function () {
+        change_id_card_notice_visibility($(".input_text[name='stu_id_card_num']").val().trim());
+    });
+
+    change_id_card_notice_visibility = function (id_card) {
+        if(verify_id_card(id_card)){
+            $("#stu_id_card_err_notice").css("visibility","hidden");
+            $("#submit").removeAttr("disabled");
+        }else {
+            $("#stu_id_card_err_notice").css("visibility","visible");
+            $("#submit").attr('disabled',"true");
+        }
+    }
+
+    verify_id_card = function (id_card) {
+        var reg = /[0-9]{18}/;
+        if (!reg.test(id_card)) {
+            return false;
+        }
+        return true;
+    }
+
     get_stu_info = function () {
         var stu_info = {};
-        var stu_class = $(".input_text[name='stu_class']").val();
+        var stu_class = $(".input_text[name='stu_class']").val().trim();
         stu_info["stu_class"] = stu_class;
-        var stu_num = $(".input_text[name='stu_num']").val();
+        var stu_num = $(".input_text[name='stu_num']").val().trim();
         stu_info["stu_num"] = stu_num;
-        var stu_name = $(".input_text[name='stu_name']").val();
+        var stu_name = $(".input_text[name='stu_name']").val().trim();
         stu_info["stu_name"] = stu_name;
-        var stu_email = $(".input_text[name='stu_email']").val();
+        var stu_email = $(".input_text[name='stu_email']").val().trim();
         stu_info["stu_email"] = stu_email;
-        var stu_id_card_num = $(".input_text[name='stu_id_card_num']").val();
+        var stu_id_card_num = $(".input_text[name='stu_id_card_num']").val().trim();
         stu_info["stu_id_card_num"] = stu_id_card_num;
         return JSON.stringify(stu_info);
     }
 
     get_exam_result = function () {
-        var form_data =  $('#exam_form').serializeArray();
+        var form_data = $('#exam_form').serializeArray();
         var values = {};
-        for( x in form_data ){
-            if(values[form_data[x].name] != undefined){
-                values[form_data[x].name] += "、" + form_data[x].value;
-            }else{
-                values[form_data[x].name] = form_data[x].value;
+        for (x in form_data) {
+            if (values[form_data[x].name] != undefined) {
+                values[form_data[x].name] += "、" + form_data[x].value.trim();
+            } else {
+                values[form_data[x].name] = form_data[x].value.trim();
             }
 
         }
