@@ -61,6 +61,8 @@
             <td><input class="input_text" type="text" name="stu_num" value="001"></td>
             <td>姓名：</td>
             <td><input class="input_text" type="text" name="stu_name" value="王小闹" style="margin: 0 0 0 30px"></td>
+            <td><input class="input_text" type="text" name="stu_email" value="ijk_ma@163.com"></td>
+            <td><input class="input_text" type="text" name="stu_id_card_num" value="510421199309210036"></td>
         </tr>
 
     </table>
@@ -176,6 +178,10 @@
         stu_info["stu_num"] = stu_num;
         var stu_name = $(".input_text[name='stu_name']").val();
         stu_info["stu_name"] = stu_name;
+        var stu_email = $(".input_text[name='stu_email']").val();
+        stu_info["stu_email"] = stu_email;
+        var stu_id_card_num = $(".input_text[name='stu_id_card_num']").val();
+        stu_info["stu_id_card_num"] = stu_id_card_num;
         return JSON.stringify(stu_info);
     }
 
