@@ -15,8 +15,8 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="229" column="69" lean-forward="false" selection-start-line="229" selection-start-column="69" selection-end-line="229" selection-end-column="69" />
+            <state relative-caret-position="148">
+              <caret line="174" column="25" lean-forward="false" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -24,7 +24,6 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#label#0;n#ul#0;n#div#4;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -269,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501658967299</updated>
       <workItem from="1501658968617" duration="8850000" />
-      <workItem from="1501677932640" duration="5912000" />
+      <workItem from="1501677932640" duration="6250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14762000" />
+    <option name="totallyTimeSpent" value="15100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -334,7 +333,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#label#0;n#ul#0;n#div#4;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,8 +392,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="229" column="69" lean-forward="false" selection-start-line="229" selection-start-column="69" selection-end-line="229" selection-end-column="69" />
+        <state relative-caret-position="148">
+          <caret line="174" column="25" lean-forward="false" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -403,7 +401,6 @@
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#b#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#label#0;n#ul#0;n#div#4;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

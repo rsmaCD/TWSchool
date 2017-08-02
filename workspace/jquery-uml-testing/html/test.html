@@ -172,15 +172,11 @@
             </ul>
         </div>
 
-        <!--<input type="submit" value="test_submit">-->
+        <input id="submit" type="submit" value="计算分数">
 
     </form>
 </div>
 
-<div style="margin: 20px 0 0 0">
-    <!--<input id="submit" name="submit" type="button" value="计算分数"/>-->
-    <button id="submit" type="submit">计算分数</button>
-</div>
 
 
 <script src="http://www.iclubz.com/js/jquery.js"></script>
@@ -188,13 +184,12 @@
 
 <script>
 
-    $("#submit").click(function () {
-
+    $("#exam_form").submit(function(e){
+        e.preventDefault();
         localStorage.setItem('stu_info', get_stu_info());
         localStorage.setItem('exam_result', get_exam_result());
-
         location.href = "result.html"
-    })
+    });
 
     $("#stu_email").blur(function () {
         change_email_notice_visibility($(".input_text[name='stu_email']").val().trim());
