@@ -144,6 +144,7 @@
         </ul>
     </div>
 
+    <!--<input type="submit" value="test_submit">-->
 
 </form>
 </div>
@@ -159,8 +160,15 @@
 
 <script>
 
-
     $("#submit").click(function () {
+
+        localStorage.setItem('stu_info', get_stu_info());
+        localStorage.setItem('exam_result', get_exam_result());
+
+        location.href = "result.html"
+    })
+
+    get_stu_info = function () {
         var stu_info = {};
         var stu_class = $(".input_text[name='stu_class']").val();
         stu_info["stu_class"] = stu_class;
@@ -168,7 +176,10 @@
         stu_info["stu_num"] = stu_num;
         var stu_name = $(".input_text[name='stu_name']").val();
         stu_info["stu_name"] = stu_name;
+        return JSON.stringify(stu_info);
+    }
 
+    get_exam_result = function () {
         var form_data =  $('#exam_form').serializeArray();
         var values = {};
         for( x in form_data ){
@@ -179,18 +190,8 @@
             }
 
         }
-
-        var stu_info = JSON.stringify(stu_info);
-        var exam_result = JSON.stringify(values);
-
-
-        localStorage.setItem('stu_info', stu_info);
-        localStorage.setItem('exam_result', exam_result);
-//        alert(stu_info);
-//        alert(exam_result);
-
-        location.href = "result.html"
-    })
+        return JSON.stringify(values);
+    }
 
 </script>
 
