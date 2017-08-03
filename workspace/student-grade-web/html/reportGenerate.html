@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Search Student</title>
+    <title>Report Generate</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/searchStudent.css">
     <script src="http://www.iclubz.com/js/jquery.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript"
@@ -18,59 +17,65 @@
             crossorigin="anonymous"></script>
 
     <script src="../js/add_navbar_and_footer.js"></script>
-    <script src="../js/search_stu.js"></script>
+    <script src="../js/report_generate.js"></script>
 </head>
 <body>
 
 <div id="navbar"></div>
 
 <div class="container">
-    <div class="row">
-        <input id="stu_id" type="text" placeholder="ID">
-        <button id="search-id-button" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> search
-        </button>
-        <input id="stu_name" type="text" placeholder="name">
-        <button id="search-name-button" type="button" class="btn btn-default">
-            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> search
-        </button>
 
-    </div>
     <div class="row">
         <table class="table">
             <thead>
             <tr>
                 <th>#</th>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>ID Card Number</th>
-                <th>Native Place</th>
+                <th>姓名</th>
+                <th>数学</th>
+                <th>语文</th>
+                <th>英语</th>
+                <th>编程</th>
+                <th>平均分</th>
+                <th>总分</th>
             </tr>
             </thead>
 
-            <tbody id="search_result">
+            <tbody id="report_result">
 
             </tbody>
         </table>
     </div>
 
+    <div class="row">
+        <div id="report_total_and_average" class="col-md-3 col-md-offset-9">
+
+        </div>
+    </div>
+
 </div>
+
+
+
 <div id="footer"></div>
 
-<script id="search_result_template" type="text/x-jquery-tmpl">
-        {{each(i,stu) data}}
+<script id="report_template" type="text/x-jquery-tmpl">
+        {{each(i,report_item) report_item_list}}
         <tr>
                 <th>${i+1}</th>
-                <th>${stu_id}</th>
                 <th>${stu_name}</th>
-                <th>${stu_email}</th>
-                <th>${stu_phone_num}</th>
-                <th>${stu_id_card_num}</th>
-                <th>${stu_native_place}</th>
+                <th>${math}</th>
+                <th>${language}</th>
+                <th>${english}</th>
+                <th>${program}</th>
+                <th>${average}</th>
+                <th>${total}</th>
         </tr>
         {{/each}}
+</script>
+
+<script id="report_total_and_average_template" type="text/x-jquery-tmpl">
+    <p>全班总分平均数:${average}</p>
+    <p>全班总分中位数:${median}</p>
 </script>
 
 </body>

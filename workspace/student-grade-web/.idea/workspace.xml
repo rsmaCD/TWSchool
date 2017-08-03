@@ -25,8 +25,8 @@
       <file leaf-file-name="add_student.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/add_student.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="57" column="68" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="68" />
+            <state relative-caret-position="203">
+              <caret line="57" column="85" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="85" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -37,8 +37,8 @@
       <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="57" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="5" selection-end-column="57" />
+            <state relative-caret-position="165">
+              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -47,18 +47,18 @@
       <file leaf-file-name="searchStu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/searchStu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="300">
+              <caret line="20" column="47" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_stu.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_stu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/search_stu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+            <state relative-caret-position="334">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="55" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -66,12 +66,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searchStudent.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/searchStudent.css">
+      <file leaf-file-name="reportGenerate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/reportGenerate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="49" column="74" lean-forward="false" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="report_generate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/report_generate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="57" column="101" lean-forward="false" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
+              <folding>
+                <element signature="e#0#41#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,9 +103,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -109,17 +131,19 @@
         <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/add_navbar_and_footer.js" />
-        <option value="$PROJECT_DIR$/css/global.css" />
         <option value="$PROJECT_DIR$/../jquery-uml-testing/html/test.html" />
         <option value="$PROJECT_DIR$/js/add_stu_success_msg.js" />
         <option value="$PROJECT_DIR$/css/addStudent.css" />
         <option value="$PROJECT_DIR$/html/addStudent.html" />
-        <option value="$PROJECT_DIR$/html/navbar.html" />
         <option value="$PROJECT_DIR$/js/search_stu_result_template.js" />
         <option value="$PROJECT_DIR$/js/add_student.js" />
         <option value="$PROJECT_DIR$/css/searchStudent.css" />
-        <option value="$PROJECT_DIR$/html/searchStu.html" />
         <option value="$PROJECT_DIR$/js/search_stu.js" />
+        <option value="$PROJECT_DIR$/html/searchStu.html" />
+        <option value="$PROJECT_DIR$/html/navbar.html" />
+        <option value="$PROJECT_DIR$/js/report_generate.js" />
+        <option value="$PROJECT_DIR$/html/reportGenerate.html" />
+        <option value="$PROJECT_DIR$/css/global.css" />
       </list>
     </option>
   </component>
@@ -656,12 +680,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501741232642</updated>
       <workItem from="1501741233960" duration="15718000" />
-      <workItem from="1501762328660" duration="5303000" />
+      <workItem from="1501762328660" duration="7324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21021000" />
+    <option name="totallyTimeSpent" value="23042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -772,14 +796,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/footer.css" />
-    <entry file="file://$PROJECT_DIR$/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/add_navbar_and_footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -841,14 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="57" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="5" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/searchStudent.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -859,29 +867,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/add_student.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="57" column="68" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="68" />
+        <state relative-caret-position="203">
+          <caret line="57" column="85" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="85" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/searchStu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/search_stu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        <state relative-caret-position="334">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="55" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/searchStu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="47" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/report_generate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="57" column="101" lean-forward="false" selection-start-line="57" selection-start-column="101" selection-end-line="57" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/reportGenerate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="49" column="74" lean-forward="false" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
