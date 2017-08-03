@@ -1,0 +1,11 @@
+.input-group{
+    margin: 20px 0 20px 0;
+}
+
+.submit-button{
+    color: #292b2c;
+    background-color: #ccc;
+    border-radius: 4px;
+    width: 80px;
+    height: 40px;
+}
