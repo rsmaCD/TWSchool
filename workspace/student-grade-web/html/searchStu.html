@@ -16,6 +16,7 @@
             crossorigin="anonymous"></script>
 
     <script src="../js/add_navbar_and_footer.js"></script>
+    <script src="../js/search_stu.js"></script>
 </head>
 <body>
 
@@ -49,7 +50,7 @@
         {{each(i,stu) data}}
         <tr>
                 <th>${i+1}</th>
-                <th>${stu_name}</th>
+                <th>${stu_id}</th>
                 <th>${stu_name}</th>
                 <th>${stu_email}</th>
                 <th>${stu_phone_num}</th>
@@ -58,14 +59,6 @@
         </tr>
         {{/each}}
 
-</script>
-
-<script>
-    if (localStorage.getItem('stu_info_list')) {
-        var stu_info_list = jQuery.parseJSON(localStorage.getItem('stu_info_list'));
-        var search_result = {"data":stu_info_list};
-        $('#search_result_template').tmpl(search_result).appendTo('#search_result');
-    }
 </script>
 
 </body>

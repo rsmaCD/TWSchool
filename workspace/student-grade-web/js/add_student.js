@@ -69,12 +69,21 @@ $(function () {
 
 });
 
+function get_random_num(n){
+    var rnd="";
+    for(var i=0;i<n;i++)
+        rnd+=Math.floor(Math.random()*10);
+    return rnd;
+}
+
 get_stu_info = function () {
     var form_data = $('#add-student-form').serializeArray();
     var values = {};
     for (x in form_data) {
         values[form_data[x].name] = form_data[x].value.trim();
     }
+    var stu_id = get_random_num(10);
+    values["stu_id"] = stu_id;
     return values;
 };
 
