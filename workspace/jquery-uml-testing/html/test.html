@@ -38,49 +38,41 @@
 
 <body style="margin: 20px 0 20px 20px">
 
+<form id="exam_form">
+    <div id="exam_info">
+        <h1>统一建模语言理论测试</h1>
 
-<div id="exam_info">
-    <h1>统一建模语言理论测试</h1>
+        <table>
+            <tr>
+                <td>考试科目：</td>
+                <td><input class="input_text_readonly" type="text" name="exam_name"
+                           readonly="readonly" value="统一建模语言"></td>
+                <td>时间：</td>
+                <td><input class="input_text_readonly" type="text" name="exam_time"
+                           readonly="readonly" value="100分钟"></td>
+                <td>得分：</td>
+                <td><input class="input_text_readonly" type="text" name="exam_score"
+                           readonly="readonly" value="100"></td>
+            </tr>
+            <tr>
+                <td>班级：</td>
+                <td><input class="input_text" type="text" name="stu_class" value="1班"></td>
+                <td>学号：</td>
+                <td><input class="input_text" type="text" name="stu_num" value="001"></td>
+                <td>姓名：</td>
+                <td><input class="input_text" type="text" name="stu_name" value="" style="margin: 0 0 0 30px"></td>
+                <td><input id="stu_email" class="input_text" type="text" name="stu_email" value="ijk_ma@163.com"></td>
+                <td><input id="stu_id_card_num" class="input_text" type="text" name="stu_id_card_num"
+                           value="510421199309210036"></td>
+            </tr>
 
-    <table>
-        <tr>
-            <td>考试科目：</td>
-            <td><input class="input_text_readonly" type="text" name="exam_name"
-                       readonly="readonly" value="统一建模语言"></td>
-            <td>时间：</td>
-            <td><input class="input_text_readonly" type="text" name="exam_time"
-                       readonly="readonly" value="100分钟"></td>
-            <td>得分：</td>
-            <td><input class="input_text_readonly" type="text" name="exam_score"
-                       readonly="readonly" value="100"></td>
-        </tr>
-        <tr>
-            <td>班级：</td>
-            <td><input class="input_text" type="text" name="stu_class" value="1班"></td>
-            <td>学号：</td>
-            <td><input class="input_text" type="text" name="stu_num" value="001"></td>
-            <td>姓名：</td>
-            <td><input class="input_text" type="text" name="stu_name" value="王小闹" style="margin: 0 0 0 30px"></td>
-            <td><input id="stu_email" class="input_text" type="text" name="stu_email" value="ijk_ma@163.com"></td>
-            <td><input id="stu_id_card_num" class="input_text" type="text" name="stu_id_card_num"
-                       value="510421199309210036"></td>
-        </tr>
+        </table>
 
-    </table>
-
-    <div id="stu_email_err_notice" style="visibility: hidden">
-        <b style="color: red">请输入正确的邮箱！</b>
     </div>
 
-    <div id="stu_id_card_err_notice" style="visibility: hidden">
-        <b style="color: red">请输入正确的身份证号！</b>
-    </div>
 
-</div>
+    <div id="exam_question">
 
-
-<div id="exam_question">
-    <form id="exam_form">
         <h2>一、填空题（每空5分，共20分）</h2>
         <div id="gap_filling">
 
@@ -152,13 +144,13 @@
                 <label>1、用例图只是用于与客户交流和沟通的，用于确定需求。
 
                     <input name="true_or_false_question_1" type="radio" value="正确"/>√
-                    <input name="true_or_false_questions_1" type="radio" checked="checked" value="错误"/>X</label>
+                    <input name="true_or_false_question_1" type="radio" checked="checked" value="错误"/>X</label>
 
             </ul>
             <ul>
                 <label>2、在状态途中，终止状态在一个状态图中允许有人一多个。
-                    <input name="true_or_false_questions_2" type="radio" checked="checked" value="正确"/>√
-                    <input name="true_or_false_questions_2" type="radio" value="错误"/>X</label>
+                    <input name="true_or_false_question_2" type="radio" checked="checked" value="正确"/>√
+                    <input name="true_or_false_question_2" type="radio" value="错误"/>X</label>
             </ul>
         </div>
 
@@ -172,83 +164,159 @@
             </ul>
         </div>
 
+        <div class="messagebox">
+
+        </div>
+
+
         <input id="submit" type="submit" value="计算分数">
 
-    </form>
-</div>
 
+    </div>
 
+</form>
 
 <script src="http://www.iclubz.com/js/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
 <script>
 
-    $("#exam_form").submit(function(e){
-        e.preventDefault();
-        localStorage.setItem('stu_info', get_stu_info());
+    $("#exam_form").submit(function () {
+        event.preventDefault();
+
         localStorage.setItem('exam_result', get_exam_result());
         location.href = "result.html"
+
     });
 
-    $("#stu_email").blur(function () {
-        change_email_notice_visibility($(".input_text[name='stu_email']").val().trim());
+    $("#exam_form").validate({
+        rules: {
+            stu_name: {
+                required: true
+            },
+            stu_num: {
+                required: true
+            },
+            stu_class: {
+                required: true
+            },
+            stu_email: {
+                required: true,
+                email: true
+            },
+            stu_id_card_num: {
+                required: true,
+                maxlength: 18
+            },
+            gap_filling_1: {
+                required: true
+            },
+            gap_filling_2: {
+                required: true
+            },
+            single_choice_1: {
+                required: true
+            },
+            single_choice_2: {
+                required: true
+            },
+            multiple_choice_1: {
+                required: true
+            },
+            multiple_choice_2: {
+                required: true
+            },
+            true_or_false_question_1: {
+                required: true
+            },
+            true_or_false_question_2: {
+                required: true
+            },
+            short_answer_question_1: {
+                required: true
+            }
+        },
+        messages: {
+            stu_name: "Enter your name",
+            stu_email: {
+                required: "Enter your email",
+                email: "email err"
+            },
+            stu_id_card_num: {
+                required: "Enter your id_card_num",
+                maxlength: "IDCardNum err"
+            }
+        },
+        errorLabelContainer: ".messagebox",
+        wrapper: "li",
+        submitHandler: function(form) {
+            form.evevent.preventDefault();
+            localStorage.setItem('exam_result', get_exam_result());
+            location.href = "result.html"
+        }
     });
 
-    change_email_notice_visibility = function (email) {
-        if(verify_email(email)){
-            $("#stu_email_err_notice").css("visibility","hidden");
-            $("#submit").removeAttr("disabled");
-        }else {
-            $("#stu_email_err_notice").css("visibility","visible");
-            $("#submit").attr('disabled',"true");
-        }
-    }
-
-    verify_email = function (email) {
-        var reg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
-        if (!reg.test(email)) {
-            return false;
-        }
-        return true;
-    }
-
-    $("#stu_id_card_num").blur(function () {
-        change_id_card_notice_visibility($(".input_text[name='stu_id_card_num']").val().trim());
-    });
-
-    change_id_card_notice_visibility = function (id_card) {
-        if(verify_id_card(id_card)){
-            $("#stu_id_card_err_notice").css("visibility","hidden");
-            $("#submit").removeAttr("disabled");
-        }else {
-            $("#stu_id_card_err_notice").css("visibility","visible");
-            $("#submit").attr('disabled',"true");
-        }
-    }
-
-    verify_id_card = function (id_card) {
-        var reg = /[0-9]{18}/;
-        if (!reg.test(id_card)) {
-            return false;
-        }
-        return true;
-    }
-
-    get_stu_info = function () {
-        var stu_info = {};
-        var stu_class = $(".input_text[name='stu_class']").val().trim();
-        stu_info["stu_class"] = stu_class;
-        var stu_num = $(".input_text[name='stu_num']").val().trim();
-        stu_info["stu_num"] = stu_num;
-        var stu_name = $(".input_text[name='stu_name']").val().trim();
-        stu_info["stu_name"] = stu_name;
-        var stu_email = $(".input_text[name='stu_email']").val().trim();
-        stu_info["stu_email"] = stu_email;
-        var stu_id_card_num = $(".input_text[name='stu_id_card_num']").val().trim();
-        stu_info["stu_id_card_num"] = stu_id_card_num;
-        return JSON.stringify(stu_info);
-    }
+    //    verify_checkbox_1 = function() {
+    //
+    //        var checked = $("input[name='multiple_choice_1']:checked").length;
+    //        if(!checked) {
+    //            alert("You must check at least one checkbox.");
+    //            return false;
+    //        }
+    //    }
+    //
+    //    verify_checkbox_2 = function() {
+    //        var checked = $("input[name='multiple_choice_2']:checked").length;
+    //        if(!checked) {
+    //            alert("You must check at least one checkbox.");
+    //            return false;
+    //        }
+    //    }
+    //
+    //    $("#stu_email").blur(function () {
+    //        change_email_notice_visibility($(".input_text[name='stu_email']").val().trim());
+    //    });
+    //
+    //    change_email_notice_visibility = function (email) {
+    //        if(verify_email(email)){
+    //            $("#stu_email_err_notice").css("visibility","hidden");
+    //            $("#submit").removeAttr("disabled");
+    //        }else {
+    //            $("#stu_email_err_notice").css("visibility","visible");
+    //            $("#submit").attr('disabled',"true");
+    //        }
+    //    }
+    //
+    //    verify_email = function (email) {
+    //        var reg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    //        if (!reg.test(email)) {
+    //            return false;
+    //        }
+    //        return true;
+    //    }
+    //
+    //    $("#stu_id_card_num").blur(function () {
+    //        change_id_card_notice_visibility($(".input_text[name='stu_id_card_num']").val().trim());
+    //    });
+    //
+    //    change_id_card_notice_visibility = function (id_card) {
+    //        if(verify_id_card(id_card)){
+    //            $("#stu_id_card_err_notice").css("visibility","hidden");
+    //            $("#submit").removeAttr("disabled");
+    //        }else {
+    //            $("#stu_id_card_err_notice").css("visibility","visible");
+    //            $("#submit").attr('disabled',"true");
+    //        }
+    //    }
+    //
+    //    verify_id_card = function (id_card) {
+    //        var reg = /[0-9]{18}/;
+    //        if (!reg.test(id_card)) {
+    //            return false;
+    //        }
+    //        return true;
+    //    }
 
     get_exam_result = function () {
         var form_data = $('#exam_form').serializeArray();

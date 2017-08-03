@@ -19,7 +19,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 
-<script id="stu_info_template" type="text/x-jquery-tmpl">
+<script id="exam_result_template" type="text/x-jquery-tmpl">
     <table>
         <tr>
            <td>班级:</td>
@@ -36,9 +36,6 @@
            <td>${stu_id_card_num}</td>
         </tr>
     </table>
-</script>
-
-<script id="exam_result_template" type="text/x-jquery-tmpl">
     <table>
         <tr>
            <td>题型:</td>
@@ -62,8 +59,8 @@
         </tr>
          <tr>
            <td>判断题:</td>
-           <td>${true_or_false_questions_1}</td>
-           <td>${true_or_false_questions_2}</td>
+           <td>${true_or_false_question_1}</td>
+           <td>${true_or_false_question_2}</td>
         </tr>
     </table>
     <p>简答题:
@@ -71,12 +68,6 @@
 </script>
 
 <script>
-
-    if (localStorage.getItem('stu_info')) {
-        var stu_info = jQuery.parseJSON(localStorage.getItem('stu_info'));
-        $('#stu_info_template').tmpl(stu_info).appendTo('#stu_info_table');
-    }
-
     if (localStorage.getItem('exam_result')) {
         var exam_result = jQuery.parseJSON(localStorage.getItem('exam_result'));
         $('#exam_result_template').tmpl(exam_result).appendTo('#exam_result_');
