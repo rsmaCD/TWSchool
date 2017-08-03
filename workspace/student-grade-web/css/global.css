@@ -1,0 +1,12 @@
+*{
+    Border-sizing:border-box;
+}
+
+#navbar{
+    margin-bottom: 0;
+}
+
+#footer{
+    text-align: center;
+    height: 30px;
+}
