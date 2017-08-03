@@ -9,3 +9,14 @@
     width: 80px;
     height: 40px;
 }
+.input-group input{
+    width: 40px;
+}
+
+.err_msg{
+    color: red;
+}
+.success_msg{
+    color: red;
+    visibility: hidden;
+}

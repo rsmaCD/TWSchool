@@ -17,6 +17,7 @@
             crossorigin="anonymous"></script>
 
     <script src="../js/add_navbar_and_footer.js"></script>
+    <script src="../js/add_student.js"></script>
 
 </head>
 <body>
@@ -41,17 +42,23 @@
                 </div>
                 <div class="input-group">
                     <span class="input-group-addon">身份证号：</span>
-                    <input type="text" name="stu_phone_num" class="form-control" placeholder="学生身份证号" aria-describedby="basic-addon1">
+                    <input type="text" name="stu_id_card_num" class="form-control" placeholder="学生身份证号" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon">学生籍贯：</span>
+                    <input type="text" name="stu_native_place" class="form-control" placeholder="学生籍贯" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="err_msg"></div>
+                <div class="success_msg">
+                    <p>添加学生成功！</p>
                 </div>
 
                 <div class="col-md-1 col-md-offset-10">
                     <button type="submit" class="submit-button">添加</button>
                 </div>
             </form>
-
-            <div class="err_msg">
-
-            </div>
 
         </div>
 
