@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="http://www.iclubz.com/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <script src="../js/add_navbar_and_footer.js"></script>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<div class="container">
+    <div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>ID Card Number</th>
+            <th>Native Place</th>
+        </tr>
+        </thead>
+
+        <tbody id="search_result">
+
+        </tbody>
+    </table>
+    </div>
+
+</div>
+<div id="footer"></div>
+
+<script id="search_result_template" type="text/x-jquery-tmpl">
+        {{each(i,stu) data}}
+        <tr>
+                <th>${i+1}</th>
+                <th>${stu_name}</th>
+                <th>${stu_name}</th>
+                <th>${stu_email}</th>
+                <th>${stu_phone_num}</th>
+                <th>${stu_id_card_num}</th>
+                <th>${stu_native_place}</th>
+        </tr>
+        {{/each}}
+
+</script>
+
+<script>
+    if (localStorage.getItem('stu_info_list')) {
+        var stu_info_list = jQuery.parseJSON(localStorage.getItem('stu_info_list'));
+        var search_result = {"data":stu_info_list};
+        $('#search_result_template').tmpl(search_result).appendTo('#search_result');
+    }
+</script>
+
+</body>
+</html>

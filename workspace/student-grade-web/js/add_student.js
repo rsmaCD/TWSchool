@@ -2,7 +2,7 @@
  * Created by rsma on 03/08/2017.
  */
 $(function () {
-    $("#exam_form").submit(function () {
+    $("#add-student-form").submit(function () {
         event.preventDefault();
     });
 
@@ -13,17 +13,17 @@ $(function () {
             },
             stu_email: {
                 required: true,
-                email:true
+                email: true
             },
             stu_phone_num: {
                 required: true,
-                maxlength:11,
-                minlength:11
+                maxlength: 11,
+                minlength: 11
             },
             stu_id_card_num: {
                 required: true,
-                maxlength:18,
-                minlength:18
+                maxlength: 18,
+                minlength: 18
             },
             stu_native_place: {
                 required: true
@@ -51,12 +51,20 @@ $(function () {
         },
         errorLabelContainer: ".err_msg",
         wrapper: "li",
-        submitHandler: function(form) {
-            localStorage.setItem('stu_info', get_stu_info());
+        submitHandler: function (form) {
+            if (localStorage.getItem('stu_info_list')) {
+                var stu_info_list = JSON.parse(localStorage.getItem('stu_info_list'));
+                stu_info_list.push(get_stu_info());
+                localStorage.setItem("stu_info_list", JSON.stringify(stu_info_list));
+            } else {
+                var stu_info_list = [];
+                stu_info_list.push(get_stu_info());
+                localStorage.setItem("stu_info_list", JSON.stringify(stu_info_list));
+            }
+
             show_success_msg();
             clean_input();
         }
-
     });
 
 });
@@ -67,11 +75,11 @@ get_stu_info = function () {
     for (x in form_data) {
         values[form_data[x].name] = form_data[x].value.trim();
     }
-    return JSON.stringify(values);
+    return values;
 };
 
 show_success_msg = function () {
-    $(".success_msg").css("visibility","visible");
+    $(".success_msg").css("visibility", "visible");
 };
 
 clean_input = function () {
