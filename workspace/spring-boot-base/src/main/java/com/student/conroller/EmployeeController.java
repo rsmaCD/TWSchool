@@ -19,8 +19,6 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    Map<String, Employee> employees = new HashMap<>();
-
     @RequestMapping(value = "/employees", method = RequestMethod.POST)
     public ResponseEntity addEmployee(@RequestBody Employee employee) {
         return new ResponseEntity<>(employeeService.addEmployee(employee), HttpStatus.CREATED);

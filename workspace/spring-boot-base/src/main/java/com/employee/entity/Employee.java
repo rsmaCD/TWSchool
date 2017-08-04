@@ -1,5 +1,7 @@
 package com.employee.entity;
 
+import java.util.List;
+
 /**
  * Created by rsma on 04/08/2017.
  */
@@ -8,6 +10,7 @@ public class Employee {
     private String id;
     private String name;
     private String email;
+    List<Address> addressList;
 
     public String getName() {
         return name;
@@ -31,6 +34,14 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
     }
 
     @Override
