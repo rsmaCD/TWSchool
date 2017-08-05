@@ -5,9 +5,19 @@ package com.employee.entity;
  */
 public class Address {
 
+    //地址唯一标识
+    private String addressName;
     private String lineOne;
     private String lineTwo;
     private String city;
+
+    public String getAddressName() {
+        return addressName;
+    }
+
+    public void setAddressName(String addressName) {
+        this.addressName = addressName;
+    }
 
     public String getCity() {
         return city;
