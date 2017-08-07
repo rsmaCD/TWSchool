@@ -1,7 +1,7 @@
-package studentScore.refactor.status;
+package studentScore.original.status;
 
-import studentScore.Global;
-import studentScore.App;
+import studentScore.global.Global;
+import studentScore.original.App;
 
 /**
  * Created by rsma on 28/07/2017.

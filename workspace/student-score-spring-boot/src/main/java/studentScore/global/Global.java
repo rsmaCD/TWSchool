@@ -1,4 +1,4 @@
-package studentScore;
+package studentScore.global;
 
 /**
  * Created by rsma on 28/07/2017.

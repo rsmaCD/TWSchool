@@ -1,8 +1,7 @@
-package studentScore;
+package studentScore.original;
 
-import studentScore.refactor.io.ConsoleIO;
-import studentScore.refactor.io.IOInterface;
-import studentScore.refactor.status.*;
+import studentScore.original.io.IOInterface;
+import studentScore.original.status.*;
 
 /**
  * Created by rsma on 28/07/2017.

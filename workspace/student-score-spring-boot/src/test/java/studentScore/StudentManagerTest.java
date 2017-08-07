@@ -3,6 +3,10 @@ package studentScore;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import studentScore.entity.Course;
+import studentScore.entity.Student;
+import studentScore.entity.StudentManager;
+import studentScore.global.Global;
 
 import java.util.ArrayList;
 import java.util.List;

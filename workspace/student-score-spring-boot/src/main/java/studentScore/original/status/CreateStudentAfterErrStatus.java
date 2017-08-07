@@ -1,11 +1,11 @@
-package studentScore.refactor.status;
+package studentScore.original.status;
 
-import studentScore.Global;
-import studentScore.Student;
-import studentScore.StudentScoreService;
-import studentScore.App;
-import studentScore.refactor.Validate;
-import studentScore.refactor.io.IOInterface;
+import studentScore.global.Global;
+import studentScore.entity.Student;
+import studentScore.service.StudentScoreService;
+import studentScore.original.App;
+import studentScore.global.Validate;
+import studentScore.original.io.IOInterface;
 
 /**
  * Created by rsma on 29/07/2017.

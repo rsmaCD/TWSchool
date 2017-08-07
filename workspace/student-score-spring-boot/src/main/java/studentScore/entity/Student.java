@@ -1,4 +1,4 @@
-package studentScore;
+package studentScore.entity;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package studentScore.refactor;
+package studentScore.global;
 
-import studentScore.Global;
+import studentScore.global.Global;
 
 /**
  * Created by rsma on 28/07/2017.

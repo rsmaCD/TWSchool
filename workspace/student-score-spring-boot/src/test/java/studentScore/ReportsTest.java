@@ -2,6 +2,10 @@ package studentScore;
 
 import org.junit.Before;
 import org.junit.Test;
+import studentScore.entity.Course;
+import studentScore.entity.Reports;
+import studentScore.entity.Student;
+import studentScore.global.Global;
 
 import java.util.List;
 

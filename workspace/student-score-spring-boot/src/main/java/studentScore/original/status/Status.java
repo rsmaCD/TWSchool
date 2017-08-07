@@ -1,4 +1,4 @@
-package studentScore.refactor.status;
+package studentScore.original.status;
 
 /**
  * Created by rsma on 28/07/2017.

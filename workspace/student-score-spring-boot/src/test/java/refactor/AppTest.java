@@ -1,8 +1,8 @@
 package refactor;
 
 import org.junit.Test;
-import studentScore.App;
-import studentScore.refactor.io.FileIO;
+import studentScore.original.App;
+import studentScore.original.io.FileIO;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

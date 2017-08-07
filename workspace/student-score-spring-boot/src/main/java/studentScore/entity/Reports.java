@@ -1,4 +1,6 @@
-package studentScore;
+package studentScore.entity;
+
+import studentScore.global.Global;
 
 import java.util.ArrayList;
 import java.util.Comparator;

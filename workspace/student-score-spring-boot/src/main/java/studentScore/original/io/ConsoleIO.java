@@ -1,4 +1,4 @@
-package studentScore.refactor.io;
+package studentScore.original.io;
 
 import java.util.Scanner;
 
