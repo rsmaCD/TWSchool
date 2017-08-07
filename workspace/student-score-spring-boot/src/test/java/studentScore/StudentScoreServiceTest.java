@@ -5,7 +5,7 @@ import org.junit.Test;
 import studentScore.entity.Course;
 import studentScore.entity.Reports;
 import studentScore.entity.Student;
-import studentScore.entity.StudentManager;
+import studentScore.service.StudentManager;
 import studentScore.global.Global;
 import studentScore.service.StudentScoreService;
 

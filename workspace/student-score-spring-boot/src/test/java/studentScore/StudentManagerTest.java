@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import studentScore.entity.Course;
 import studentScore.entity.Student;
-import studentScore.entity.StudentManager;
+import studentScore.service.StudentManager;
 import studentScore.global.Global;
 
 import java.util.ArrayList;
@@ -83,5 +83,13 @@ public class StudentManagerTest {
         Student actualStudent = manager.getStudentById("111");
         //Then
         assertEquals(null,actualStudent);
+    }
+
+    @Test
+    public void should_get_student_when_put_student() throws Exception {
+        manager = StudentManager.getInstance();
+        Student student = new Student("111","Tom",courseList);
+        Student actualStu = manager.postStudent(student);
+        assertEquals(student,actualStu);
     }
 }

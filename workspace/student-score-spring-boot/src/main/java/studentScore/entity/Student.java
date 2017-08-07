@@ -17,6 +17,18 @@ public class Student {
         this.courseList = courseList;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
+
     public String getId() {
         return id;
     }

@@ -1,11 +1,17 @@
-package studentScore.entity;
+package studentScore.service;
+
+import org.springframework.stereotype.Service;
+import studentScore.entity.Course;
+import studentScore.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by rsma on 26/07/2017.
  */
+@Service
 public class StudentManager {
 
     private StudentManager() {}
@@ -16,15 +22,16 @@ public class StudentManager {
         return management;
     }
 
+    public Student postStudent(Student student){
+        String id = UUID.randomUUID().toString().replace("-", "");
+        student.setId(id);
+        studentList.add(student);
+        return getStudentById(student.getId());
+    }
 
-    public Student createStudent(String id, String name, List<Course> courseList) {
-
-        if(getStudentById(id) == null) {
-            Student student = new Student(id, name, courseList);
-            studentList.add(student);
-            return student;
-        }
-        return null;
+    public boolean putStudent(Student student,String id){
+        Student studentById = getStudentById(id);
+return true;
     }
 
     public Student getStudentById(String id){
@@ -32,6 +39,15 @@ public class StudentManager {
             if(stu.getId().equals(id)){
                 return stu;
             }
+        }
+        return null;
+    }
+
+    public Student createStudent(String id, String name, List<Course> courseList) {
+        if(getStudentById(id) == null) {
+            Student student = new Student(id, name, courseList);
+            studentList.add(student);
+            return student;
         }
         return null;
     }
