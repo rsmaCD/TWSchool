@@ -1,7 +1,7 @@
-package com.student.conroller;
+package com.employee.controller;
 
 import com.employee.entity.Address;
-import com.student.service.AddressService;
+import com.employee.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

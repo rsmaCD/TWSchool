@@ -1,13 +1,13 @@
-package com.student.conroller;
+package com.employee.controller;
 
 import com.employee.entity.Employee;
-import com.student.service.EmployeeService;
+import com.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * Created by rsma on 04/08/2017.

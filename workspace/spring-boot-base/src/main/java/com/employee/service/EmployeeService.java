@@ -1,4 +1,4 @@
-package com.student.service;
+package com.employee.service;
 
 import com.employee.entity.Employee;
 import org.springframework.stereotype.Service;
