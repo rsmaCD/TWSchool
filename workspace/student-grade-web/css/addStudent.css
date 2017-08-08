@@ -3,8 +3,10 @@
 }
 
 .submit-button{
-    color: #292b2c;
-    background-color: #ccc;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
     border-radius: 4px;
     width: 80px;
     height: 40px;
@@ -19,4 +21,20 @@
 .success_msg{
     color: red;
     visibility: hidden;
+}
+
+.stu-navtive-place select{
+    margin: 0 10px;
+}
+
+.input-group-stu-navtive-place{
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }

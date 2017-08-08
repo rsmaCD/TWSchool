@@ -17,7 +17,7 @@
             crossorigin="anonymous"></script>
 
     <script src="../js/add_navbar_and_footer.js"></script>
-    <script src="../js/report_generate.js"></script>
+    <script src="../js/report_generate_sever.js"></script>
 </head>
 <body>
 
@@ -65,23 +65,23 @@
 <div id="footer"></div>
 
 <script id="report_template" type="text/x-jquery-tmpl">
-        {{each(i,report_item) report_item_list}}
+        {{each(i,report_item) reportItems}}
         <tr>
                 <th>${i+1}</th>
-                <th>${stu_name}</th>
-                <th>${math}</th>
-                <th>${language}</th>
-                <th>${english}</th>
-                <th>${program}</th>
-                <th>${average}</th>
-                <th>${total}</th>
+                <th>${stuName}</th>
+                <th>${courseMap.math.courseScore}</th>
+                <th>${courseMap.language.courseScore}</th>
+                <th>${courseMap.english.courseScore}</th>
+                <th>${courseMap.program.courseScore}</th>
+                <th>${averageScore}</th>
+                <th>${totalScore}</th>
         </tr>
         {{/each}}
 </script>
 
 <script id="report_total_and_average_template" type="text/x-jquery-tmpl">
-    <p>全班总分平均数:${average}</p>
-    <p>全班总分中位数:${median}</p>
+    <p>全班总分平均数:${averageScore}</p>
+    <p>全班总分中位数:${medianScore}</p>
 </script>
 
 </body>

@@ -62,7 +62,6 @@ $(function () {
 
     $("#search-id-button").click(function(){
         var stu_num = $("#stu_id").val().trim();
-        alert(stu_num);
         if(localStorage.getItem('stu_info_list') && stu_num != ""){
             var stu_info_list = jQuery.parseJSON(localStorage.getItem('stu_info_list'));
             var stu_arr = [];

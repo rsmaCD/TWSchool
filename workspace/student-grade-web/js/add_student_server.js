@@ -3,71 +3,63 @@
  */
 $(function () {
 
-    // $(".stu-navtive-place").citySelect({
-    //     nodata:"none",
-    //     required:false
-    // });
-
-
     $("#add-student-form").submit(function () {
         event.preventDefault();
     });
 
     $("#add-student-form").validate({
         rules: {
-            stu_name: {
+            name: {
                 required: true
             },
-            stu_email: {
+            email: {
                 required: true,
                 email: true
             },
-            stu_phone_num: {
+            phoneNum: {
                 required: true,
                 maxlength: 11,
                 minlength: 11
             },
-            stu_id_card_num: {
+            idCardNum: {
                 required: true,
                 maxlength: 18,
                 minlength: 18
             },
-            stu_native_place: {
+            nativePlace: {
                 required: true
             }
         },
         messages: {
-            stu_name: "请输入名字",
-            stu_email: {
+            name: "请输入名字",
+            email: {
                 required: "请输入邮箱",
                 email: "请输入正确的邮箱"
             },
-            stu_id_card_num: {
+            idCardNum: {
                 required: "请输入身份证号",
                 maxlength: "请输入正确的身份证号",
                 minlength: "请输入正确的身份证号"
             },
-            stu_phone_num: {
+            phoneNum: {
                 required: "请输入电话号码",
                 maxlength: "请输入正确的电话号码",
                 minlength: "请输入正确的电话号码"
             },
-            stu_native_place: {
+            nativePlace: {
                 required: "请选择籍贯"
             }
         },
         errorLabelContainer: ".err_msg",
         wrapper: "li",
         submitHandler: function (form) {
-            if (localStorage.getItem('stu_info_list')) {
-                var stu_info_list = JSON.parse(localStorage.getItem('stu_info_list'));
-                stu_info_list.push(get_stu_info());
-                localStorage.setItem("stu_info_list", JSON.stringify(stu_info_list));
-            } else {
-                var stu_info_list = [];
-                stu_info_list.push(get_stu_info());
-                localStorage.setItem("stu_info_list", JSON.stringify(stu_info_list));
-            }
+            $.ajax({
+                url: "http://localhost:8080/reports"
+            }).then(function(data, status, jqxhr) {
+                console.log(data);
+                console.log(status);
+                show_report(data);
+            });
 
             show_success_msg();
             clean_input();
