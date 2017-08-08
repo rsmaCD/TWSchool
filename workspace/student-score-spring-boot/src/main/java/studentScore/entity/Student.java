@@ -12,6 +12,10 @@ public class Student {
     private String id;
     private List<Course> courseList;
     private String name;
+    private String idCardNum;
+    private String email;
+    private String phoneNum;
+    private String nativePlace;
 
     public Student(){}
 
@@ -48,6 +52,38 @@ public class Student {
 
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getIdCardNum() {
+        return idCardNum;
+    }
+
+    public String getNativePlace() {
+        return nativePlace;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setIdCardNum(String idCardNum) {
+        this.idCardNum = idCardNum;
+    }
+
+    public void setNativePlace(String nativePlace) {
+        this.nativePlace = nativePlace;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
     }
 
     @JsonIgnore

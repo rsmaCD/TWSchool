@@ -1,7 +1,10 @@
 package studentScore.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 import studentScore.entity.Reports;
 import studentScore.service.ReportsService;
 
@@ -10,13 +13,14 @@ import studentScore.service.ReportsService;
  */
 @RestController
 @RequestMapping("/reports")
+@CrossOrigin(origins = "http://localhost:8080")
 public class ReportController {
 
     @Autowired
     private ReportsService reportsService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public Reports post() {
+    public Reports get() {
         return reportsService.createReportsAll();
     }
 }
