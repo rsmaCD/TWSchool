@@ -21,7 +21,7 @@ public class CreateReportsStatus implements Status {
     }
 
     @Override
-    public void input() {
+    public void input()  {
         ioInterface.output(Global.createReportsNotice);
         String input = ioInterface.getInput();
         if (!Validate.validateCreateReportsInput(input)) {

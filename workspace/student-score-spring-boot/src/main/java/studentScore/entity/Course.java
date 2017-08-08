@@ -1,9 +1,11 @@
 package studentScore.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by rsma on 29/07/2017.
  */
-public class Course {
+public class Course implements Cloneable, Serializable {
 
     private String courseName;
     private int courseScore;
@@ -43,5 +45,11 @@ public class Course {
             }
         }
         return false;
+    }
+
+    @Override
+    protected Course clone() throws CloneNotSupportedException {
+        Course course = (Course)super.clone();
+        return course;
     }
 }

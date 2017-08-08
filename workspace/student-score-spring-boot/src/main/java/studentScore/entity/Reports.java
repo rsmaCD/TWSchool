@@ -68,13 +68,15 @@ public class Reports {
 
     private void getReportItems(List<Student> studentList){
         for (Student student:studentList) {
-            ReportItem reportItem = new ReportItem();
-            reportItem.setStuName(student.getName());
-            reportItem.setCourseMap(student.getCourseList().stream()
-                    .collect(Collectors.toMap(Course::getCourseName, account -> account)));
-            reportItem.calTotalScore();
-            reportItem.calAverageScore();
-            reportItems.add(reportItem);
+            if(student.getCourseList() != null) {
+                ReportItem reportItem = new ReportItem();
+                reportItem.setStuName(student.getName());
+                reportItem.setCourseMap(student.getCourseList().stream()
+                        .collect(Collectors.toMap(Course::getCourseName, account -> account)));
+                reportItem.calTotalScore();
+                reportItem.calAverageScore();
+                reportItems.add(reportItem);
+            }
         }
     }
 
@@ -97,6 +99,9 @@ public class Reports {
 
     private void calcMedianScore(){
 
+        if(reportItems.size() == 0){
+            return;
+        }
         List<Integer> totalScoreList = new ArrayList<>();
 
         for (ReportItem item:this.reportItems){
@@ -114,6 +119,9 @@ public class Reports {
     }
 
     private void calcAverageScore(){
+        if(reportItems.size() == 0){
+            return;
+        }
         double totalScore = 0;
         for (ReportItem item:reportItems) {
             totalScore += item.getAverageScore();

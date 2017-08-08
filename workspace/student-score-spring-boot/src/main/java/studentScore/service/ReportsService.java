@@ -34,7 +34,7 @@ public class ReportsService {
     }
 
 
-    public Reports createReports(List<Student> studentList){
+    public Reports createReports(List<Student> studentList) throws CloneNotSupportedException {
         List<Student> students = new ArrayList<>();
         for (Student student:studentList) {
             students.add(manager.getStudentById(student.getId()));

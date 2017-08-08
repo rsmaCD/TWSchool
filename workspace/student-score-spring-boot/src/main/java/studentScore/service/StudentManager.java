@@ -20,7 +20,7 @@ public class StudentManager {
         return management;
     }
 
-    public Student postStudent(Student student){
+    public Student postStudent(Student student) {
         if(student.getId() == null) {
             String id = UUID.randomUUID().toString().replace("-", "");
             student.setId(id);
@@ -29,12 +29,22 @@ public class StudentManager {
             return null;
         }
         studentMap.put(student.getId(), student);
-        return studentMap.get(student.getId());
+        try {
+            return studentMap.get(student.getId()).clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 
-    public Student getStudentById(String id){
-        return studentMap.get(id);
+    public Student getStudentById(String id) {
+        try {
+            return studentMap.get(id).clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 //    public Student createStudent(String id, String name, List<Course> courseList) {
@@ -46,7 +56,7 @@ public class StudentManager {
 //        return null;
 //    }
 
-    public List<Student> getStudentsByIdList(List<String> idList){
+    public List<Student> getStudentsByIdList(List<String> idList) {
 
         List<Student> studentList = new ArrayList<>();
         for (String id:idList) {

@@ -1,13 +1,13 @@
 package studentScore.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by rsma on 26/07/2017.
  */
-public class Student {
+public class Student implements Cloneable, Serializable{
 
     private String id;
     private List<Course> courseList;
@@ -96,5 +96,18 @@ public class Student {
         }
 
         return false;
+    }
+
+    @Override
+    public Student clone() throws CloneNotSupportedException {
+        Student cloneStudent = (Student) super.clone();
+        cloneStudent.courseList = new ArrayList<>();
+        if(this.courseList != null) {
+            for (Course simple : this.courseList) {
+                cloneStudent.courseList.add(simple.clone());
+            }
+
+        }
+        return cloneStudent;
     }
 }
