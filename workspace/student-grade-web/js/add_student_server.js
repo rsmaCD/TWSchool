@@ -54,26 +54,25 @@ $(function () {
         wrapper: "li",
         submitHandler: function (form) {
             $.ajax({
-                url: "http://localhost:8080/reports"
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                url: "http://localhost:8080/students",
+                type: "POST",
+                data: JSON.stringify(get_stu_info())
             }).then(function(data, status, jqxhr) {
                 console.log(data);
                 console.log(status);
-                show_report(data);
-            });
+                show_success_msg();
+                clean_input();
 
-            show_success_msg();
-            clean_input();
+            });
         }
     });
 
 });
 
-function get_random_num(n){
-    var rnd="";
-    for(var i=0;i<n;i++)
-        rnd+=Math.floor(Math.random()*10);
-    return rnd;
-}
 
 get_stu_info = function () {
     var form_data = $('#add-student-form').serializeArray();
@@ -81,8 +80,6 @@ get_stu_info = function () {
     for (x in form_data) {
         values[form_data[x].name] = form_data[x].value.trim();
     }
-    var stu_id = get_random_num(10);
-    values["stu_id"] = stu_id;
     return values;
 };
 
