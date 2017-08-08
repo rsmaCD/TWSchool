@@ -18,7 +18,7 @@
             crossorigin="anonymous"></script>
 
     <script src="../js/add_navbar_and_footer.js"></script>
-    <script src="../js/search_stu.js"></script>
+    <script src="../js/search_stu_server.js"></script>
 </head>
 <body>
 
@@ -63,12 +63,12 @@
         {{each(i,stu) data}}
         <tr>
                 <th>${i+1}</th>
-                <th>${stu_id}</th>
-                <th>${stu_name}</th>
-                <th>${stu_email}</th>
-                <th>${stu_phone_num}</th>
-                <th>${stu_id_card_num}</th>
-                <th>${stu_native_place}</th>
+                <th>${id}</th>
+                <th>${name}</th>
+                <th>${email}</th>
+                <th>${phoneNum}</th>
+                <th>${idCardNum}</th>
+                <th>${nativePlace}</th>
         </tr>
         {{/each}}
 </script>

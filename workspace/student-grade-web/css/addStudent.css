@@ -23,6 +23,11 @@
     visibility: hidden;
 }
 
+.failed_msg{
+    color: red;
+    visibility: hidden;
+}
+
 .stu-navtive-place select{
     margin: 0 10px;
 }
