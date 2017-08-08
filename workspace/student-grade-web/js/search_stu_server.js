@@ -57,13 +57,11 @@ search_stu = function (stu_num) {
         success: function (data, textStatus) {
             console.log(data);
             console.log(status);
-            alert("11111")
             var stu_arr = [];
             stu_arr.push(data);
             append_to_search_result_table(stu_arr);
         },
         error: function () {
-            alert("111")
             $('#search_result').html("");
         }
     });

@@ -61,14 +61,14 @@ $(function () {
                 url: "http://localhost:8080/students",
                 type: "POST",
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(get_stu_info())
-            }).then(function(data, status, jqxhr) {
-                console.log(data);
-                console.log(status);
-                if(status =="success"){
+                data: JSON.stringify(get_stu_info()),
+                success: function (data, textStatus) {
+                    console.log(data);
+                    console.log(status);
                     show_success_msg();
                     clean_input();
-                }else {
+                },
+                error: function () {
                     show_failed_msg();
                 }
             });
