@@ -38,13 +38,28 @@ public class StudentManager {
     }
 
 
-    public Student getStudentById(String id) {
-        try {
-            return studentMap.get(id).clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
+    public Student postStudentCourse(String id,List<Course> courseList){
+        Student studentById = studentMap.get(id);
+        if(studentById != null){
+            studentById.setCourseList(courseList);
+            return studentById;
+        }else {
             return null;
         }
+
+    }
+
+    public Student getStudentById(String id) {
+        Student student = studentMap.get(id);
+        if(student != null) {
+            try {
+                return student.clone();
+            } catch (CloneNotSupportedException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
+        return null;
     }
 
 //    public Student createStudent(String id, String name, List<Course> courseList) {

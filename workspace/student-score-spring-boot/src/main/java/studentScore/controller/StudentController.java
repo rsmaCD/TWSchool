@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import studentScore.entity.Course;
 import studentScore.entity.Student;
 import studentScore.service.StudentManager;
+
+import java.util.List;
 
 /**
  * Created by rsma on 07/08/2017.
@@ -33,6 +36,16 @@ public class StudentController {
         Student student = manager.getStudentById(id);
         if(student != null){
             return new ResponseEntity<>(student, HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @RequestMapping(value = "/{id}/courses",method = RequestMethod.POST)
+    public ResponseEntity postCourse(@PathVariable("id") String id, @RequestBody List<Course> listCourse) {
+        Student student = manager.postStudentCourse(id,listCourse);
+        if(student != null){
+            return new ResponseEntity<>(student, HttpStatus.CREATED);
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
