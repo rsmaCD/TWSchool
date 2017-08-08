@@ -12,14 +12,19 @@ import studentScore.service.StudentManager;
  */
 @RestController
 @RequestMapping("/students")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin("*")
 public class StudentController {
 
     @Autowired
     private StudentManager manager;
 
-    @RequestMapping( method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity post(@RequestBody Student student) {
         return new ResponseEntity<>(manager.postStudent(student), HttpStatus.CREATED);
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity get() {
+        return new ResponseEntity<>(manager.getAllStudents(), HttpStatus.OK);
     }
 }
