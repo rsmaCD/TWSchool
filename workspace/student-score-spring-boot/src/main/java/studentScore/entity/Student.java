@@ -1,5 +1,7 @@
 package studentScore.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 /**
@@ -11,8 +13,15 @@ public class Student {
     private List<Course> courseList;
     private String name;
 
+    public Student(){}
+
     public Student(String id,String name,List<Course> courseList) {
         this.id = id;
+        this.name = name;
+        this.courseList = courseList;
+    }
+
+    public Student(String name,List<Course> courseList) {
         this.name = name;
         this.courseList = courseList;
     }
@@ -41,10 +50,11 @@ public class Student {
         return name;
     }
 
+    @JsonIgnore
     public double getAverageScore(){
         return ((double)getTotalScore())/courseList.size();
     }
-
+    @JsonIgnore
     public int getTotalScore(){
         int totalScore = 0;
         for (Course course:courseList) {

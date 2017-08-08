@@ -1,7 +1,6 @@
-package refactor;
+package studentScore.original;
 
 import org.junit.Test;
-import studentScore.original.App;
 import studentScore.original.io.FileIO;
 
 import java.io.IOException;

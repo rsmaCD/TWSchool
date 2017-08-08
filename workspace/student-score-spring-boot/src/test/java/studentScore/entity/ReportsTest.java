@@ -1,10 +1,8 @@
-package studentScore;
+package studentScore.entity;
 
 import org.junit.Before;
 import org.junit.Test;
-import studentScore.entity.Course;
-import studentScore.entity.Reports;
-import studentScore.entity.Student;
+import studentScore.service.ReportsService;
 import studentScore.global.Global;
 
 import java.util.List;
@@ -17,7 +15,7 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class ReportsTest {
 
-    private Reports reports;
+    private ReportsService reports;
     private Student tom;
     private Student lili;
     private Student www;
@@ -48,10 +46,10 @@ public class ReportsTest {
     @Test
     public void get_empty_reports_when_input_no_student_id() throws Exception {
         //Given
-        reports = new Reports();
+        reports = new ReportsService();
         String emptyReports = new StringBuilder().append(Global.reportsHeadTemplate).append(String.format(Global.reportsTailTemplate,0.0,0.0)).toString();
         //When
-        String  actual = reports.createReports(asList());
+        String  actual = reports.createReportsWithTemplate(asList());
         //Then
         assertEquals(emptyReports,actual);
 
@@ -60,14 +58,14 @@ public class ReportsTest {
     @Test
     public void get_student_and_score_reports_when_input_one_student() throws Exception {
         //Given
-        reports = new Reports();
+        reports = new ReportsService();
         String expectReports = new StringBuilder()
                 .append(Global.reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
                 .append(String.format(Global.reportsTailTemplate,1.25,5.0)).toString();
 
         //When
-        String actual = reports.createReports(asList(tom));
+        String actual = reports.createReportsWithTemplate(asList(tom));
         //Then
         assertEquals(expectReports,actual);
     }
@@ -75,14 +73,14 @@ public class ReportsTest {
     @Test
     public void get_students_and_score_reports_when_input_two_students_id() throws Exception {
         //Given
-        reports = new Reports();
+        reports = new ReportsService();
         String expectReports = new StringBuilder()
                 .append(Global.reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
                 .append("Lili|2|2|2|2|2.00|8\n")
                 .append(String.format(Global.reportsTailTemplate,1.625,6.5)).toString();
         //When
-        String actual = reports.createReports(asList(tom,lili));
+        String actual = reports.createReportsWithTemplate(asList(tom,lili));
         //Then
         assertEquals(expectReports,actual);
     }
@@ -90,7 +88,7 @@ public class ReportsTest {
     @Test
     public void get_students_and_score_reports_when_input_Three_students_id() throws Exception {
         //Given
-        reports = new Reports();
+        reports = new ReportsService();
         String expectReports = new StringBuilder()
                 .append(Global.reportsHeadTemplate)
                 .append("Tom|2|1|1|1|1.25|5\n")
@@ -98,7 +96,7 @@ public class ReportsTest {
                 .append("WWW|2|2|2|2|2.00|8\n")
                 .append(String.format(Global.reportsTailTemplate,1.75,8.0)).toString();
         //When
-        String actual = reports.createReports(asList(tom,lili,www));
+        String actual = reports.createReportsWithTemplate(asList(tom,lili,www));
         //Then
         assertEquals(expectReports,actual);
     }

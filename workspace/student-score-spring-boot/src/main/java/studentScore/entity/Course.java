@@ -5,17 +5,10 @@ package studentScore.entity;
  */
 public class Course {
 
-    private String id;
     private String courseName;
     private int courseScore;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    public Course (){}
 
     public void setCourseScore(int courseScore) {
         this.courseScore = courseScore;

@@ -1,11 +1,11 @@
-package studentScore;
+package studentScore.service;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import studentScore.entity.Course;
 import studentScore.entity.Student;
-import studentScore.service.StudentManager;
 import studentScore.global.Global;
 
 import java.util.ArrayList;
@@ -19,6 +19,7 @@ import static junit.framework.TestCase.assertEquals;
  */
 public class StudentManagerTest {
 
+    @Autowired
     private StudentManager manager;
     private Course mathCourse;
     private Course languageCourse;
@@ -45,9 +46,9 @@ public class StudentManagerTest {
         //Given
         manager = StudentManager.getInstance();
         //When
-        Student student = manager.createStudent("111"
+        Student student = manager.postStudent(new Student("111"
                 ,"Tom"
-                ,courseList);
+                ,courseList));
         //Then
         assertEquals(true,student != null);
     }
@@ -57,8 +58,8 @@ public class StudentManagerTest {
         //Given
         manager = StudentManager.getInstance();
         //When
-        manager.createStudent("111","Tom",courseList);
-        Student student = manager.createStudent("111","Lili",courseList);
+        manager.postStudent(new Student("111","Tom",courseList));
+        Student student = manager.postStudent(new Student("111","Lili",courseList));
         //Then
         assertEquals(false,student != null);
     }
@@ -69,7 +70,7 @@ public class StudentManagerTest {
         manager = StudentManager.getInstance();
         Student expectedStudent = new Student("111", "Tom", courseList);
         //When
-        manager.createStudent("111","Tom",courseList);
+        manager.postStudent(new Student("111","Tom",courseList));
         Student actualStudent = manager.getStudentById("111");
         //Then
         assertEquals(expectedStudent,actualStudent);
@@ -83,13 +84,5 @@ public class StudentManagerTest {
         Student actualStudent = manager.getStudentById("111");
         //Then
         assertEquals(null,actualStudent);
-    }
-
-    @Test
-    public void should_get_student_when_put_student() throws Exception {
-        manager = StudentManager.getInstance();
-        Student student = new Student("111","Tom",courseList);
-        Student actualStu = manager.postStudent(student);
-        assertEquals(student,actualStu);
     }
 }

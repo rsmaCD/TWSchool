@@ -1,13 +1,10 @@
-package studentScore;
+package studentScore.service;
 
 import org.junit.Before;
 import org.junit.Test;
 import studentScore.entity.Course;
-import studentScore.entity.Reports;
 import studentScore.entity.Student;
-import studentScore.service.StudentManager;
 import studentScore.global.Global;
-import studentScore.service.StudentScoreService;
 
 import java.util.List;
 
@@ -20,7 +17,7 @@ import static org.mockito.Mockito.*;
 public class StudentScoreServiceTest {
 
     private StudentManager mockStudentManager;
-    private Reports mockReports;
+    private ReportsService mockReports;
     private StudentScoreService studentScoreSystem;
     private List<Course> courseListLegal;
     private Student tom;
@@ -30,7 +27,7 @@ public class StudentScoreServiceTest {
     public void setUp() throws Exception {
 
         mockStudentManager = mock(StudentManager.class);
-        mockReports = mock(Reports.class);
+        mockReports = mock(ReportsService.class);
         studentScoreSystem = new StudentScoreService(mockStudentManager,mockReports);
 
         Course mathCourse = new Course(Global.mathCourseName,2);
@@ -48,7 +45,7 @@ public class StudentScoreServiceTest {
     @Test
     public void should_call_creatstudent_onece_when_input_legal() throws Exception {
         studentScoreSystem.createStudent("Tom,112,2,2,2,2");
-        verify(mockStudentManager, times(1)).createStudent("112","Tom",courseListLegal);
+        verify(mockStudentManager, times(1)).postStudent(new Student("112","Tom",courseListLegal));
     }
 
     @Test
@@ -56,7 +53,7 @@ public class StudentScoreServiceTest {
 
         studentScoreSystem.createReports("110,111");
         verify(mockStudentManager, times(1)).getStudentsByIdList(asList("110","111"));
-        verify(mockReports, times(1)).createReports(asList(tom,lili));
+        verify(mockReports, times(1)).createReportsWithTemplate(asList(tom,lili));
 
     }
 }

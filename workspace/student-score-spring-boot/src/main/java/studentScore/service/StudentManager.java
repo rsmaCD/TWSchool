@@ -4,9 +4,7 @@ import org.springframework.stereotype.Service;
 import studentScore.entity.Course;
 import studentScore.entity.Student;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created by rsma on 26/07/2017.
@@ -16,41 +14,37 @@ public class StudentManager {
 
     private StudentManager() {}
     private static final StudentManager management = new StudentManager();
-    private List<Student> studentList = new ArrayList<>();
+    private Map<String,Student> studentMap = new HashMap<>();
 
     public static StudentManager getInstance() {
         return management;
     }
 
     public Student postStudent(Student student){
-        String id = UUID.randomUUID().toString().replace("-", "");
-        student.setId(id);
-        studentList.add(student);
-        return getStudentById(student.getId());
+        if(student.getId() == null) {
+            String id = UUID.randomUUID().toString().replace("-", "");
+            student.setId(id);
+        }
+        if(studentMap.get(student.getId()) != null){
+            return null;
+        }
+        studentMap.put(student.getId(), student);
+        return studentMap.get(student.getId());
     }
 
-    public boolean putStudent(Student student,String id){
-        Student studentById = getStudentById(id);
-return true;
-    }
 
     public Student getStudentById(String id){
-        for (Student stu: studentList) {
-            if(stu.getId().equals(id)){
-                return stu;
-            }
-        }
-        return null;
+        return studentMap.get(id);
     }
 
-    public Student createStudent(String id, String name, List<Course> courseList) {
-        if(getStudentById(id) == null) {
-            Student student = new Student(id, name, courseList);
-            studentList.add(student);
-            return student;
-        }
-        return null;
-    }
+//    public Student createStudent(String id, String name, List<Course> courseList) {
+//        if(getStudentById(id) == null) {
+//            Student student = new Student(id, name, courseList);
+//            studentMap.put(id,student);
+//            return student;
+//        }
+//        return null;
+//    }
 
     public List<Student> getStudentsByIdList(List<String> idList){
 
@@ -64,8 +58,12 @@ return true;
         return studentList;
     }
 
+    public List<Student> getAllStudents(){
+        return new ArrayList<>(this.studentMap.values());
+    }
+
 
     public void cleanList(){
-        studentList = new ArrayList<>();
+        studentMap = new HashMap<>();
     }
 }
