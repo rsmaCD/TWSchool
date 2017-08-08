@@ -1,5 +1,7 @@
 package studentScore.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -17,18 +19,10 @@ public class ReportItem {
     private Map<String,Course> courseMap;
 
     public double getAverageScore() {
-        //return ((double)getTotalScore())/courseMap.size();
-
         return averageScore;
     }
 
     public int getTotalScore() {
-//        int totalScore = 0;
-//        List<Course> courseList = new ArrayList<>(courseMap.values());
-//        for (Course course:courseList) {
-//            totalScore += course.getCourseScore();
-//        }
-//        return totalScore;
         return totalScore;
     }
 
@@ -54,5 +48,16 @@ public class ReportItem {
 
     public void setTotalScore(int totalScore) {
         this.totalScore = totalScore;
+    }
+
+    public void calAverageScore(){
+        this.averageScore =  ((double)getTotalScore())/courseMap.size();
+    }
+    public void calTotalScore(){
+        int totalScore = 0;
+        for (Course course:new ArrayList<>(courseMap.values())) {
+            totalScore += course.getCourseScore();
+        }
+        this.totalScore =  totalScore;
     }
 }

@@ -72,8 +72,8 @@ public class Reports {
             reportItem.setStuName(student.getName());
             reportItem.setCourseMap(student.getCourseList().stream()
                     .collect(Collectors.toMap(Course::getCourseName, account -> account)));
-            reportItem.setTotalScore(student.getTotalScore());
-            reportItem.setAverageScore(student.getAverageScore());
+            reportItem.calTotalScore();
+            reportItem.calAverageScore();
             reportItems.add(reportItem);
         }
     }

@@ -86,19 +86,6 @@ public class Student {
         this.phoneNum = phoneNum;
     }
 
-    @JsonIgnore
-    public double getAverageScore(){
-        return ((double)getTotalScore())/courseList.size();
-    }
-    @JsonIgnore
-    public int getTotalScore(){
-        int totalScore = 0;
-        for (Course course:courseList) {
-            totalScore += course.getCourseScore();
-        }
-        return totalScore;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if(obj.getClass() != this.getClass()){
