@@ -3,10 +3,7 @@ package studentScore.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import studentScore.entity.Student;
 import studentScore.service.StudentManager;
 
@@ -15,6 +12,7 @@ import studentScore.service.StudentManager;
  */
 @RestController
 @RequestMapping("/students")
+@CrossOrigin(origins = "http://localhost:8080")
 public class StudentController {
 
     @Autowired
@@ -24,5 +22,4 @@ public class StudentController {
     public ResponseEntity post(@RequestBody Student student) {
         return new ResponseEntity<>(manager.postStudent(student), HttpStatus.CREATED);
     }
-
 }
