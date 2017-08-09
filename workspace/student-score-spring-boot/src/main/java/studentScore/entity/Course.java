@@ -12,20 +12,20 @@ public class Course implements Cloneable, Serializable {
 
     public Course (){}
 
-    public void setCourseScore(int courseScore) {
-        this.courseScore = courseScore;
+    public String getCourseName() {
+        return courseName;
     }
 
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
-
     public int getCourseScore() {
         return courseScore;
+    }
+
+    public void setCourseScore(int courseScore) {
+        this.courseScore = courseScore;
     }
 
     public Course(String courseName, int courseScore){
