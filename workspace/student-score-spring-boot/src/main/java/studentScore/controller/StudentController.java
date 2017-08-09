@@ -1,6 +1,8 @@
 package studentScore.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +17,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/students")
-@CrossOrigin("*")
 public class StudentController {
 
     @Autowired

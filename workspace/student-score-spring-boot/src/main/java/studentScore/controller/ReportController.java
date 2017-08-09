@@ -13,7 +13,6 @@ import studentScore.service.ReportsService;
  */
 @RestController
 @RequestMapping("/reports")
-@CrossOrigin("*")
 public class ReportController {
 
     @Autowired
