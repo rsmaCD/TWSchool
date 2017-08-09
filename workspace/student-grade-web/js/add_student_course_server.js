@@ -90,7 +90,6 @@ get_course_info = function () {
         value["courseScore"] = form_data[x].value.trim();
         values.push(value);
     }
-    alert(values);
     return values;
 };
 
