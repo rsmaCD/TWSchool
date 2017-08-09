@@ -10,30 +10,38 @@ $(function () {
     $("#add-student-course-form").validate({
         rules: {
             math: {
-                required: true
+                required: true,
+                number:true
             },
             english: {
-                required: true
+                required: true,
+                number:true
             },
             program: {
-                required: true
+                required: true,
+                number:true
             },
             language: {
-                required: true
+                required: true,
+                number:true
             }
         },
         messages: {
             math: {
-                required: "请输入数学成绩"
+                required: "请输入数学成绩",
+                number:"请输入正确的数学成绩"
             },
             english: {
-                required: "请输入英语成绩"
+                required: "请输入英语成绩",
+                number:"请输入正确的英语成绩"
             },
             program: {
-                required: "请输入编程成绩"
+                required: "请输入编程成绩",
+                number:"请输入正确的编程成绩"
             },
             language: {
-                required: "请输入语文成绩"
+                required: "请输入语文成绩",
+                number:"请输入正确的语文成绩"
             }
         },
         errorLabelContainer: ".err_msg",
