@@ -9,8 +9,7 @@ import java.util.*;
 /**
  * Created by rsma on 26/07/2017.
  */
-@Service
-public class StudentManager {
+public class StudentManager implements StudentServiceInterface{
 
     private StudentManager() {}
     private static final StudentManager management = new StudentManager();
@@ -19,7 +18,7 @@ public class StudentManager {
     public static StudentManager getInstance() {
         return management;
     }
-
+    @Override
     public Student postStudent(Student student) {
         if(student.getId() == null) {
             String id = UUID.randomUUID().toString().replace("-", "");
@@ -37,7 +36,7 @@ public class StudentManager {
         }
     }
 
-
+    @Override
     public Student postStudentCourse(String id,List<Course> courseList){
         Student studentById = studentMap.get(id);
         if(studentById != null){
@@ -47,7 +46,7 @@ public class StudentManager {
             return null;
         }
     }
-
+    @Override
     public Student getStudentById(String id) {
         Student student = studentMap.get(id);
         if(student != null) {
@@ -81,7 +80,7 @@ public class StudentManager {
         }
         return studentList;
     }
-
+    @Override
     public List<Student> getAllStudents(){
         return new ArrayList<>(this.studentMap.values());
     }

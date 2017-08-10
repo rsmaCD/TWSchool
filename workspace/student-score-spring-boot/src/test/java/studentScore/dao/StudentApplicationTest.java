@@ -23,8 +23,6 @@ import static java.util.Arrays.asList;
 public class StudentApplicationTest {
     @Autowired
     private StudentRepository studentRepository;
-    @Autowired
-    private CourseRepository courseRepository;
 
     @Before
     public void setUp() throws Exception {

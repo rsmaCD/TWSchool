@@ -9,6 +9,7 @@ import studentScore.entity.Student;
  */
 @Repository
 public interface StudentRepository extends JpaRepository<Student,Long>{
-
     Student findByName(String name);
+    Student findById(String id);
+
 }

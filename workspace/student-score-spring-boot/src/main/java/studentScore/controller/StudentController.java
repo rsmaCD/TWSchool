@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import studentScore.entity.Course;
 import studentScore.entity.Student;
 import studentScore.service.StudentManager;
+import studentScore.service.StudentServiceInterface;
 
 import java.util.List;
 
@@ -18,21 +19,21 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    private StudentManager manager;
+    private StudentServiceInterface studentService;
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity post(@RequestBody Student student){
-        return new ResponseEntity<>(manager.postStudent(student), HttpStatus.CREATED);
+        return new ResponseEntity<>(studentService.postStudent(student), HttpStatus.CREATED);
     }
 
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity get() {
-        return new ResponseEntity<>(manager.getAllStudents(), HttpStatus.OK);
+        return new ResponseEntity<>(studentService.getAllStudents(), HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public ResponseEntity getById(@PathVariable("id") String id) {
-        Student student = manager.getStudentById(id);
+        Student student = studentService.getStudentById(id);
         if(student != null){
             return new ResponseEntity<>(student, HttpStatus.OK);
         }else{
@@ -42,7 +43,7 @@ public class StudentController {
 
     @RequestMapping(value = "/{id}/courses",method = RequestMethod.POST)
     public ResponseEntity postCourse(@PathVariable("id") String id, @RequestBody List<Course> listCourse) {
-        Student student = manager.postStudentCourse(id,listCourse);
+        Student student = studentService.postStudentCourse(id,listCourse);
         if(student != null){
             return new ResponseEntity<>(student, HttpStatus.CREATED);
         }else{
