@@ -1,5 +1,6 @@
 package studentScore.original;
 
+import studentScore.original.io.ConsoleIO;
 import studentScore.original.io.IOInterface;
 import studentScore.original.status.*;
 
@@ -66,8 +67,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-//        App app = new App(new ConsoleIO());
-//        app.Start();
-//        app.Run();
+        App app = new App(new ConsoleIO());
+        app.Start();
+        app.Run();
     }
 }

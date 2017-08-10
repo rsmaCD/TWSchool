@@ -48,7 +48,6 @@ public class Reports {
         if(studentList.size() == 0){
             return sb.append(Global.reportsHeadTemplate).append(String.format(Global.reportsTailTemplate,0.0,0.0)).toString();
         }
-
         this.calcMedianScore();
         this.calcAverageScore();
         sb.append(Global.reportsHeadTemplate)

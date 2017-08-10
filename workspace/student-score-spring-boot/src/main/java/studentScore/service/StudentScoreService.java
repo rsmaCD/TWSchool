@@ -31,8 +31,6 @@ public class StudentScoreService {
             Course languageCourse = new Course(Global.languageCourseName, Integer.valueOf(split[3]));
             Course englishCourse = new Course(Global.englishCourseName, Integer.valueOf(split[4]));
             Course programCourse = new Course(Global.programCourseName, Integer.valueOf(split[5]));
-//            Student student = manager.createStudent(split[1], split[0]
-//                    , asList(mathCourse,languageCourse,englishCourse,programCourse));
             Student student = new Student(split[1], split[0]
                     , asList(mathCourse, languageCourse, englishCourse, programCourse));
 

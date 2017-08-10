@@ -28,12 +28,7 @@ public class StudentManager implements StudentServiceInterface{
             return null;
         }
         studentMap.put(student.getId(), student);
-        try {
-            return studentMap.get(student.getId()).clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return getStudentById(student.getId());
     }
 
     @Override
@@ -59,15 +54,6 @@ public class StudentManager implements StudentServiceInterface{
         }
         return null;
     }
-
-//    public Student createStudent(String id, String name, List<Course> courseList) {
-//        if(getStudentById(id) == null) {
-//            Student student = new Student(id, name, courseList);
-//            studentMap.put(id,student);
-//            return student;
-//        }
-//        return null;
-//    }
 
     public List<Student> getStudentsByIdList(List<String> idList) {
 
