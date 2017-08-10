@@ -1,9 +1,9 @@
 package studentScore.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -13,14 +13,42 @@ import java.io.Serializable;
 public class Course implements Cloneable, Serializable {
 
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(name="system-uuid",
+            strategy = "uuid")
+    private String id;
+    @ManyToOne
+    @JoinColumn (name="student_id")
+    @JsonBackReference
+    private Student student;
     @Column(nullable = false)
     private String courseName;
     @Column(nullable = false)
     private int courseScore;
 
     public Course (){}
+
+    public Course(String courseName, int courseScore, Student student) {
+        this.courseName = courseName;
+        this.courseScore = courseScore;
+        this.student = student;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCourseName() {
         return courseName;

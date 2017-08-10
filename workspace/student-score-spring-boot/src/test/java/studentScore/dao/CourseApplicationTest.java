@@ -29,6 +29,7 @@ public class CourseApplicationTest {
     @Test
     public void should_get_course_which_course_name_is_math() throws Exception {
         Course math = courseRepository.findByCourseName("math");
+        System.out.println(math.getId());
         Assert.assertEquals(80, math.getCourseScore());
     }
 }

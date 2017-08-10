@@ -46,7 +46,6 @@ public class StudentManager {
         }else {
             return null;
         }
-
     }
 
     public Student getStudentById(String id) {
