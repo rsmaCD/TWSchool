@@ -68,7 +68,7 @@ public class Reports {
 
     private void getReportItems(List<Student> studentList){
         for (Student student:studentList) {
-            if(student.getCourseList() != null) {
+            if(student.getCourseList().size() != 0) {
                 ReportItem reportItem = new ReportItem();
                 reportItem.setStuName(student.getName());
                 reportItem.setCourseMap(student.getCourseList().stream()
@@ -102,20 +102,24 @@ public class Reports {
         if(reportItems.size() == 0){
             return;
         }
-        List<Integer> totalScoreList = new ArrayList<>();
+        List<Integer> sortedTotalScore = getSortedTotalScore();
 
+        if(sortedTotalScore.size()%2 == 0){
+            double i = sortedTotalScore.get(sortedTotalScore.size()/2 - 1);
+            double j = sortedTotalScore.get(sortedTotalScore.size()/2);
+            this.medianScore =  ((double) ( i + j))/2;
+        }else {
+            this.medianScore = ((double) sortedTotalScore.get(sortedTotalScore.size() / 2));
+        }
+    }
+
+    private List<Integer> getSortedTotalScore() {
+        List<Integer> totalScoreList = new ArrayList<>();
         for (ReportItem item:this.reportItems){
             totalScoreList.add(item.getTotalScore());
         }
         totalScoreList.sort(Comparator.naturalOrder());
-
-        if(totalScoreList.size()%2 == 0){
-            double i = totalScoreList.get(totalScoreList.size()/2 - 1);
-            double j = totalScoreList.get(totalScoreList.size()/2);
-            this.medianScore =  ((double) ( i + j))/2;
-        }else {
-            this.medianScore = ((double) totalScoreList.get(totalScoreList.size() / 2));
-        }
+        return totalScoreList;
     }
 
     private void calcAverageScore(){
