@@ -89,12 +89,10 @@ public class Student implements Cloneable, Serializable{
     @Override
     public boolean equals(Object obj) {
         if(obj.getClass() != this.getClass()){
-            return false;
+            if(this.id.equals(((Student)obj).getId())){
+                return true;
+            }
         }
-        if(this.id.equals(((Student)obj).getId())){
-            return true;
-        }
-
         return false;
     }
 
