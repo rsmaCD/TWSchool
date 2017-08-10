@@ -83,7 +83,7 @@ function get_random_num(n){
     return rnd;
 }
 
-get_stu_info = function () {
+function get_stu_info() {
     var form_data = $('#add-student-form').serializeArray();
     var values = {};
     for (x in form_data) {
@@ -94,10 +94,12 @@ get_stu_info = function () {
     return values;
 };
 
-show_success_msg = function () {
+function show_success_msg() {
     $(".success_msg").css("visibility", "visible");
+    $(".failed_msg").css("visibility", "hidden");
 };
 
-clean_input = function () {
-    $("#add-student-form").trigger('reset');
-}
+function show_failed_msg() {
+    $(".failed_msg").css("visibility", "visible");
+    $(".success_msg").css("visibility", "hidden");
+};

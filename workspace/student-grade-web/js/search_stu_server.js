@@ -2,6 +2,7 @@
  * Created by rsma on 03/08/2017.
  */
 $(function () {
+
     show_all_stu();
 
     $("#search-id-button").click(function () {
@@ -9,6 +10,7 @@ $(function () {
         search_stu(stu_num);
         $("#stu_name").val("");
     });
+
 
     // $("#search-name-button").click(function(){
     //     var stu_name = $("#stu_name").val().trim();
@@ -18,7 +20,17 @@ $(function () {
 
 });
 
-show_all_stu = function () {
+
+
+function find_stu_by_id(stu_id) {
+    for(var i = 0;i < stu_data.length;i++){
+        if(stu_data[i].id = stu_id){
+            return stu_data[i];
+        }
+    }
+};
+
+function show_all_stu() {
 
     $.ajax({
         headers: {
@@ -29,22 +41,20 @@ show_all_stu = function () {
         type: "GET",
         contentType: "application/json; charset=utf-8",
     }).then(function (data, status, jqxhr) {
-        console.log(data);
-        console.log(status);
         if (status == "success") {
             append_to_search_result_table(data);
         }
     });
 };
 
-append_to_search_result_table = function (stu_info_list) {
+function append_to_search_result_table(stu_info_list) {
     $('#search_result').html("");
     var search_result = {"data": stu_info_list};
     $('#search_result_template').tmpl(search_result).appendTo('#search_result');
 };
 
 
-search_stu = function (stu_num) {
+function search_stu(stu_num) {
 
     $.ajax({
         headers: {
@@ -55,8 +65,6 @@ search_stu = function (stu_num) {
         contentType: "application/json; charset=utf-8",
         type: 'GET',
         success: function (data, textStatus) {
-            console.log(data);
-            console.log(status);
             var stu_arr = [];
             stu_arr.push(data);
             append_to_search_result_table(stu_arr);

@@ -47,6 +47,7 @@
                 <th>Phone Number</th>
                 <th>ID Card Number</th>
                 <th>Native Place</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -61,7 +62,7 @@
 
 <script id="search_result_template" type="text/x-jquery-tmpl">
         {{each(i,stu) data}}
-        <tr>
+        <tr class="stu_info_tr">
                 <th>${i+1}</th>
                 <th>${id}</th>
                 <th>${name}</th>
@@ -69,7 +70,11 @@
                 <th>${phoneNum}</th>
                 <th>${idCardNum}</th>
                 <th>${nativePlace}</th>
+                {{if courseList.length}}
+                <th><a href="addStudentCourse.html?id=${id}">修改成绩</a></th>
+                {{else}}
                 <th><a href="addStudentCourse.html?id=${id}">添加成绩</a></th>
+                {{/if}}
         </tr>
         {{/each}}
 </script>

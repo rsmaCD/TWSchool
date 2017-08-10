@@ -12,7 +12,7 @@ $(function () {
     });
 });
 
-show_report = function (report_info) {
+function show_report(report_info) {
 
     var report_info_json = report_info;
     $('#report_result').html("");

@@ -18,21 +18,21 @@ $(function () {
 
 });
 
-show_all_stu = function () {
+function show_all_stu() {
     if (localStorage.getItem('stu_info_list')) {
         var stu_info_list = jQuery.parseJSON(localStorage.getItem('stu_info_list'));
         append_to_search_result_table(stu_info_list);
     }
 };
 
-append_to_search_result_table = function (stu_info_list) {
+function append_to_search_result_table(stu_info_list) {
     $('#search_result').html("");
     var search_result = {"data": stu_info_list};
     $('#search_result_template').tmpl(search_result).appendTo('#search_result');
 };
 
 
-search_stu = function (stu_filed_name,stu_filed_value) {
+function search_stu(stu_filed_name,stu_filed_value) {
     if(localStorage.getItem('stu_info_list') && stu_filed_value != ""){
         var stu_info_list = jQuery.parseJSON(localStorage.getItem('stu_info_list'));
         var stu_arr = [];
